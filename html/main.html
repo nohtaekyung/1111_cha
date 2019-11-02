@@ -3,22 +3,394 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=750">
     <meta property="og:image" content="../img/kakao_prev.jpg">
     <title>CHA Meditech</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/responsive.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
     <link rel="stylesheet" href="../js/aos/aos.css"/>
     <link rel="stylesheet" href="../js/swiper/swiper.min.css"/>
     <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
+    <!--<script type="text/javascript" src="../js/egjs-infinitegrid.js"></script>-->
     <script type="text/javascript" src="../js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="../js/bm.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
 <div class="wrapper main" id="wrapper">
-    <div class="col-12 main_visual_wrap">
-        i'm joker
+    <div class="col-12 col-center mw-750">
+        <!--header-->
+        <header class="col-12 header_wrap">
+            <div class="col-12 header_con">
+                <div class="menu_con">
+                    <a href="javascript:void(0)" class="menu_box">
+                        <div class="img">
+                            <img src="../img/menu_icon.png" alt="전체메뉴">
+                        </div>
+                        <div class="text">
+                            전체메뉴
+                        </div>
+                    </a>
+                </div>
+                <h1 class="logo_con">
+                    <a href="javascript:void(0)">
+                        <img src="../img/logo.png" alt="CHA 의과대학교 일산차병원">
+                    </a>
+                </h1>
+                <div class="util_list_con">
+                    <a href="javascript:void(0)" class="util_list">
+                        <div class="img">
+                            <img src="../img/search_icon.png" alt="검색">
+                        </div>
+                        <div class="text">
+                            검색
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="util_list">
+                        <div class="img">
+                            <img src="../img/login_icon.png" alt="로그인">
+                        </div>
+                        <div class="text">
+                            로그인
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--main_visual_wrap-->
+        <div class="col-12 main_visual_wrap">
+            <div class="col-12 main_notice_wrap">
+                <a href="javascript:void(0)" class="col-12 main_notice_con">
+                    <span class="main_notice_icon">
+                        <img src="../img/main_notice_icon.png" alt="공지">
+                    </span>
+                    <span class="main_notice_text">
+                        2019년 12월 입원환자를 위한 관리프로그램  2019년 12월 입원환자를 위한 관리프로그램
+                    </span>
+                </a>
+            </div>
+            <div class="col-12 h-100 main_visual_inner swiper-container">
+                <div class="col-12 h-100 main_visual_slide_wrap swiper-wrapper">
+                    <div class="col-12 h-100 main_visual_slide_list swiper-slide" style="background-image: url('../img/main_visual_img_000.jpg')">
+                        <div class="col-12 main_visual_text_con">
+                            <div class="col-0 sub_title">
+                                120 웰니스로 건강하게
+                            </div>
+                            <div class="col-12 title">
+                                120 웰니스로<br/>
+                                120세까지
+                            </div>
+                            <div class="col-12 desc">
+                                이제는 치료가 아닌<br/>
+                                예방의학의 시대입니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 h-100 main_visual_slide_list swiper-slide" style="background-image: url('../img/main_visual_img_000.jpg')">
+                        <div class="col-12 main_visual_text_con">
+                            <div class="col-0 sub_title">
+                                120 웰니스로 건강하게
+                            </div>
+                            <div class="col-12 title">
+                                120 웰니스로<br/>
+                                120세까지
+                            </div>
+                            <div class="col-12 desc">
+                                이제는 치료가 아닌<br/>
+                                예방의학의 시대입니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-0 tc main_visual_pagination_wrap">
+                <div class="pagination_con"></div>
+            </div>
+        </div>
+        <!--section_wrap-->
+        <div class="col-12 section_wrap">
+            <!--quick button-->
+            <div class="col-12 section">
+                <div class="col-12 visual_quick_btn_list_con">
+                    <div class="visual_quick_btn_list">
+                        <a href="javascript:void(0)" class="visual_quick_btn_list_inner">
+                            처음진료·빠른예약
+                        </a>
+                    </div>
+                    <div class="visual_quick_btn_list">
+                        <a href="javascript:void(0)" class="visual_quick_btn_list_inner">
+                            의료진 소개
+                        </a>
+                    </div>
+                    <div class="visual_quick_btn_list">
+                        <a href="javascript:void(0)" class="visual_quick_btn_list_inner">
+                            고마워요 차병원
+                        </a>
+                    </div>
+                    <div class="visual_quick_btn_list">
+                        <a href="javascript:void(0)" class="visual_quick_btn_list_inner">
+                            찾아오시는 길
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--facility-->
+            <div class="col-12 section" id="facility">
+                <div class="col-12 facility_wrap">
+                    <div class="col-12 facility_slide_wrap swiper-container">
+                        <div class="col-12 facility_slide_con swiper-wrapper">
+                            <div class="col-12 facility_slide_list swiper-slide">
+                                <div class="col-12 img_con">
+                                    <img src="../img/facility_img_000.jpg" alt="">
+                                </div>
+                                <div class="col-12 text_con">
+                                    <div class="title">
+                                        일산차병원<br/>
+                                        이용시설
+                                    </div>
+                                    <div class="desc">
+                                        <span class="point0 fontweight_bold">산후조리원</span><br/>
+                                        산모와 아기 모두 건강하고 안전하도록,<br/>
+                                        최적화된 산후조리.호텔급 서비스를 제공합니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 facility_slide_arrow_con">
+                            <div class="facility_slide_arrow left"></div>
+                            <div class="facility_slide_arrow right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--staff-->
+            <div class="col-12 section" id="staff">
+                <div class="col-12 tc section_title">
+                    전문 의료진
+                </div>
+                <div class="col-12 staff_card_list_wrap">
+                    <div class="col-12 staff_card_list_con">
+                        <div class="col-6 staff_card_list">
+                            <div class="col-12 staff_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/staff_img_000.png" alt="홍길동 교수">
+                                </div>
+                                <div class="sub_title">
+                                    산부인과
+                                </div>
+                                <div class="title">
+                                    홍길동 교수
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 staff_card_list">
+                            <div class="col-12 staff_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/staff_img_001.png" alt="홍길동 교수">
+                                </div>
+                                <div class="sub_title">
+                                    산부인과
+                                </div>
+                                <div class="title">
+                                    홍길동 교수
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 staff_card_list">
+                            <div class="col-12 staff_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/staff_img_002.png" alt="홍길동 교수">
+                                </div>
+                                <div class="sub_title">
+                                    산부인과
+                                </div>
+                                <div class="title">
+                                    홍길동 교수
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 staff_card_list">
+                            <div class="col-12 staff_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/staff_img_003.png" alt="홍길동 교수">
+                                </div>
+                                <div class="sub_title">
+                                    산부인과
+                                </div>
+                                <div class="title">
+                                    홍길동 교수
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 tc">
+                    <div class="show more_btn_con">
+                        <a href="javascript:void(0)" class="more_btn">
+                            더보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--life-->
+            <div class="col-12 section" id="life">
+                <div class="col-12 tc section_title">
+                    <span class="point0">#</span>메디컬 <span class="point0">#</span>라이프 <span class="point0">#</span>산후조리원
+                </div>
+                <div class="col-12 life_card_list_wrap">
+                    <div class="col-12 life_card_list_con" id="lifeCardGrid">
+                        <div class="col-6 life_card_list">
+                            <div class="life_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/life_img_000.jpg" alt="최신시술">
+                                </div>
+                                <div class="sub_title">
+                                    최신시술
+                                </div>
+                                <div class="title">
+                                    면역관문억제제 병용 요법
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 life_card_list">
+                            <div class="life_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/life_img_001.jpg" alt="건강상식">
+                                </div>
+                                <div class="sub_title">
+                                    건강상식
+                                </div>
+                                <div class="title">
+                                    우리는 제대로 먹고 있을까?<br/>
+                                    새로 쓰는 식습관 공식
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 life_card_list">
+                            <div class="life_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/life_img_002.jpg" alt="이용후기">
+                                </div>
+                                <div class="sub_title">
+                                    이용후기
+                                </div>
+                                <div class="title">
+                                    친절한 의료진에 정말 마음<br/>
+                                    편안하게 산부인과에 다녀왔네요.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 life_card_list">
+                            <div class="life_card_list_inner">
+                                <div class="img_con">
+                                    <img src="../img/life_img_003.jpg" alt="질환이야기">
+                                </div>
+                                <div class="sub_title">
+                                    질환이야기
+                                </div>
+                                <div class="title">
+                                    규칙적이던 월경이 갑자기<br/>
+                                    멈췄다면? '무월경' 대처법
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 tc">
+                    <div class="show more_btn_con">
+                        <a href="javascript:void(0)" class="more_btn">
+                            더보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--footer-->
+        <footer class="col-12 footer_wrap">
+            <div class="col-12 footer_con">
+                <div class="col-12 footer_top_con">
+                    <div class="col-4">
+                        <div class="footer_btn_con">
+                            <a href="javascript:void(0)" class="footer_btn_inner">
+                                <span class="footer_btn_icon">
+                                    <img src="../img/footer_btn_000.png" alt="오시는길">
+                                </span>
+                                <span class="footer_btn">
+                                    오시는길
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer_btn_con">
+                            <a href="javascript:void(0)" class="footer_btn_inner">
+                                <span class="footer_btn_icon">
+                                    <img src="../img/footer_btn_001.png" alt="주요전화번호">
+                                </span>
+                                <span class="footer_btn">
+                                    주요전화번호
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer_lang_area">
+                            <a href="javascript:void(0)" class="footer_lang">언어선택</a>
+                            <ul class="footer_lang_list">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span>
+                                             <img src="../img/lang_eng.png" alt="">
+                                        </span>
+                                        <span> English</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span>
+                                            <img src="../img/lang_chi.png" alt="">
+                                        </span>
+                                        <span>
+                                            China
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="col-12 footer_quick_link_list_con">
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            환자권리장전
+                        </a>
+                    </li>
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            이용약관
+                        </a>
+                    </li>
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            개인정보처리방침
+                        </a>
+                    </li>
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            이메일 무단수집거부
+                        </a>
+                    </li>
+                </ul>
+                <div class="col-12 footer_desc">
+                    (410-380) 경기도 고양시 일산동구 장항동 889<br/>
+                    COPYRIGHT © 2019 CHAMC, ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </footer>
     </div>
 </div>

@@ -1,40 +1,48 @@
 $(function(){
 
-    var main_visual_slide = new Swiper('.main_visual_wrap .main_visual_slide_con', {
+    var main_visual_slide = new Swiper('.main_visual_wrap .main_visual_inner', {
         direction: 'horizontal' // 슬라이드 진행방향은 수평(vertical하면 수직으로 움직임)
         ,loop : true
-        ,speed : 1000
+        ,speed : 500
         ,mousewheelControl: false
         ,autoplay: {
-            delay: 5000,
-            disableOnInteraction: false, //사용자 상호 작용 후 자동 재생이 중지되지 않으며 매회 다시 시작
+            delay: 3000,
         }
         ,autoplayDisableOnInteraction: true // 인터렉션 이후 다시 오토 플레이
         , pagination: {
-            el: '.main_visual_wrap .main_visual_pagination.swiper-pagination',
+            el: '.main_visual_wrap .main_visual_pagination_wrap .pagination_con',
             type: 'bullets',
             clickable : true
         }
-        ,navigation: {
-            nextEl: '.main_visual_wrap .main_visual_slide_arrow.right',
-            prevEl: '.main_visual_wrap .main_visual_slide_arrow.left',
-        }
-        ,on : {
-            slideChangeTransitionStart : function() {
-                $('.main_visual_text_list').hide();
-                $('.main_visual_text_list').css('opacity', '0');
-                $($('.main_visual_text_list').find('h2')).css('opacity', '0');
-                $($('.main_visual_text_list').find('.h_desc2')).css('opacity', '0');
-                $($('.main_visual_text_list')[this.realIndex]).show();
-                $($('.main_visual_text_list')[this.realIndex]).css('opacity', '1');
+    });
 
-                //TweenMax.to($('.main_visual_text_list')[this.realIndex], 1, {ease: Sine.easeInOut,opacity:1});
-                TweenMax.to($($('.main_visual_text_list')[this.realIndex]).find('h2'), 1, {ease: Sine.easeInOut,opacity:1});
-                TweenMax.to($($('.main_visual_text_list')[this.realIndex]).find('.h_desc2'), 1, {ease: Sine.easeInOut,delay:1.3,opacity:1});
-            }
+    var main_facility_swiper = new Swiper('.facility_wrap .facility_slide_wrap', {
+        direction: 'horizontal' // 슬라이드 진행방향은 수평(vertical하면 수직으로 움직임)
+        ,loop : true
+        ,speed : 500
+        ,mousewheelControl: false
+        ,autoplayDisableOnInteraction: true // 인터렉션 이후 다시 오토 플레이
+        ,navigation: {
+            nextEl: '.facility_wrap .facility_slide_arrow.right',
+            prevEl: '.facility_wrap .facility_slide_arrow.left',
         }
     });
 
-    main_visual_slide.autoplay.start(); //자동 재생 시작
+    //footer
+    $('.footer_lang_area').on('click',function(){
+        if($('.footer_lang_list').hasClass('on')){
+            $('.footer_lang_list').removeClass('on');
+        }else{
+            $('.footer_lang_list').addClass('on');
+        }
+    })
 
 })
+
+$(document).ready(function() {
+    $("#lifeCardGrid").find("img").load(function(){
+        $("#lifeCardGrid").masonry({
+            itemSelector : ".life_card_list"
+        });
+    });
+});
