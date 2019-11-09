@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+.point0{color:#ff5d4e !important;}
+
 .btn_style_0_wrap{display: flex; align-items: center; justify-content: center;}
 .btn_style_0_wrap .btn_style_0_con{flex:1; margin-right: 8px;}
 .btn_style_0_wrap .btn_style_0_con:last-child{margin-right: 0;}
