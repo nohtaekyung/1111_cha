@@ -7,6 +7,7 @@
 .sub_contents_wrap h2{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
 .sub_contents_wrap h3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:700;}
 .sub_contents_wrap .h_desc3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#666666; font-weight:400;}
+.sub_contents_wrap .h_desc3.fontweight700{font-weight:700;}
 
 /* tab_style_0_con */
 .tab_style_0_con{overflow-x:auto;}
@@ -45,6 +46,7 @@
 .btn_style_0_con{}
 .btn_style_0_con .btn_style_0{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#fff; font-weight:400;
     display:block; padding-top:18px; padding-bottom:18px; background-color:#ff776a; width:100%; box-sizing: border-box; text-align: center;}
+.btn_style_0_con .btn_style_0.big{padding-top:43px; padding-bottom:43px;}
 
 .seperate_line_style_0{border-bottom:1px solid #cccccc; height:0;}
 .seperate_line_style_1{border-bottom:3px solid #ff5d4e; height:0;}
@@ -88,10 +90,11 @@
 .check_style_0_wrap .check_style_0_list_con > li{padding-top:29px; padding-bottom:23px; overflow: hidden; border-bottom:1px solid #cccccc;}
 .check_style_0_wrap .check_style_0_list_con > li:first-child{border-top:1px solid #cccccc;}
 .check_style_0_wrap .check_style_0_con{float:left; position: relative;}
-.check_style_0_wrap .check_style_0{display:none;}
-.check_style_0_wrap .check_style_0 + label{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:400;
+.check_style_0_con .check_style_0{display:none;}
+.check_style_0_con .check_style_0 + label{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:400;
     display:inline-block; vertical-align: middle; padding-left:44px;}
-.check_style_0_wrap .check_style_0 + label:after{content:""; position: absolute; top:1px; left:0; width:34px; height:34px;
+.check_style_0_con.fontweight700 .check_style_0 + label{font-weight: 700;}
+.check_style_0_con .check_style_0 + label:after{content:""; position: absolute; top:1px; left:0; width:34px; height:34px;
     background-image: url('../img/check_style_0.png'); background-repeat: no-repeat; background-position: center center;}
-.check_style_0_wrap .check_style_0:checked + label:after{background-image: url('../img/check_style_0_h.png');}
+.check_style_0_con .check_style_0:checked + label:after{background-image: url('../img/check_style_0_h.png');}
 .check_style_0_wrap .check_style_0_arrow{float:right; padding-top:7px; padding-bottom:13px; padding-left:15px; padding-right:15px;}
