@@ -39,6 +39,7 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 
 /*facility*/
 .section#facility{padding-bottom: 80px; background-image: url('../img/main_facility_bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;}
+.section#facility .facility_slide_line{position:absolute; top:0; right:0; width:171px; height: 9px; background-color: #ff5d4e; transition: width 0.2s;}
 .facility_slide_wrap{}
 .facility_slide_wrap .facility_slide_con{margin-bottom: 40px;}
 .facility_slide_wrap .facility_slide_list{}
@@ -46,7 +47,7 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .facility_slide_wrap .facility_slide_list .text_con{padding-left: 50px; padding-right: 50px;}
 .facility_slide_wrap .facility_slide_list .text_con .title{font-size:40px; font-size:4.0rem; line-height:50px; line-height:5.0rem; letter-spacing: -0.025em; font-weight: 600; color:#000; margin-bottom: 15px;}
 .facility_slide_wrap .facility_slide_list .text_con .desc{font-size:30px; font-size:3.0rem; line-height:42px; line-height:4.2rem; letter-spacing: -0.025em; font-weight: 400; color:#000;}
-.facility_slide_wrap .facility_slide_arrow_con{padding-left: 50px; padding-right: 50px;}
+.facility_slide_wrap .facility_slide_arrow_con{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; padding-left: 50px; padding-right: 50px;}
 .facility_slide_wrap .facility_slide_arrow{display: inline-block; width: 126px; height: 76px; background-color: #ff776a; background-position: center; background-repeat: no-repeat; margin-right: 20px; cursor: pointer;}
 .facility_slide_wrap .facility_slide_arrow:last-child{margin-right: 0;}
 .facility_slide_wrap .facility_slide_arrow.left{background-image: url('../img/facility_slide_left_arrow.png');}
@@ -60,6 +61,7 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .staff_card_list_con .staff_card_list{padding-left: 20px; margin-bottom: 20px;}
 .staff_card_list_con .staff_card_list_inner{text-align: center; padding-top: 50px; padding-bottom: 47px; padding-left: 36px; padding-right: 36px; border: 1px solid #ffb9b2; background-color: #fff9f4; box-shadow: 10px 10px 10px rgba(103,44,11,0.11);}
 .staff_card_list_con .staff_card_list_inner .img_con{border-radius: 50%; margin-bottom: 39px;}
+.staff_card_list_con .staff_card_list_inner .img_con > img{width: 252px;}
 .staff_card_list_con .staff_card_list_inner .sub_title{font-size:20px; font-size:2.0rem; line-height:26px; line-height:2.6rem; letter-spacing: -0.025em; font-weight: 600; color:#ff5d4e; margin-bottom: 2px;}
 .staff_card_list_con .staff_card_list_inner .title{font-size:24px; font-size:2.4rem; line-height:30px; line-height:3.0rem; letter-spacing: -0.025em; font-weight: 600; color:#000;}
 

@@ -16,6 +16,7 @@ $(function(){
         }
     });
 
+    var mainFacilityLineTop = 0;
     var main_facility_swiper = new Swiper('.facility_wrap .facility_slide_wrap', {
         direction: 'horizontal' // 슬라이드 진행방향은 수평(vertical하면 수직으로 움직임)
         ,loop : true
@@ -25,6 +26,19 @@ $(function(){
         ,navigation: {
             nextEl: '.facility_wrap .facility_slide_arrow.right',
             prevEl: '.facility_wrap .facility_slide_arrow.left',
+        }
+        ,on : {
+            init : function(){
+                mainFacilityLineTop = $($(this)[0].slides[0]).find('.text_con').position().top ;
+                mainFacilityLineTop += $($(this)[0].slides[0]).find('.text_con .title').height();
+                $('.facility_slide_line').css('top',mainFacilityLineTop);
+            },
+            slideChangeTransitionStart : function(){
+                $('.facility_slide_line').css('width',0);
+            },
+            slideChangeTransitionEnd : function(){
+                $('.facility_slide_line').css('width','171px');
+            }
         }
     });
 
