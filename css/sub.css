@@ -36,7 +36,8 @@
 .input_list{margin-bottom:10px;}
 .input_list:last-child{margin-bottom:0;}
 .input_style_0{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#000;
-    width:100%; box-sizing: border-box; border:1px solid #cccccc; height:64px; padding-top:10px; padding-bottom:12px; border-radius:0; background-color:#fff; padding-right:30px; padding-left:30px;}
+    width:100%; box-sizing: border-box; border:1px solid #cccccc; height:64px; padding-top:10px; padding-bottom:12px; border-radius:0; background-color:#fff; padding-right:30px; padding-left:30px;
+    -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 .input_style_0:-moz-placeholder{color:#999999;}
 .input_style_0:-ms-input-placeholder{color:#999999;}
 .input_style_0::-moz-placeholder{color:#999999;}
@@ -61,7 +62,8 @@
 .mypage_util_con .mypage_util_btn{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#333333; font-weight:400;
     display:block; padding-top:17px; padding-bottom:17px; border:1px solid #cccccc;}
 .mypage_util_con .mypage_util_btn_con.type_2 .mypage_util_btn{width:200px; margin-right:auto; margin-left:auto;}
-.mypage_util_con .mypage_util_btn_con.type_2 .mypage_util_btn.type_2{background-color:#ff776a; color:#fff;}
+.mypage_util_con .mypage_util_btn.type_2{background-color:#ff776a; color:#fff;}
+.mypage_util_con .mypage_util_btn_con.type_3 .mypage_util_btn{width:260px; margin-right:auto; margin-left:auto;}
 
 
 /* step_style_0_con */
