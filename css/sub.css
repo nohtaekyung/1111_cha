@@ -33,7 +33,7 @@
 .input_list{margin-bottom:10px;}
 .input_list:last-child{margin-bottom:0;}
 .input_style_0{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#000;
-    width:100%; box-sizing: border-box; border:1px solid #cccccc; height:64px; padding-top:10px; padding-bottom:10px; border-radius:0; background-color:#fff; padding-right:30px; padding-left:30px;}
+    width:100%; box-sizing: border-box; border:1px solid #cccccc; height:64px; padding-top:10px; padding-bottom:12px; border-radius:0; background-color:#fff; padding-right:30px; padding-left:30px;}
 .input_style_0:-moz-placeholder{color:#999999;}
 .input_style_0:-ms-input-placeholder{color:#999999;}
 .input_style_0::-moz-placeholder{color:#999999;}
