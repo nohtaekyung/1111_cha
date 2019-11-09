@@ -5,6 +5,8 @@
 .sub_contents_wrap{}
 .sub_contents_wrap .sub_contents_header_con{padding-top:30px; padding-bottom:33px;}
 .sub_contents_wrap h2{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
+.sub_contents_wrap h3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:700;}
+.sub_contents_wrap .h_desc3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#666666; font-weight:400;}
 
 /* tab_style_0_con */
 .tab_style_0_con{overflow-x:auto;}
@@ -52,8 +54,6 @@
 .mypage_util_con .mypage_util_list{overflow: hidden;}
 .mypage_util_con .mypage_util_list:after{content:""; position: absolute; height:calc(100% - 5px); border-left:1px solid #e5e5e5; top:5px; left:0;}
 .mypage_util_con .mypage_util_list:first-child:after{display:none;}
-.mypage_util_con .mypage_util_title{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:700;}
-.mypage_util_con .mypage_util_desc{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#666666; font-weight:400;}
 .mypage_util_con .mypage_util_icon{height:91px; line-height:91px;}
 .mypage_util_con .mypage_util_btn_con{}
 .mypage_util_con .mypage_util_btn{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#333333; font-weight:400;
