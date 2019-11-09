@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+/* sub_contents_wrap */
+.sub_contents_wrap{}
+.sub_contents_wrap .sub_contents_header_con{padding-top:30px; padding-bottom:33px;}
+.sub_contents_wrap h2{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
+
+/* tab_style_0_con */
+.tab_style_0_con{overflow-x:auto;}
+.tab_style_0_con .tab_style_0{width:calc(250px * 5);}
+.tab_style_0_con .tab_style_0 > li{width:250px; float:left; border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; box-sizing: border-box;}
+.tab_style_0_con .tab_style_0 > li:last-child{border-right:1px solid #cccccc;}
+.tab_style_0_con .tab_style_0 > li > a{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
+    display:block; padding-top:17px; padding-bottom:17px; box-sizing: border-box; background-color:#fff; text-align: center;}
+.tab_style_0_con .tab_style_0 > li.active{border-color:#ff776a;}
+.tab_style_0_con .tab_style_0 > li.active > a{background-color:#ff776a; color:#fff;}
+
+/* list_style_0_con */
+.list_style_0_con{}
+.list_style_0_con .list_style_0{}
+.list_style_0_con .list_style_0 > li{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#333333; font-weight:400;
+    padding-left:10px; box-sizing: border-box; position: relative; margin-bottom:16px;}
+.list_style_0_con .list_style_0 > li:last-child{margin-bottom:0;}
+.list_style_0_con .list_style_0 > li:after{content:""; position: absolute; top:16px; left:0; width:4px; height:4px; border-radius:50%; background-color:#333333;}
+
+/* form_style_0_con */
+.form_style_0_con{border-top:3px solid #ff5d4e; padding-top:30px;}
+.form_style_0_con .form_style_0{}
+
+
+/* input_list */
+.input_list{margin-bottom:10px;}
+.input_list:last-child{margin-bottom:0;}
+.input_style_0{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#000;
+    width:100%; box-sizing: border-box; border:1px solid #cccccc; height:64px; padding-top:10px; padding-bottom:10px; border-radius:0; background-color:#fff; padding-right:30px; padding-left:30px;}
+.input_style_0:-moz-placeholder{color:#999999;}
+.input_style_0:-ms-input-placeholder{color:#999999;}
+.input_style_0::-moz-placeholder{color:#999999;}
+.input_style_0::-webkit-input-placeholder{color:#999999;}
