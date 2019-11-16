@@ -1,5 +1,24 @@
-$(function(){
+$(document).ready(function() {
+    $("#lifeCardGrid").find("img").load(function(){
+        $("#lifeCardGrid").masonry({
+            itemSelector : ".life_card_list"
+        });
+    });
+});
 
+$(function(){
+    //footer
+    $('.footer_lang_area').on('click',function(){
+        if($('.footer_lang_list').hasClass('on')){
+            $('.footer_lang_list').removeClass('on');
+        }else{
+            $('.footer_lang_list').addClass('on');
+        }
+    })
+
+})
+
+$(window).load(function(){
     var main_visual_slide = new Swiper('.main_visual_wrap .main_visual_inner', {
         direction: 'horizontal' // 슬라이드 진행방향은 수평(vertical하면 수직으로 움직임)
         ,loop : true
@@ -41,22 +60,4 @@ $(function(){
             }
         }
     });
-
-    //footer
-    $('.footer_lang_area').on('click',function(){
-        if($('.footer_lang_list').hasClass('on')){
-            $('.footer_lang_list').removeClass('on');
-        }else{
-            $('.footer_lang_list').addClass('on');
-        }
-    })
-
 })
-
-$(document).ready(function() {
-    $("#lifeCardGrid").find("img").load(function(){
-        $("#lifeCardGrid").masonry({
-            itemSelector : ".life_card_list"
-        });
-    });
-});

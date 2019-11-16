@@ -57,3 +57,15 @@
 .header_btn_con .header_btn.tel > span{background-image: url('../img/header_tel_icon.png');}
 .header_btn_con .header_btn.map{background-color: #13426b;}
 .header_btn_con .header_btn.map > span{background-image: url('../img/header_map_icon.png');}
+
+.sub_header_wrap{}
+.sub_header_wrap .sub_header_con{height: 101px; background-color: #ff776a;}
+.sub_header_wrap .left_con{float:left; display: flex; align-items: center; width: calc(100% - 101px); height: 100%;
+    padding-left: 30px; padding-right: 30px; border-right:1px solid rgba(255,255,255,0.6); box-sizing: border-box;}
+.sub_header_wrap .left_con .home_icon_con{position: relative; padding-right: 25px; margin-right: 25px;}
+.sub_header_wrap .left_con .home_icon_con:after{content: ''; position: absolute; top:1px; right:0; height: 24px; border-right:1px solid rgba(255,255,255,0.5);}
+.sub_header_wrap .left_con .home_icon_con .home_icon{display: inline-block;}
+.sub_header_wrap .left_con .menu_con{flex:1; background-image: url('../img/sub_header_down_arrow.png'); background-size: 38px 20px; background-position: right 0px center; background-repeat: no-repeat;}
+.sub_header_wrap .left_con .menu_con .menu{font-size:32px; font-size:3.2rem; line-height:38px; line-height:3.8rem; font-weight: 600; color:#fff;}
+.sub_header_wrap .sns_btn_con{float:left; width: 101px; height: 100%;}
+.sub_header_wrap .sns_btn_con .sns_btn{display: block; width: 100%; height: 100%; background-image: url('../img/sns_icon.png'); background-repeat: no-repeat; background-size: 39px 36px; background-position: center;}

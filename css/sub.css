@@ -4,20 +4,36 @@
 /* sub_contents_wrap */
 .sub_contents_wrap{}
 .sub_contents_wrap .sub_contents_header_con{padding-top:30px; padding-bottom:33px;}
-.sub_contents_wrap h2{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
+.sub_contents_wrap h2{font-size:32px; font-size:3.2rem; line-height:38px; line-height:3.8rem; color:#111111; font-weight:700;}
+.mypage .sub_contents_wrap h2{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
 .sub_contents_wrap h3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:700;}
 .sub_contents_wrap .h_desc3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#666666; font-weight:400;}
 .sub_contents_wrap .h_desc3.fontweight700{font-weight:700;}
 
 /* tab_style_0_con */
 .tab_style_0_con{overflow-x:auto;}
-.tab_style_0_con .tab_style_0{width:calc(250px * 5);}
-.tab_style_0_con .tab_style_0 > li{width:250px; float:left; border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; box-sizing: border-box;}
+.tab_style_0_con .tab_style_0{display: table; table-layout: fixed; overflow: hidden; min-width:750px; width:100%;}
+.tab_style_0_con .tab_style_0 > li{display: table-cell; width:250px; /*float:left;*/ border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; box-sizing: border-box;}
 .tab_style_0_con .tab_style_0 > li:last-child{border-right:1px solid #cccccc;}
 .tab_style_0_con .tab_style_0 > li > a{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
     display:block; padding-top:17px; padding-bottom:17px; box-sizing: border-box; background-color:#fff; text-align: center;}
 .tab_style_0_con .tab_style_0 > li.active{border-color:#ff776a;}
 .tab_style_0_con .tab_style_0 > li.active > a{background-color:#ff776a; color:#fff;}
+
+.tab_style_0_con.type_2{}
+.tab_style_0_con.type_2 .tab_style_0 > li{border-top:none;}
+.tab_style_0_con.type_2 .tab_style_0 > li.active{border-color: #13426b;}
+.tab_style_0_con.type_2 .tab_style_0 > li.active > a{background-color:#13426b; color:#fff;}
+
+.tab_style_1_con{}
+.tab_style_1_con .tab_style_1{width:100%; overflow: hidden;}
+.tab_style_1_con .tab_style_1 > li{border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; box-sizing: border-box;}
+.tab_style_1_con .tab_style_1 > li:last-child{border-right:1px solid #cccccc;}
+.tab_style_1_con .tab_style_1 > li > a{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
+    display:block; padding-top:17px; padding-bottom:17px; box-sizing: border-box; background-color:#fff; text-align: center;}
+.tab_style_1_con .tab_style_1 > li.active{border-color:#ff5d4e;}
+.tab_style_1_con .tab_style_1 > li.active > a{background-color:#ffeeed; color:#ff5d4e;}
+.tab_style_1_con .tab_style_1 > li.active + li{border-left-color:#ff5d4e;}
 
 /* list_style_0_con */
 .list_style_0_con{}
@@ -43,12 +59,6 @@
 .input_style_0::-moz-placeholder{color:#999999;}
 .input_style_0::-webkit-input-placeholder{color:#999999;}
 
-/* btn_style_0_con */
-.btn_style_0_con{}
-.btn_style_0_con .btn_style_0{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#fff; font-weight:400;
-    display:block; padding-top:18px; padding-bottom:18px; background-color:#ff776a; width:100%; box-sizing: border-box; text-align: center;}
-.btn_style_0_con .btn_style_0.big{padding-top:43px; padding-bottom:43px;}
-
 .seperate_line_style_0{border-bottom:1px solid #cccccc; height:0;}
 .seperate_line_style_1{border-bottom:3px solid #ff5d4e; height:0;}
 
@@ -62,7 +72,7 @@
 .mypage_util_con .mypage_util_btn{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#333333; font-weight:400;
     display:block; padding-top:17px; padding-bottom:17px; border:1px solid #cccccc;}
 .mypage_util_con .mypage_util_btn_con.type_2 .mypage_util_btn{width:200px; margin-right:auto; margin-left:auto;}
-.mypage_util_con .mypage_util_btn.type_2{background-color:#ff776a; color:#fff;}
+.mypage_util_con .mypage_util_btn.type_2{background-color:#ff776a; border-color:#ff776a; color:#fff;}
 .mypage_util_con .mypage_util_btn_con.type_3 .mypage_util_btn{width:260px; margin-right:auto; margin-left:auto;}
 
 
@@ -100,3 +110,49 @@
     background-image: url('../img/check_style_0.png'); background-repeat: no-repeat; background-position: center center;}
 .check_style_0_con .check_style_0:checked + label:after{background-image: url('../img/check_style_0_h.png');}
 .check_style_0_wrap .check_style_0_arrow{float:right; padding-top:7px; padding-bottom:13px; padding-left:15px; padding-right:15px;}
+
+/*검색*/
+.search_style_0_con{}
+.search_style_0_con .input_style_0{width:calc(100% - 180px); padding-left: 20px; padding-right: 20px; margin-right: 10px;}
+.search_style_0_con .btn_style_0_con{width: 170px;}
+.search_style_0_con .btn_style_0_con .btn_style_0{height: 64px;}
+
+/*검색 nodata*/
+.nodata_wrap{}
+.nodata_wrap .nodata_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.025em; font-weight: 600; color:#111;}
+.nodata_wrap .nodata_list_con{}
+.nodata_wrap .nodata_list > li{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; font-weight: 400; color:#111; word-break: keep-all; margin-bottom: 8px;}
+.nodata_wrap .nodata_list > li:last-child{margin-bottom: 0;}
+
+/* 진료과 리스트 */
+.department_list_wrap{}
+.department_list_wrap .department_list_con{width:calc(100% + 15px); margin-left: -15px; margin-bottom: -15px;}
+.department_list_wrap .department_list{padding-left: 15px; margin-bottom: 15px; box-sizing: border-box;}
+.department_list_wrap .department_list_inner{position: relative; display: flex; align-items: center; justify-content: center; width:100%; height:220px; padding-bottom: 24px; border:1px solid #ffc5ab; background-color: #fef5f1; box-sizing: border-box;}
+.department_list_wrap .department_list_inner .img_con{}
+.department_list_wrap .department_list_inner .department_list_title{position: absolute; left:0; bottom:20px; width: 100%; font-size:22px; font-size:2.2rem; line-height:28px; line-height:2.8rem; letter-spacing: -0.025em; font-weight: 400; color:#333; text-align: center;}
+
+/*진료과 소개*/
+.intro_img_con{display: flex; flex-wrap: wrap; align-content: center; height: 360px; background-image: url('../img/intro_img_000.jpg'); background-repeat: no-repeat; background-position: center; padding-left: 30px; padding-right: 30px; box-sizing: border-box;}
+.intro_img_con .title{font-size:35px; font-size:3.5rem; line-height:60px; line-height:6.0rem; font-weight: 600; color:#ff5d4e;}
+.intro_img_con .title > span{border-bottom: 1px solid #ff5d4e;}
+.intro_img_con .tel{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; font-weight: 500; color:#666;}
+
+.intro_desc_con{}
+.intro_desc_con .intro_desc{font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; font-weight: 400; color:#666; word-break: keep-all; margin-bottom: 14px;}
+.intro_desc_con .intro_desc:last-child{margin-bottom: 0;}
+
+/*의료진 리스트*/
+.staff_list_con{}
+.staff_list_con .staff_list{padding-top: 66px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1; box-sizing: border-box;}
+.staff_list_con .staff_list:last-child{border-bottom:none; padding-bottom: 0;}
+.staff_list_con .staff_list_inner{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;}
+.staff_list_con .staff_list .img_con{display: inline-block; vertical-align: top; width: 127px;}
+.staff_list_con .staff_list .text_con{display: inline-block; vertical-align: top; width: calc(100% - 127px); padding-left: 22px; box-sizing: border-box;}
+.staff_list_con .staff_list .name{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.025em; font-weight: 600; color:#111; margin-bottom: 7px;}
+.staff_list_con .staff_list .department{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; letter-spacing: -0.025em; font-weight: 400; color:#111; word-break: keep-all; margin-bottom: 6px;}
+.staff_list_con .staff_list .desc{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; letter-spacing: -0.025em; font-weight: 400; color:#111; word-break: keep-all;}
+.staff_list_con .staff_list .info_con{border-top:3px solid #988f87;}
+.staff_list_con .staff_list .info_con tr{border-bottom: 1px solid #ccc;}
+.staff_list_con .staff_list .info_con td{height: 70px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;}
+
