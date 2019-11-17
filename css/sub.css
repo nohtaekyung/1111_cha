@@ -226,3 +226,11 @@
     -webkit-appearance: none; -moz-appearance: none; appearance: none;
     background-image: url('../img/select_style_0_arrow.png'); background-repeat: no-repeat; background-position: right 10px center;}
 .select_style_0.type_2{width:259px;}
+
+
+.user_name_box{padding-top:36px; padding-bottom:38px; background-color:#fef5f1; font-size:0; line-height:0;}
+.user_name_box .user_name_title{font-size:30px; line-height:36px; color:#666666; font-weight:400;}
+.user_name_box .user_name{font-size:30px; line-height:36px; color:#ff5d4e; font-weight:700;}
+
+.mypage_desc{font-size:28px; line-height:40px; color:#111111; font-weight:400;}
+.naver_color{color:#1bb400 !important;}
