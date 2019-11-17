@@ -48,8 +48,8 @@
 .list_style_1_con{}
 .list_style_1_con .list_style_1{}
 .list_style_1_con .list_style_1 > li{position: relative; font-size:26px; font-size:2.6rem; line-height:48px; line-height:4.8rem; letter-spacing: -0.025em; font-weight: 400; color:#666;
-    padding-left: 13px; box-sizing: border-box;}
-.list_style_1_con .list_style_1 > li:after{content:""; position: absolute; top:50%; left:0; margin-top:-2px; width:3px; height:3px; border-radius:50%; background-color:#666;}
+    padding-left: 13px; box-sizing: border-box; word-break: keep-all;}
+.list_style_1_con .list_style_1 > li:after{content:""; position: absolute; top:23px; left:0; width:3px; height:3px; border-radius:50%; background-color:#666;}
 
 .list_style_1_con .list_style_1.type_2 > li{display: inline-block; margin-right: 16px;}
 
@@ -184,11 +184,11 @@
 
 /*의료진 리스트*/
 .staff_list_con{}
-.staff_list_con .staff_list{padding-top: 66px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1; box-sizing: border-box;}
+.staff_list_con .staff_list{padding-top: 40px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1; box-sizing: border-box;}
 .staff_list_con .staff_list:last-child{border-bottom:none; padding-bottom: 0;}
 .staff_list_con .staff_list_inner{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem;}
 .staff_list_con .staff_list .img_con{display: inline-block; vertical-align: top; width: 127px;}
-.staff_list_con .staff_list .text_con{display: inline-block; vertical-align: top; width: calc(100% - 127px); padding-left: 22px; box-sizing: border-box;}
+.staff_list_con .staff_list .text_con{display: inline-block; vertical-align: top; width: calc(100% - 127px); padding-left: 22px; margin-top: 17px; box-sizing: border-box;}
 .staff_list_con .staff_list .name{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.025em; font-weight: 600; color:#111; margin-bottom: 7px;}
 .staff_list_con .staff_list .department{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; letter-spacing: -0.025em; font-weight: 400; color:#111; word-break: keep-all; margin-bottom: 6px;}
 .staff_list_con .staff_list .desc{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; letter-spacing: -0.025em; font-weight: 400; color:#111; word-break: keep-all;}
@@ -197,7 +197,6 @@
 .staff_list_con .staff_list .info_con td{height: 70px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;}
 
 /*질환별 찾기*/
-
 .keyword_wrap{display: flex; align-items: stretch;}
 .keyword_wrap .keyword_list_wrap{width:calc(100% - 160px); margin-right: 10px;}
 .keyword_wrap .keyword_list_con{width:calc(100% + 18px); font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-left: -18px; margin-bottom: -20px;}
@@ -206,14 +205,17 @@
 .keyword_wrap .keyword_list.active > a{background-color: #ff776a; border-color: #ff776a; color:#fff;}
 .keyword_wrap .search_reset_btn{display: inline-flex; align-items: center; justify-content: center; width: 150px; font-size:28px; font-size:2.8rem; line-height:38px; line-height:3.8rem; font-weight: 400; color:#111; text-align: center; border:1px solid #ccc;}
 
+.search_result_text{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; font-weight: 600; color:#111; padding-bottom:26px; border-bottom:1px solid #ccc; box-sizing: border-box;}
+.search_result_text > span{display: inline-block;}
+.search_result_text .num{border-bottom:2px solid #ff5d4e;}
 
 .disease_list_wrap{}
 .disease_list_wrap .disease_list_con{}
 .disease_list_wrap .disease_list_con > li{padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1;}
 .disease_list_wrap .disease_list_con > li.active{padding-bottom: 30px;}
 .disease_list_wrap .disease_list_con > li > a{display: block; padding-top: 36px; padding-bottom: 36px;;
-    background-image: url('../img/gnb_down_arrow.png'); background-repeat: no-repeat; background-size: 22px 12px; background-position:  right 0px center; box-sizing: border-box;}
-.disease_list_wrap .disease_list_con > li.active > a{border-bottom:1px solid #ccc; background-image: url('../img/gnb_up_arrow.png');}
+    background-image: url('../img/disease_list_down_arrow.png'); background-repeat: no-repeat; background-size: 22px 12px; background-position:  right 19px center; box-sizing: border-box;}
+.disease_list_wrap .disease_list_con > li.active > a{border-bottom:1px solid #ccc; background-image: url('../img/disease_list_up_arrow.png');}
 .disease_list_wrap .disease_list_con > li > a > span{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 600; color:#111;}
 .disease_list_wrap .disease_list_con > li > .list_style_1_con{display: none; margin-top: 27px;}
 
