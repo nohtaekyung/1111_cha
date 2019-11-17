@@ -238,9 +238,18 @@
 .select_style_0.type_2{width:259px;}
 
 
-.user_name_box{padding-top:36px; padding-bottom:38px; background-color:#fef5f1; font-size:0; line-height:0;}
-.user_name_box .user_name_title{font-size:30px; line-height:36px; color:#666666; font-weight:400;}
-.user_name_box .user_name{font-size:30px; line-height:36px; color:#ff5d4e; font-weight:700;}
+.user_name_box{padding-top:31px; padding-bottom:34px; background-color:#fef5f1; font-size:0; line-height:0;}
+.user_name_box .user_name_title{font-size:30px; line-height:42px; color:#666666; font-weight:400;}
+.user_name_box .user_name{font-size:30px; line-height:42px; color:#ff5d4e; font-weight:700;}
 
 .mypage_desc{font-size:28px; line-height:40px; color:#111111; font-weight:400;}
 .naver_color{color:#1bb400 !important;}
+
+.id_find_box_con{}
+.id_find_box_con .id_find_box_title{font-size:26px; line-height:32px; color:#333333; font-weight:400;}
+.id_find_box_con .id_find_list{font-size:0; line-height:0; margin-bottom:11px;}
+.id_find_box_con .id_find_list:last-child{margin-bottom:0;}
+.id_find_box_con .id_find_title{font-size:30px; line-height:36px; color:#555555; font-weight:400;
+    width:153px; height:64px; display:inline-block; vertical-align: middle; text-align: center; background-color:#f6f6f6; padding-top:15px; box-sizing: border-box;}
+.id_find_box_con .id_find_contents{font-size:30px; line-height:36px; color:#555555; font-weight:400;
+    width:calc(100% - 155px); height:64px; margin-left:2px; display:inline-block; vertical-align: middle; text-align: left; background-color:#f6f6f6; padding-top:15px; box-sizing: border-box; padding-left:30px;}
