@@ -167,14 +167,14 @@
         <div class="col-12 sub_header_wrap">
             <div class="col-12 sub_header_con">
                 <div class="left_con">
-                    <div class="home_icon_con">
+                    <div class="home_icon_con hidden">
                         <a href="javascript:void(0)" class="home_icon">
                             <img src="../img/home_icon.png" alt="home">
                         </a>
                     </div>
                     <div class="menu_con">
                         <div class="menu">
-                            진료과별 FAQ
+                            1:1전문의상담
                         </div>
                     </div>
                 </div>
@@ -188,19 +188,19 @@
         <div class="col-12 sub_contents_wrap">
             <div class="col-12 tab_style_0_con type_2">
                 <ul class="tab_style_0">
+                    <li>
+                        <a href="javascript:void(0)">
+                            진료과별 상담
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            전문분야별 상담
+                        </a>
+                    </li>
                     <li class="active">
                         <a href="javascript:void(0)">
-                            산부인과 FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            소아청소년과 FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            비뇨기과 FAQ
+                            이용안내 FAQ
                         </a>
                     </li>
                 </ul>
@@ -209,18 +209,14 @@
             <div class="col-12 pb50">
                 <div class="col-12 pt50 pb50 pl30 pr30">
                     <div class="col-12">
-                        <div class="col-12 mb20 select_style_0_wrap">
-                            <select name="department_select" id="departmentSelect" class="select_style_0">
-                                <option value="" selected>전체</option>
-                                <option value="">임신초기</option>
-                                <option value="">임신중기,말기</option>
-                                <option value="">부인과</option>
-                            </select>
-                        </div>
                         <div class="col-12 search_style_0_con">
+                            <select name="faq_type_select" id="faqTypeSelect" class="col-0 mr10 select_style_0 width150">
+                                <option value="" selected>제목</option>
+                                <option value="">내용</option>
+                            </select>
                             <input type="text" placeholder="키워드를 입력해주세요." class="col-0 input_style_0">
                             <div class="col-0 btn_style_0_con width150">
-                                <a href="javascript:void(0)" class="btn_style_0">
+                                <a href="javascript:void(0)" class="btn_style_0 gray">
                                     검색
                                 </a>
                             </div>
@@ -232,34 +228,38 @@
                     <ul class="col-12 faq_list_con" data-wv-slide-list>
                         <li class="active">
                             <a href="javascript:void(0)">
-                                <span>불임검사의 종류는 어떤것이 있으며 언제<br/>내원해야 하나요?</span>
+                                <span>상담 신청을 하려면 어떻게 해야 하나요?</span>
                             </a>
                             <div class="desc_con" style="display: block;">
                                 <div class="desc">
-                                    병원을 방문하는 시기는 생리 시작 3일째가 가장 좋습니다.<br/>
-                                    <span class="point_blue">① 기본적인 건강을 체크</span><br/>
-                                    혈압, 체중, 일반혈액 검사, 소변검사, 성병검사, 당뇨병, 간과 신장 기능검사,심전도. 흉부 X-선 촬영 등을 하게 되며, 과거 질병의 유무에 따라 조절됩니다.<br/>
-                                    <span class="point_blue">② 호르몬 검사</span><br/>
-                                    생리시작 2-3일째 시행합니다. 혈액으로 검사 하게 되며, 임신에 관여하는 호르몬을 검사합니다.<br/>
-                                    <span class="point_blue">③ 질식 자궁초음파</span><br/>
-                                    난소와 자궁의 전반적인 상태를 파악하며, 생리양이 많은 날만 아니면 시기와 관계없이 가능합니다.<br/>
-                                    <span class="point_blue">④ 자궁 난관 조영촬영</span><br/>
-                                    월경이 완전히 끝나고 2-3일안에 시행하며 자궁강의 상태와난관이 뚫려있는지를 확인합니다.<br/>
-                                    <span class="point_blue">⑤ 배란 초음파</span><br/>
-                                    월경 11-12일째부터 검사를 시작하여 배란 확인 시기까지 시행하며, 난포의성장 및 성숙한 난포의 숫자와 배란의 유무를 확인합니다.<br/>
-                                    <span class="point_blue">⑥ 정액 검사</span><br/>
-                                    불임 검사를 시작 시에 여성과 함께 시행하며, 금욕기간(부부관계 안하는 기간)을 3-4일 정도 두고 검사해 보시는 것이 좋습니다.
+                                    <span class="point_blue">１. 진료과를 선택합니다.</span><br/>
+                                    본 통합홈페이지에서의 건강 상담을 하시려면, 실제 병원의 진료과를 선택하듯이 먼저 본인에게 맞는 진료과를 선택합니다.<br/>
+                                    <span class="point_blue">2. 해당과 각 전문의의 ‘상담대기 건수’와 '상담중 / 부재중' 여부를 확인합니다. </span><br/>
+                                    현재 상담이 많이 예약되어 있지 않은 상담의께 상담을 의뢰하시면 보다 빠른 답변을 얻을 수 있습니다.<br/>
+                                    또한 본 상담실은 상담의의 진료상황에 따라 잠시 온라인 휴진(부재중)을 할 수 있습니다.<br/>
+                                    <span class="point_blue">3. ‘상담신청하기’버튼을 클릭합니다.</span><br/>
+                                    상담을 원하는 전문의에게 상담신청 '글쓰기’를 클릭합니다.<br/>
+                                    <span class="point_blue">4. 공개/비공개 선택합니다.</span><br/>
+                                    상담내용을 공개할 경우 같은 고민을 가지신 분들과 정보를 공유할 수 있으며, 공개를 선택하더라고 닉네임으로 공개되므로 개인의 신상정보는 절대 알려지지 않습니다. 단, 상담실에 따라 '공개전용 / 비공개전용' 상담실로 운영되고 있사오니 참조하시기 바랍니다.<br/>
+                                    <span class="point_blue">5. ‘상담전 기본항목'을 꼼꼼히 작성합니다.</span><br/>
+                                    작성자와 관련된 사항이 아닌 환자와 관련된 건강상태와 관련된 기본 사항을 사실에 근거하여 작성하여 주시기 바랍니다.<br/>
+                                    <span class="point_blue">6. 닉네임/상담제목/상담내용을 작성합니다.</span><br/>
+                                    실제 상담하고자 하는 내용을 상세히 작성한 후 '글 올리기'를 클릭하시면, 상담이 완료됩니다.
                                 </div>
                             </div>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
-                                <span>배란일을 알고 싶은데 언제 병원에 방문하면<br/>좋을까요? </span>
+                                <span>상담답변은 어떻게 확인할 수 있나요?</span>
                             </a>
                             <div class="desc_con">
                                 <div class="desc">
-                                    과배란 유도를 하지 않고, 자연주기에서 배란일만 확인하려면,
-                                    (생리주기 28~30일로 가정) 생리시작 11~12일째부터 내원하시면 됩니다.
+                                    <span class="point_blue">1. 해당 진료과 해당 상담의 게시판에서 직접 확인 할 수 있습니다.</span><br/>
+                                    비공개 상담의 경우 질문하신 ID와 PW가 반드시 일치해야만 답글을 확인할 수 있습니다.<br/>
+                                    <span class="point_blue">2. 화면 우측의 My Page 내에서 확인 할 수 있습니다.</span><br/>
+                                    로그인후, My Page 내의 "주치의 상담현황"에서 확인할 수 있습니다.<br/>
+                                    [답변대기] 새로운 질문에 대해 답변이 등록되지 않은 상태입니다<br/>
+                                    [답변완료] 질문에 대한 답변이 완료된 상태입니다. 게시물을 클릭하시면 바로 답변을 확인할 수 있습니다.<br/>
                                 </div>
                             </div>
                         </li>

@@ -2,10 +2,11 @@
 
 .point0{color:#ff5d4e !important;}
 
+.desc_font_0{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; font-weight: 400; color:#111;}
+
 .hr_style_0{border-bottom:2px solid #ff5d4e;}
 .hr_style_0.width60{width:60px;}
 .hr_style_1{border-bottom:15px solid #f1f1f1;}
-
 
 .btn_style_0_wrap{display: flex; align-items: center; justify-content: center;}
 .btn_style_0_wrap .btn_style_0_con{flex:1; margin-right: 8px;}
