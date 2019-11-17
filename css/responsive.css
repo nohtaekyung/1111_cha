@@ -3,7 +3,7 @@
 
 /* CSS Document */
 .wrapper {height: auto; min-height: 100%;}
-html *, body * {transition: color, background-color, border-color .3s;}
+html *, body * {transition: color .3s, background-color .3s, border-color .3s;}
 
 
 /* 12 grid bg 관련 css */

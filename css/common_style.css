@@ -49,7 +49,7 @@ u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbo
 caption {text-indent:-10000px;}
 html { font-size: 10px; }
 html, body {margin: 0; padding: 0; width: 100%; height: 100%;}
-body {background-color:#fff; color:#000; font-weight: 400; font-family:"Noto Sans KR", Sans-serif;}
+body {background-color:#fff; color:#111; font-weight: 400; font-family:"Noto Sans KR", Sans-serif;}
 input, button, textarea {font-family: inherit; font-size:1.2rem; color:#000;}
 h1, h2, h3, h4, h5, h6 {letter-spacing: 0; font-weight:normal;}
 img, fieldset, iframe {border:0 none;}

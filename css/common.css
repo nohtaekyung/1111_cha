@@ -18,6 +18,9 @@
 
 
 .select_style_0_wrap{}
-.select_style_0_wrap .select_style_0{width: 100%; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;
+.select_style_0{width: 100%; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;
     border:1px solid #ccc; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; padding-top:13px; padding-bottom: 15px; padding-left:17px; padding-right: 20px;
     background-image: url('../img/select_style_0_arrow.png'); background-repeat: no-repeat; background-size: 22px 12px; background-position: right 20px center; box-sizing: border-box;}
+.select_style_0.type_2{background-position: right 10px center;}
+.select_style_0.width150{width: 150px;}
+.select_style_0.width259{width: 259px;}

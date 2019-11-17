@@ -44,6 +44,15 @@
 .list_style_0_con .list_style_0 > li:last-child{margin-bottom:0;}
 .list_style_0_con .list_style_0 > li:after{content:""; position: absolute; top:20px; left:0; width:4px; height:4px; border-radius:50%; background-color:#333333;}
 
+/*list_style_1_con*/
+.list_style_1_con{}
+.list_style_1_con .list_style_1{}
+.list_style_1_con .list_style_1 > li{position: relative; font-size:26px; font-size:2.6rem; line-height:48px; line-height:4.8rem; letter-spacing: -0.025em; font-weight: 400; color:#666;
+    padding-left: 13px; box-sizing: border-box;}
+.list_style_1_con .list_style_1 > li:after{content:""; position: absolute; top:50%; left:0; margin-top:-2px; width:3px; height:3px; border-radius:50%; background-color:#666;}
+
+.list_style_1_con .list_style_1.type_2 > li{display: inline-block; margin-right: 16px;}
+
 /* form_style_0_con */
 .form_style_0_con{border-top:3px solid #ff5d4e; padding-top:30px; border-bottom:3px solid #ff5d4e; padding-bottom:30px;}
 .form_style_0_con .form_style_0{}
@@ -67,12 +76,6 @@
 .input_style_1:-ms-input-placeholder{color:#999999;}
 .input_style_1::-moz-placeholder{color:#999999;}
 .input_style_1::-webkit-input-placeholder{color:#999999;}
-
-/* btn_style_0_con */
-.btn_style_0_con{}
-.btn_style_0_con .btn_style_0{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#fff; font-weight:400;
-    display:block; padding-top:18px; padding-bottom:18px; background-color:#ff776a; width:100%; box-sizing: border-box; text-align: center;}
-.btn_style_0_con .btn_style_0.big{padding-top:43px; padding-bottom:43px;}
 
 .seperate_line_style_0{border-bottom:1px solid #cccccc; height:0;}
 .seperate_line_style_1{border-bottom:3px solid #ff5d4e; height:0;}
@@ -148,9 +151,10 @@
     background-color: #ff5d4e; border-color:#ff5d4e;}
 
 /*검색*/
-.search_style_0_con{}
-.search_style_0_con .input_style_0{width:calc(100% - 180px); padding-left: 20px; padding-right: 20px; margin-right: 10px;}
+.search_style_0_con{display: flex; align-items: center;}
+.search_style_0_con .input_style_0{flex:1; width:auto; padding-left: 20px; padding-right: 20px; margin-right: 10px;}
 .search_style_0_con .btn_style_0_con{width: 170px;}
+.search_style_0_con .btn_style_0_con.width150{width: 150px;}
 .search_style_0_con .btn_style_0_con .btn_style_0{height: 64px;}
 
 /*검색 nodata*/
@@ -192,6 +196,28 @@
 .staff_list_con .staff_list .info_con tr{border-bottom: 1px solid #ccc;}
 .staff_list_con .staff_list .info_con td{height: 70px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;}
 
+/*질환별 찾기*/
+
+.keyword_wrap{display: flex; align-items: stretch;}
+.keyword_wrap .keyword_list_wrap{width:calc(100% - 160px); margin-right: 10px;}
+.keyword_wrap .keyword_list_con{width:calc(100% + 18px); font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; margin-left: -18px; margin-bottom: -20px;}
+.keyword_wrap .keyword_list{display: inline-block; width:calc(100% / 7); padding-left: 18px; margin-bottom: 20px; box-sizing: border-box;}
+.keyword_wrap .keyword_list > a{display: flex; align-items: center; justify-content: center; height: 60px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; font-weight: 400; color:#111; border:1px solid #ccc; box-sizing: border-box;}
+.keyword_wrap .keyword_list.active > a{background-color: #ff776a; border-color: #ff776a; color:#fff;}
+.keyword_wrap .search_reset_btn{display: inline-flex; align-items: center; justify-content: center; width: 150px; font-size:28px; font-size:2.8rem; line-height:38px; line-height:3.8rem; font-weight: 400; color:#111; text-align: center; border:1px solid #ccc;}
+
+
+.disease_list_wrap{}
+.disease_list_wrap .disease_list_con{}
+.disease_list_wrap .disease_list_con > li{padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1;}
+.disease_list_wrap .disease_list_con > li.active{padding-bottom: 30px;}
+.disease_list_wrap .disease_list_con > li > a{display: block; padding-top: 36px; padding-bottom: 36px;;
+    background-image: url('../img/gnb_down_arrow.png'); background-repeat: no-repeat; background-size: 22px 12px; background-position:  right 0px center; box-sizing: border-box;}
+.disease_list_wrap .disease_list_con > li.active > a{border-bottom:1px solid #ccc; background-image: url('../img/gnb_up_arrow.png');}
+.disease_list_wrap .disease_list_con > li > a > span{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 600; color:#111;}
+.disease_list_wrap .disease_list_con > li > .list_style_1_con{display: none; margin-top: 27px;}
+
+
 
 
 /* board_style_0_contents */
@@ -230,12 +256,6 @@
 .btn_style_2_con .btn_style_2.type_2{width:230px;}
 .essential{position: relative; padding-left: 16px;}
 .essential::after{content: '*'; position:absolute; top:1px; left:0; font-size:23px; font-size:2.3rem; line-height:29px; line-height:2.9rem; letter-spacing: 0.02em; font-weight: 300; color:#f14c96;}
-
-.select_style_0{font-size:28px; line-height:34px; font-weight:400; color:#555555;
-    border:1px solid #cccccc; width:150px; height:64px; border-radius:0; overflow: hidden; box-sizing: border-box; padding-left:20px; padding-right:20px;
-    -webkit-appearance: none; -moz-appearance: none; appearance: none;
-    background-image: url('../img/select_style_0_arrow.png'); background-repeat: no-repeat; background-position: right 10px center;}
-.select_style_0.type_2{width:259px;}
 
 
 .user_name_box{padding-top:31px; padding-bottom:34px; background-color:#fef5f1; font-size:0; line-height:0;}
