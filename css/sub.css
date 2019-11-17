@@ -225,10 +225,22 @@
     background-image: url('../img/disease_list_down_arrow.png'); background-repeat: no-repeat; background-size: 22px 12px; background-position:  right 19px center; box-sizing: border-box;}
 .disease_list_wrap .disease_list_con > li.active > a{border-bottom:1px solid #ccc; background-image: url('../img/disease_list_up_arrow.png');}
 .disease_list_wrap .disease_list_con > li > a > span{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 600; color:#111;}
-.disease_list_wrap .disease_list_con > li > .list_style_1_con{display: none; margin-top: 27px;}
+.disease_list_wrap .disease_list_con > li > .desc_con{display: none; margin-top: 27px;}
 
-
-
+/*faq*/
+.faq_list_wrap{}
+.faq_list_wrap .faq_list_con{}
+.faq_list_wrap .faq_list_con > li{padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1;}
+.faq_list_wrap .faq_list_con > li.active{padding-bottom: 30px;}
+.faq_list_wrap .faq_list_con > li > a{display: block; padding-top: 36px; padding-bottom: 36px;;
+    background-image: url('../img/disease_list_down_arrow.png'); background-repeat: no-repeat; background-size: 22px 12px; background-position:  right 19px top 50px; box-sizing: border-box;}
+.faq_list_wrap .faq_list_con > li.active > a{border-bottom:1px solid #ccc; background-image: url('../img/disease_list_up_arrow.png');}
+.faq_list_wrap .faq_list_con > li > a > span{position: relative; display: inline-block; font-size:30px; font-size:3.0rem; line-height:42px; line-height:4.2rem; letter-spacing: -0.025em; font-weight: 600; color:#111; padding-left: 37px; box-sizing: border-box;}
+.faq_list_wrap .faq_list_con > li > a > span:after{content: 'Q.'; position: absolute; top:5px; left:0; font-size:22px; font-size:2.2rem; line-height:28px; line-height:2.8rem; font-weight: 600; color:#ff5d4e;}
+.faq_list_wrap .faq_list_con > li > .desc_con{display: none; margin-top: 27px;}
+.faq_list_wrap .faq_list_con > li .desc{position: relative; font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; font-weight: 400; color:#111; word-break: keep-all; padding-left: 37px; box-sizing: border-box;}
+.faq_list_wrap .faq_list_con > li .desc:after{content: 'A.'; position: absolute; top:9px; left:0; font-size:22px; font-size:2.2rem; line-height:28px; line-height:2.8rem; font-weight: 600; color:#ff5d4e;}
+.faq_list_wrap .faq_list_con > li .desc .point_blue{color:#13426b; font-weight: 600;}
 
 /* board_style_0_contents */
 .board_style_0_contents{}
