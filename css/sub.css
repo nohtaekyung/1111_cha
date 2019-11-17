@@ -139,13 +139,13 @@
 /* check_style_1_wrap */
 .check_style_1_wrap{}
 .check_style_1_wrap .check_style_1_con{position: relative;}
-.check_style_1_wrap .check_style_1{width:35px; height:35px; position: absolute; top:0; left:0; opacity: 0;}
+.check_style_1_wrap .check_style_1{width:35px; height:35px; display: none;}
 .check_style_1_wrap .check_style_1 + label{font-size:26px; line-height:35px; color:#666666; font-weight:400;
     display:inline-block; vertical-align: middle; padding-left:54px;}
 .check_style_1_wrap .check_style_1 + label:after{content:""; position: absolute; top:0px; left:0; width:35px; height:35px;
     border:2px solid #999999; background-color:#fff; box-sizing: border-box;}
 .check_style_1_wrap .check_style_1:checked + label:after{background-image: url('../img/check_style_1.png'); background-repeat: no-repeat; background-position: center center;
-    background-color: #ff5d4e;}
+    background-color: #ff5d4e; border-color:#ff5d4e;}
 
 /*검색*/
 .search_style_0_con{}
