@@ -1,0 +1,1765 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <title>일산차병원 워크시트</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <style type="text/css">
+            * {margin:0; padding:0;}
+            body {background-color:#fff; font-family:"맑은 고딕", san-serif; padding:20px;}
+            h1 {font-size:24px; margin-bottom:10px;}
+            .note {overflow:hidden; background-color:#eee; border:2px dashed #666; margin-bottom:20px; padding:10px;}
+            .note ul {overflow:hidden; padding-left:15px;}
+            .note ul li {list-style:bullet; font-size:12px; line-height:1.5em;}
+
+            .status {overflow:hidden; margin-bottom:10px;}
+            .status {overflow:hidden;}
+            .status li {float:left; list-style:none; margin-left:5px;}
+            .status li:first-child {margin-left:0;}
+            .status li a {display:block; font-size:11px; text-decoration:none; padding-right:5px; padding-left:5px; height:18px;}
+            .status li a:hover {background-color:#dfb8b6; color:#fff;}
+            .dn { display:none; }
+
+            section {overflow:hidden;}
+            table {width:100%; border-collapse:collapse; table-layout:fixed;}
+            th, td {word-break:break-all;}
+            tbody .end td {background-color:#ddd;}
+            tbody .later { background-color:#34599d; }
+            tbody .later.end td { background-color:#34599d; }
+            tbody .later2 { background-color:#34599d; display:none !important; }
+            tbody .modify td {background-color:#e8e9f6;}
+            tbody .mod td {background-color:#e8e9f6;}
+            tbody .mod2 td {background-color:#D2FFD2;}
+            tbody .mod3 td {background-color:lightblue;}
+            tbody .mod4 td {background:#FFD4DF;}
+            tbody .mod5 td {background-color:#FFC846;}
+            thead th {background-color:#dcdcdc; color:#333; border:1px solid #666; font-size:12px; padding-top:5px; padding-bottom:5px;}
+            tbody td {border:1px solid #666; font-size:12px; padding:3px 6px;}
+            tbody td.start {color:#10be31; font-weight:bold;}
+            tbody td.name {color:#555;}
+            tbody td.end {color:#ff6028; font-weight:bold;}
+            tbody td.status {color:#0f8ce4; font-weight:bold;}
+            tbody .center {text-align:center; padding-left:0;}
+            tbody .depth01 {font-weight:bold; text-align:center; padding-left:0;}
+            tbody .due{color:#a0a0a0; text-align:left; padding-left:10px}
+            tbody .due p{border-top:2px solid #a0a0a0; padding:5px;}
+            tbody .due p:first-child{border-top:0}
+            tbody a {text-decoration:none;}
+            tbody a:hover {text-decoration:underline;}
+            td.link{cursor:pointer;}
+            th:nth-child(1), td:nth-child(1) {width:10%;}
+            th:nth-child(2), td:nth-child(2) {width:10%;}
+            th:nth-child(3), td:nth-child(3) {width:14%;}
+            th:nth-child(4), td:nth-child(4) {width:5%; padding:3px 2px; }
+            th:nth-child(5), td:nth-child(5) {width:16%;}
+            th:nth-child(6), td:nth-child(6) {width:3%;}
+            th:nth-child(7), td:nth-child(7) {width:3%;}
+            th:nth-child(8), td:nth-child(8) {width:6%;}
+            th:nth-child(9), td:nth-child(9) {width:6%;}
+            .through { text-decoration:line-through; }
+
+            /* MOBILE */
+            @media screen and (max-width:768px){
+                body {padding:10px;}
+                h1 {font-size:16px;}
+                .note {display:none; overflow:hidden; line-height:0; height:0; width:0;}
+                table tbody tr td {font-size:13px;}
+                th:nth-child(6), th:nth-child(8), th:nth-child(9), th:nth-child(10), th:nth-child(11), th:nth-child(12), td.center {display:none; overflow:hidden; line-height:0; height:0; width:0;}
+                th:nth-child(4) { display:table-cell; }
+
+                th:nth-child(1), td:nth-child(1) {width:16%;}
+                th:nth-child(2), td:nth-child(2) {width:16%;}
+                th:nth-child(3), td:nth-child(3) {width:16%;}
+                th:nth-child(4), td:nth-child(4) {width:16%; display:table-cell !important; }
+                th:nth-child(5), td:nth-child(5) {width:20%;}
+                th:nth-child(7), td:nth-child(7) {width:16%; display:table-cell !important; }
+            }
+
+            /* MENU:HOVER_COLOR */
+            table tbody tr.menu01:hover td {background-color:#A7EEFF;}
+            table tbody tr.menu02:hover td {background-color:#9DF0E1;}
+            table tbody tr.menu03:hover td {background-color:#FFD4DF;}
+            table tbody tr.menu04:hover td {background-color:#D2FFD2;}
+            table tbody tr.menu05:hover td {background-color:#FFDCFF;}
+            table tbody tr.menu06:hover td {background-color:#FAFA96;}
+            table tbody tr.menu07:hover td {background-color:#FFC846;}
+            table tbody tr.menu08:hover td {background-color:#FFE4B5;}
+            table tbody tr.menu09:hover td {background-color:#A5E3E6;}
+            table tbody tr.menu10:hover td {background-color:#d4e4f5;}
+            table tbody tr.menu11:hover td {background-color:#41ffb7;}
+            table tbody tr.menu12:hover td {background-color:#f288af;}
+            table tbody tr.menu13:hover td {background-color:#7fb2f0;}
+            table tbody tr.menu14:hover td {background-color:#eddfaf;}
+            table tbody tr.later:hover td {background-color:#34599d;}
+
+            /*layer 팝업 완료시 color 변경색 추가*/
+            tbody .layer td {background-color:lightblue;}
+
+            .filters { width:100%; text-align:center; padding:20px 0; background:#fcfcfc; border-top:1px dashed #eee; border-bottom:1px dashed #ccc; margin-bottom:40px; }
+            .filters li { display:inline-block; list-style:none; }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $('.link').on('click', function(){
+                    var tg = 'html/' + $(this).text() + '.html';
+                    if(tg == ''){
+                    }else{
+                        window.open(''+tg+'','_blank')
+                    }
+                    // if( $(this).parents().hasClass("later") ){
+                    //     alert("1차 오픈 이후 코딩");
+                    // } else {
+                    // }
+                });
+                $(".filters :checkbox").click(function() {
+                   var re = new RegExp($(".filters :checkbox:checked").map(function() {
+                        return this.value;
+                    }).get().join("|") );
+                   $("tbody tr").each(function() {
+                      var $this = $(this);
+                      $this[re.source!="" && re.test($this.attr("class")) ? "show" : "hide"]();
+                   });
+                });
+                var page = $(".table tbody tr").length;
+                var page2 = $("tr.end").length;
+                var page3 = $(".c3").length;
+                var page4 = $(".c4").length;
+                var count = page - page2;
+                // console.log(count);
+                $(".page").text(page);
+                $(".page2").text(count);
+                $(".page3").text(page3);
+                $(".page4").text(page4);
+            })
+        </script>
+    </head>
+    <body>
+        <h1>일산차병원 워크시트 PC</h1>
+        <div class="note">
+            <ul>
+                <li><strong>파일리스트의 메뉴는 항상 최신 버전으로 유지 합니다.</strong></li>
+                <li>해당 파일리스트는 직군별 협업을 위해 작성 되었습니다.</li>
+                <li><strong>프로젝트 관련 퍼블리셔 외 파일리스트 수정을 금지합니다.</strong></li>
+                <li>파일의 경로는 상대경로로 작업 합니다.</li>
+                <li><strong>전체적으로 스타일을 변경합니다.</strong></li>
+                <li><strong>1차오픈만 공개하여놨습니다.</strong></li>
+                <li>page 개수 : <span class="page"></span> 개</li>
+                <li>남은 page 개수 : <span class="page2"></span> 개</li>
+                <li>1차 오픈 : <span class="page3"></span> 개</li>
+                <li>2차 오픈 : <span class="page4"></span> 개</li><br>
+                <li><strong>업데이트 관리자:</strong> <span>최수진</span></li>
+            </ul>
+        </div>
+        <a href="pub_list.html" style="font-size: 12px;text-decoration: none;">Mobile</a>
+        <br><br>
+        <section class="filter_wrap">
+            <ul class="filters">
+                <li>
+                    <input type="checkbox" value="c1" id="filter-c1" />
+                    <label for="filter-c1">완료</label>
+                </li>
+                <li>
+                    <input type="checkbox" value="c2" id="filter-c2" />
+                    <label for="filter-c2">수정</label>
+                </li>
+                <li>
+                    <input type="checkbox" value="c3" id="filter-c3" />
+                    <label for="filter-c3">1차</label>
+                </li>
+                <li>
+                    <input type="checkbox" value="c4" id="filter-c4" />
+                    <label for="filter-c4">2차</label>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">1DEPTH</th>
+                        <th scope="col">2DEPTH</th>
+                        <th scope="col">3DEPTH</th>
+                        <th scope="col">TYPE</th>
+                        <th scope="col">LINK</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">STATUS</th>
+                        <th scope="col">START</th>
+                        <th scope="col">COMPLETE</th>
+                        <th scope="col">etc</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr class="menu00">class="menu01~menu13", 작업완료 후 class="end" 추가
+                            <td class="depth01">가이드</td>
+                            <td></td>
+                            <td></td>
+                            <td class="center"></td>팝업 or tab
+                            <td class="link">guide/guide</td>link,pop
+                            <td class="center name">담당자</td>
+                            <td class="center status">작업중: ing, 작업완료: end</td>
+                            <td class="center start">시작날짜</td>
+                            <td class="center end">완료날짜</td>
+                     </tr> -->
+                    <tr class="end c3 menu01 c1 c2">
+                        <td class="depth01">main</td>
+                        <td></td>
+                        <td></td>
+                        <td class="center"></td>
+                        <td class="link">index</td>
+                        <td class="center name">황수정</td>
+                        <td class="center status">end</td>
+                        <td class="center start">20191121</td>
+                        <td class="center end">20191121</td>
+                        <td class="center etc">
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="end c3 menu10 c1 c2">
+                        <td class="depth01"></td>
+                        <td>교수홈페이지</td>
+                        <td></td>
+                        <td class="center"></td>
+                        <td class="link">professor/profile</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc">
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="end c3 menu10 c1">
+                        <td class="depth01"></td>
+                        <td>이메일</td>
+                        <td></td>
+                        <td class="center"></td>
+                        <td class="link">email1</td>
+                        <td class="center name">최수진</td>
+                        <td class="center status">end</td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu10 c1">
+                        <td class="depth01"></td>
+                        <td>이메일</td>
+                        <td></td>
+                        <td class="center"></td>
+                        <td class="link">email2</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01">회원</td>
+                        <td>로그인</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/login</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td>로그인 5회 실패</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/loginCancel</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td>회원가입</td>
+                        <td>유형선택</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/joinStep</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>약관동의</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/joinStep01</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>본인인증/정보입력</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/joinStep02</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>주소검색</td>
+                        <td class="center">추가레이어팝업</td>
+                        <td class="link">common/searchZip</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>가입완료</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/joinStep03</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td>아이디찾기</td>
+                        <td>선택</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/idFind</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>아이디정보</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/idFindResult</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>아이디 이메일 발송완료</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/idFindFinal</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td>비밀번호찾기</td>
+                        <td>선택</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/passwordFind</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>비밀번호정보</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/passwordFindResult</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>임시비밀번호 발송</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/passwordFindFinal</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu02 c1">
+                        <td class="depth01"></td>
+                        <td>회원가입 FAQ</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/memberFAQ</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc "></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01">마이페이지</td>
+                        <td>개인정보</td>
+                        <td>개인정보수정</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/passwordChk</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>간편로그인 개인정보수정불가</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/passwordChkNaver</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>개인정보수정-수정 네이버 연동 전</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/memberEdit_1</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>개인정보수정-수정 네이버 연동 후</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/memberEdit_2</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>환자등록번호 확인</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/memberSearch</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>비밀번호변경</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/passwordChange</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>비밀번호변경 안내대상</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/passwordChange6Month</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <!-- <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>비밀번호변경 안내대상2</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/passwordChange6Month_pop</td>
+                        <td class="center name">최수진</td>
+                        <td class="center status">end</td>
+                        <td class="center start">20191024</td>
+                        <td class="center end">20191024 20:45</td>
+                        <td class="center etc"></td>
+                    </tr> -->
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>간편로그인 비밀번호수정불가</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/passwordChangeNaver</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td>진료예약현황</td>
+                        <td>환자등록번호 확인</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/search</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu03 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>리스트</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/member_reservationList</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>인터넷 예약 확인증</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/reservation05</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu03">
+                        <td class="depth01"></td>
+                        <td>나의차트</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/mychat</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu03">
+                        <td class="depth01"></td>
+                        <td>1:1 상담내역</td>
+                        <td>리스트</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/onlineConsult</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu03">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>답변 대기상태</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/onlineConsult_view</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu03">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>답변 완료</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/onlineConsult_viewAnswer</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu03">
+                        <td class="depth01"></td>
+                        <td>강좌신청내역</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">mypage/application</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01">진료예약·상담</td>
+                        <td>서브메인</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/submain</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td>의료진·진료일정</td>
+                        <td>리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/schedule</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의료진 검색</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/schedule_staff</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc">'</td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의료진 검색 과선택</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/schedule_select</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td>진료예약</td>
+                        <td>진료예약 안내</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reservation</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>본인확인 예약하기</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">appointment/reservation01</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>예약하기 1/3</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">appointment/reservation02</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>예약하기 2/3</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">appointment/reservation03</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>예약하기 3/3</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">appointment/reservation04</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>인터넷 예약 확인증</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">appointment/reservation05</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>처음진료 빠른예약</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_QuickReserve</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1 c2">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>전화예약</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_phone</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1 c2">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>방문예약</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_visit</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>FAX예약</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_fax</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1 c2">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>예약조회·취소 - 환자등록번호 확인</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_search</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>예약조회·취소 - 환자등록번호 리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_searchList</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu04 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>예약조회·취소 - 환자등록번호 예약없음</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/reserve_searchNon</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td>1:1전문의상담</td>
+                        <td>진료과별 상담</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/onlineConsult</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>전문분야별 상담</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/clinicConsult</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 교수선택</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/consult_list</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 결과없음</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/consult_non</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 상담실</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">medical/onlineConsultPwd01</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 비밀번호 확인</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">medical/onlineConsultPwd02</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 비밀번호 재설정</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">medical/onlineConsultPwd03</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 작성하기</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/consult_write</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 답변/대기상태</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/consult_view</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담하기 - 답변작성</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/consult_writeAnswer</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>이용안내 FAQ</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/faq</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td>고마워요 차병원</td>
+                        <td>리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/thank</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>새글쓰기</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/thankWrite</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu04">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>내용보기</td>
+                        <td class="center">web</td>
+                        <td class="link">appointment/thankView</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01">진료과·의료진</td>
+                        <td>의료과·진료진 찾기</td>
+                        <td>진료과·센터·클리닉 리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/search_defalut</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의료진 리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/search_medical</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>검색 없음</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/search_non</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td>진료과·의료진 찾기</td>
+                        <td>진료과</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/list_department</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>진료과 - 소개</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/department_introduction</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>진료과 - 의료진</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/department_medicalStaff</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>진료과 - 관련센터&클리닉</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/department_related</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>센터</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/list_center</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <!-- <tr class="menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>센터 - 소개</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/center_introduction</td>
+                        <td class="center name">최수진</td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>센터 - 의료진</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/center_medicalStaff</td>
+                        <td class="center name">최수진</td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr> -->
+                    <tr class="end c3 menu5 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>클리닉</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/list_clinic</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <!-- <tr class="menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>클리닉 - 소개</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/clinic_introduction</td>
+                        <td class="center name">최수진</td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>클리닉 - 의료진</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/clinic_medicalStaff</td>
+                        <td class="center name">최수진</td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr> -->
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td>쉬운 진료과 찾기</td>
+                        <td>질환별 찾기</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_disease</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>질환별 찾기 - 단어 검색</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_disease_word</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>질환별 찾기 - 자음 검색</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_disease_sound</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>질환별 찾기 - 선택</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_disease_staff</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>질환별 찾기 - 검색결과없음</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_disease_non</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>증상별 찾기</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_symptom</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>증상별 찾기 - 단어 검색</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_symptom_word</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>증상별 찾기 - 선택</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/easyFind_symptom_staff</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td>진료과별 FAQ</td>
+                        <td>산부인과 FAQ</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/faq_obstetrics</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>소아청소년과 FAQ - 검색후 목록버튼</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/faq_pediatrics</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td>진료안내상담</td>
+                        <td>상담 - 리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/counseling_list</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담 - 상담실</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">medical/onlineConsultPwd01</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담 - 비밀번호 확인</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">medical/onlineConsultPwd02</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담 - 비밀번호 재설정</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">medical/onlineConsultPwd03</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담 - 작성하기</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/counseling_write</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담 - 답변/대기상태</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/counseling_view</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu5">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>상담 - 답변작성</td>
+                        <td class="center">web</td>
+                        <td class="link">medical/counseling_writeAnswer</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01">이용안내</td>
+                        <td>서브메인</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">guide/submain</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td>처음오시는분</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">guide/introduction</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td>외래·응급·입원</td>
+                        <td>외래진료 - 일반진료</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_outpatient_general</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>외래진료 - 산모진료</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_outpatient_mother</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>외래진료 - 산부인과(난임)</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_outpatient_infertility</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>응급진료안내</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_emergency</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>건강보험안내</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_insurance</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>입퇴원·면회안내 - 입퇴원안내</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_visit_hospitalization</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>입퇴원·면회안내 - 분만실</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_visit_childbirth</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>입퇴원·면회안내 - 신생아실</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_visit_newborn</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>입퇴원·면회안내 - 모자동실</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_visit_motherAndChild</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>입원생활안내 - 생활안내</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_life_guide</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>입원생활안내 - 시설 및 안내수칙</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/treatment_life_facilities</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td>비급여수가안내</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">guide/charges</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu6">
+                        <td class="depth01"></td>
+                        <td>병원둘러보기</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">guide/viewHospital</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td>주요전화번호</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">guide/phoneNumber</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6">
+                        <td class="depth01"></td>
+                        <td>증명서발급안내</td>
+                        <td>진단서 및 증명서</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/certificate_diagnosis</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu6">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의무기록사본발급 신청</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/certificate_record</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu6">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의무기록사본발급 신청하기 작성</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">guide/certificate_recordWrite</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu6">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의무기록사본 인터넷 신청 접수증</td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">guide/certificate_recordView</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later end c4 menu6">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>의무기록사본발급 조회 리스트</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/certificate_recordList</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 menu6">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>소득공제신청</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/certificate_deduction</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td>찾아오시는길</td>
+                        <td>약도·자가용</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/location_map</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>대중교통안내</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/location_public</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu6 c1">
+                        <td class="depth01"></td>
+                        <td></td>
+                        <td>주차안내</td>
+                        <td class="center">web</td>
+                        <td class="link">guide/location_parking</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 later2 menu7">
+                        <td class="depth01">건강정보</td>
+                        <td>서브메인</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">health/submain</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="later c4 later2 menu8">
+                        <td class="depth01">120웰니스</td>
+                        <td>서브메인</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">120wellness/submain</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu9 c1">
+                        <td class="depth01">Footer</td>
+                        <td>환자권리장전</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/patientRights</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu9 c1">
+                        <td class="depth01"></td>
+                        <td>이용약관</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/termsOfUse</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu9 c1">
+                        <td class="depth01"></td>
+                        <td>개인정보처리방침</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/information</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu9 c1">
+                        <td class="depth01"></td>
+                        <td>이메일 수집거부</td>
+                        <td></td>
+                        <td class="center">레이어팝업</td>
+                        <td class="link">member/collection</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu9 c1">
+                        <td class="depth01"></td>
+                        <td>비급여수가안내</td>
+                        <td></td>
+                        <td class="center">web</td>
+                        <td class="link">guide/charges</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                    <tr class="end c3 menu9 c1">
+                        <td class="depth01"></td>
+                        <td>차병원 네트워크</td>
+                        <td></td>
+                        <td class="center">레이어</td>
+                        <td class="link">index</td>
+                        <td class="center name"></td>
+                        <td class="center status"></td>
+                        <td class="center start"></td>
+                        <td class="center end"></td>
+                        <td class="center etc"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>
+
+
+
