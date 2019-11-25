@@ -36,6 +36,14 @@
 .tab_style_1_con .tab_style_1 > li.active > a{background-color:#ffeeed; color:#ff5d4e;}
 .tab_style_1_con .tab_style_1 > li.active + li{border-left-color:#ff5d4e;}
 
+.tab_style_2_con{}
+.tab_style_2_con .tab_style_2{font-size:0; line-height:0; overflow: hidden; text-align: center; margin-bottom:-1px;}
+.tab_style_2_con .tab_style_2 > li{display:inline-block; vertical-align: middle; margin-right:50px;}
+.tab_style_2_con .tab_style_2 > li:last-child{margin-right:0;}
+.tab_style_2_con .tab_style_2 > li > a{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
+    padding-top:25px; padding-bottom:24px; border-bottom:3px solid transparent; display:block;}
+.tab_style_2_con .tab_style_2 > li.active > a{color:#ff5d4e; border-bottom-color:#ff5d4e;}
+
 /* list_style_0_con */
 .list_style_0_con{}
 .list_style_0_con .list_style_0{}
@@ -43,6 +51,7 @@
     padding-left:10px; box-sizing: border-box; position: relative; margin-bottom:8px; word-break: keep-all;}
 .list_style_0_con .list_style_0 > li:last-child{margin-bottom:0;}
 .list_style_0_con .list_style_0 > li:after{content:""; position: absolute; top:20px; left:0; width:4px; height:4px; border-radius:50%; background-color:#333333;}
+.list_style_0_con.type_2 .list_style_0 > li:after{background-color:#ff5d4e;}
 
 /*list_style_1_con*/
 .list_style_1_con{}
@@ -68,6 +77,7 @@
 
 /* form_style_0_con */
 .form_style_0_con{border-top:3px solid #ff5d4e; padding-top:30px; border-bottom:3px solid #ff5d4e; padding-bottom:30px;}
+.form_style_0_con.type_2{border-bottom:none; padding-bottom:0;}
 .form_style_0_con .form_style_0{}
 
 
@@ -365,3 +375,31 @@
 /* 이메일 무단수집 거부 */
 .email_page_title{font-size:30px; line-height:42px; color:#111111; font-weight:700;}
 .email_page_desc{font-size:28px; line-height:42px; color:#111111; font-weight:300;}
+
+/* input_list_style_1_con */
+.input_list_style_1_con{}
+.input_list_style_1_con .input_list_style_1{font-size:0; line-height:0; text-align: left; padding-left:30px; box-sizing: border-box; margin-bottom:11px;}
+.input_list_style_1_con .input_list_style_1:last-child{margin-bottom:0;}
+.input_list_style_1_con .input_list_style_1 label{font-size:30px; font-size:3.0rem; line-height:64px; line-height:6.4rem; color:#555555; font-weight:400;
+    width:125px; display:inline-block; vertical-align: middle;}
+.input_list_style_1_con .input_list_style_1 .input_style_style_1_input{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#555555; font-weight:400;
+    background-color:#fff; border:1px solid #cccccc; border-radius:0; overflow: hidden; padding-top:13px; padding-bottom:13px; box-sizing: border-box;
+    width:calc(100% - 125px); display:inline-block; vertical-align: middle; padding-right:30px; padding-left:30px;
+    -webkit-appearance: none; -moz-appearance:none; appearance:none;}
+.input_list_style_1_con .input_list_style_1 .input_style_style_1_input.is_on_value{color:#ff5d4e;
+    background-color: #f6f6f6; border-color:#f6f6f6;}
+.input_list_style_1_con .input_list_style_1 .input_style_style_1_input:-moz-placeholder{color:#555555;}
+.input_list_style_1_con .input_list_style_1 .input_style_style_1_input:-ms-input-placeholder{color:#555555;}
+.input_list_style_1_con .input_list_style_1 .input_style_style_1_input::-moz-placeholder{color:#555555;}
+.input_list_style_1_con .input_list_style_1 .input_style_style_1_input::-webkit-input-placeholder{color:#555555;}
+.input_list_style_1_con.type_2 .input_list_style_1 label{width:224px;}
+.input_list_style_1_con.type_2 .input_list_style_1 .input_style_style_1_input{width:calc(100% - 224px);}
+.input_list_style_1_con.boxing{padding-top:30px; padding-bottom:30px; padding-right:30px; background-color:#f6f6f6;}
+
+/* 진료예약현황 */
+/* my_reserve_list_wrap */
+.my_reserve_list_wrap{text-align: center; border:4px solid #ff5d4e; padding-top:30px; padding-bottom:30px;}
+.my_reserve_list_wrap .reserve_list_header_wrap{padding-bottom:15px; border-bottom:2px solid #f4f4f4;}
+.my_reserve_list_wrap .reserve_header_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
+.my_reserve_list_wrap .reserve_header_btn_con{}
+.my_reserve_list_wrap .reserve_header_btn{}

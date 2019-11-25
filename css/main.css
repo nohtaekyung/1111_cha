@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:touch; -webkit-font-smoothing: antialiased;}
-
 /*main_visual_wrap*/
 .main_visual_wrap{z-index: 1; height: 820px;}
 .main_visual_wrap .main_notice_wrap{position: absolute; z-index: 2; top:0; left: 0; padding-top: 20px; padding-bottom: 20px; padding-left: 30px; padding-right: 30px; background-color: rgba(255,255,255,0.6);}
