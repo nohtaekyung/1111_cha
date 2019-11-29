@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .header_wrap{ padding-left: 30px; padding-right: 30px;}
+.sub .header_wrap{border-bottom:1px solid #cccccc;}
 .header_wrap .header_con{padding-top: 30px; padding-bottom: 30px;}
 .header_wrap .menu_con{position: absolute; top:50%; left:0; transform: translateY(-50%); text-align: center;}
 .header_wrap .menu_box{display: inline-block;}

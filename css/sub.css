@@ -3,13 +3,14 @@
 
 /* sub_contents_wrap */
 .sub_contents_wrap{}
-.sub_contents_wrap .sub_contents_header_con{padding-top:30px; padding-bottom:33px;}
+.sub_contents_wrap .sub_contents_header_con{padding-top:31px; padding-bottom:33px;}
 .sub_contents_wrap h2{font-size:32px; font-size:3.2rem; line-height:38px; line-height:3.8rem; color:#111111; font-weight:700;}
 .mypage .sub_contents_wrap h2{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
 .sub_contents_wrap h3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#111111; font-weight:700;}
 .sub_contents_wrap h3.short{letter-spacing: -0.05em;}
 .sub_contents_wrap .h_desc3{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#666666; font-weight:400;}
 .sub_contents_wrap .h_desc3.fontweight700{font-weight:700;}
+.sub_contents_wrap .sub_contents_header_con .mypage_close_btn{position: absolute; right:30px; top:50%; margin-top:-15px;}
 
 /* tab_style_0_con */
 .tab_style_0_con{overflow-x:auto;}
