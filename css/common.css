@@ -7,7 +7,12 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 
 .hr_style_0{border-bottom:2px solid #ff5d4e;}
 .hr_style_0.width60{width:60px;}
+.hr_style_0.height1{border-width: 1px;}
+.hr_style_0.height3{border-width: 3px;}
+
 .hr_style_1{border-bottom:15px solid #f1f1f1;}
+
+.hr_style_2{border-bottom: 1px solid #ccc;}
 
 .btn_style_0_wrap{display: flex; align-items: center; justify-content: center;}
 .btn_style_0_wrap .btn_style_0_con{flex:1; margin-right: 8px;}
@@ -19,7 +24,9 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .btn_style_0_con .btn_style_0.small{height:60px; display:inline-block;}
 .btn_style_0_con .btn_style_0.gray{background-color: #999; border-color: #999;}
 .btn_style_0_con .btn_style_0.white{color:#666; background-color: #fff; border-color:#ccc;}
+.btn_style_0_con .btn_style_0.point_color{color:#ff5d4e; background-color: #fff; border-color:#ff5d4e;}
 .btn_style_0_con .btn_style_0.big{height: 120px;}
+.btn_style_0_con .btn_style_0.width250{width:250px;}
 .btn_style_0_con .btn_style_0.width260{width:260px;}
 
 
