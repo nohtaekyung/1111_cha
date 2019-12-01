@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=750">
     <meta property="og:image" content="../img/kakao_prev.jpg">
     <title>CHA Meditech</title>
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/common_style.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/responsive.css"/>
     <link rel="stylesheet" href="../css/header.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
@@ -17,7 +17,9 @@
     <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="../js/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/bm.js"></script>
     <script type="text/javascript" src="../js/gnb.js"></script>
+    <script type="text/javascript" src="../js/sub.js"></script>
 </head>
 <body>
 <div class="wrapper sub" id="wrapper">
@@ -165,14 +167,14 @@
         <div class="col-12 sub_header_wrap">
             <div class="col-12 sub_header_con">
                 <div class="left_con">
-                    <div class="home_icon_con">
+                    <div class="home_icon_con hidden">
                         <a href="javascript:void(0)" class="home_icon">
                             <img src="../img/home_icon.png" alt="home">
                         </a>
                     </div>
                     <div class="menu_con">
                         <div class="menu">
-                            진료과별 FAQ
+                            고마워요 차병원
                         </div>
                     </div>
                 </div>
@@ -184,253 +186,61 @@
 
         <!-- contents_wrap -->
         <div class="col-12 sub_contents_wrap">
-            <div class="col-12 tab_style_0_con type_2">
-                <ul class="tab_style_0">
-                    <li class="active">
-                        <a href="javascript:void(0)">
-                            산부인과 FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            소아청소년과 FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            비뇨기과 FAQ
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 pt43 pb50 pl30 pr30">
-                <div class="col-12 mb23 list_style_0_con">
-                    <ul class="list_style_0">
+            <!--contents-->
+            <div class="col-12 pt43 pb43 pl30 pr30">
+                <div class="col-12 list_style_0_con">
+                    <ul class="list_style_0 gray">
                         <li>
-                            일산차병원를 이용하시거나  진료과/의료진을 찾는데
-                            도움이 필요하시면 문의 부탁드립니다.
-                        </li>
-                        <li>
-                            본 상담실에 남겨주신 글에 대한 답변은 당일 또는 1~3일
-                            내에 답변드리겠습니다.
-                        </li>
-                        <li>
-                            상담실의 성격에 맞지 않는 글은 관리자에 의하여<br/>
-                            무단 삭제될 수 있습니다.
-                        </li>
-                    </ul>
-                </div>
-                <hr class="col-12 mb21 hr_style_0 height1">
-                <div class="col-12 mb43">
-                    <div class="col-0 list_style_0_con">
-                        <ul class="list_style_0">
-                            <li>
-                                진료안내 외 의학적 상담은<br/>
-                                1:1전문상담을 이용해주세요.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-0 mt9 fr">
-                        <div class="btn_style_0_con">
-                            <a href="javascript:void(0)" class="btn_style_0 width250 point_color">
-                                1:1 전문의 상담
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <hr class="col-12 mb30 hr_style_0 height3">
-                <div class="col-12 check_style_0_wrap">
-                    <ul class="check_style_0_list_con">
-                        <li>
-                            <div class="check_style_0_con">
-                                <input type="checkbox" class="check_style_0" id="check0">
-                                <label for="check0">개인정보 수집∙이용 동의</label>
-                            </div>
-                            <a href="javascript:void(0)" class="check_style_0_arrow">
-                                <img src="../img/check_style_0_arrow.png" alt="약관 보기">
-                            </a>
+                            본문 또는 첨부파일내에 개인정보(주민등록번호, 연락처 등)
+                            가 포함되지 않도록 유의해 주세요.
                         </li>
                     </ul>
                 </div>
             </div>
-            <hr class="col-12 mb45 hr_style_1">
-            <div class="col-12 mb46 pr30 pl30">
-                <div class="col-12 board_style_0_con">
-                    <div class="col-12 board_style_0_contents">
-                        <div class="col-12 form_style_1_wrap">
-                            <div class="col-12 mb10 form_header">
-                                <div class="col-12 mb15">
-                                    <div class="form_header_title">
-                                        필수입력항목
-                                    </div>
-                                    <div class="mt3 form_copy">
-                                    <span class="essential">
-                                        표시는 필수입력정보입니다.
-                                    </span>
-                                    </div>
-                                </div>
-                                <div class="col-12 form_desc_3">
-                                    정확한 상담을 위해 필수 입력항목을 채워 주세요.<br/>
-                                    교수님 답변 완료 후, 이메일과 SMS가 발송되오니 정확한 정보
-                                    기입 부탁드립니다.
-                                </div>
-                            </div>
-                            <form action="" class="col-12 form_style_1_con">
-                                <div class="form_contents_list_con">
-                                    <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="public">
-                                                공개여부
-                                                <span class="vm essential"></span>
-                                            </label>
-                                        </div>
-                                        <div class="pt14 form_contents_desc_con">
-                                            <div class="check_style_0_wrap">
-                                                <div class="check_style_0_con">
-                                                    <input type="checkbox" class="check_style_0" id="public0">
-                                                    <label for="public0">비공개</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="nickname">
-                                                닉네임
-                                                <span class="vm essential"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form_contents_desc_con">
-                                            <div class="over-hidden form_contents_desc">
-                                                <div class="col-12 input_style_2_con">
-                                                    <input type="text" class="input_style_2" id="nickname">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="password">
-                                                비밀번호
-                                                <span class="vm essential"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form_contents_desc_con">
-                                            <div class="over-hidden form_contents_desc">
-                                                <div class="col-12 input_style_2_con">
-                                                    <input type="password" class="input_style_2" id="password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="mobile">
-                                                연락처
-                                                <span class="vm essential"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form_contents_desc_con">
-                                            <div class="over-hidden form_contents_desc">
-                                                <div class="fl input_style_2_con">
-                                                    <select name="mobile" id="mobile" class="select_style_0 type_2 width150">
-                                                        <option value="010">010</option>
-                                                        <option value="011">011</option>
-                                                        <option value="012">012</option>
-                                                        <option value="013">013</option>
-                                                    </select>
-                                                </div>
-                                                <div class="fl mt32 mr6 ml6 input_seperate_icon">
-                                                </div>
-                                                <div class="fl input_style_2_con">
-                                                    <input type="text" class="input_style_2" id="mobile1">
-                                                </div>
-                                                <div class="fl mt32 mr6 ml6 input_seperate_icon">
-                                                </div>
-                                                <div class="fl input_style_2_con">
-                                                    <input type="text" class="input_style_2" id="mobile2">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="email0">
-                                                이메일
-                                                <span class="vm essential"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form_contents_desc_con">
-                                            <div class="over-hidden form_contents_desc">
-                                                <div class="fl input_style_2_con">
-                                                    <input type="text" class="input_style_2" id="email0">
-                                                </div>
-                                                <div class="fl mt12 mr9 ml9 input_seperate_icon bg">
-                                                    <img src="../img/seperate_icon.png" alt="@">
-                                                </div>
-                                                <div class="fl input_style_2_con">
-                                                    <input type="text" class="input_style_2" id="email1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <hr class="col-12 mb30 hr_style_1">
             <div class="col-12 pb50">
-                <div class="mb45 form_seperate_box"></div>
                 <div class="col-12 board_style_0_con">
                     <div class="col-12 board_style_0_contents">
                         <div class="col-12 pr30 pl30 form_style_1_wrap">
                             <div class="col-12 mb30 form_header">
                                 <div class="col-12 mb15">
                                     <div class="form_header_title">
-                                        상담하기
+                                        새글쓰기
                                     </div>
-                                    <div class="mt3 form_copy">
-                                    <span class="essential">
-                                        표시는 필수입력정보입니다.
-                                    </span>
-                                    </div>
-                                </div>
-                                <div class="col-12 form_desc_3">
-                                    궁금하신 사항을 구체적으로 써주시면 보다 정확한 답변을<br/>
-                                    받으실 수 있습니다.
                                 </div>
                             </div>
                             <form action="" class="col-12 mb30 form_style_1_con">
                                 <div class="form_contents_list_con">
                                     <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="title">
-                                                제목
-                                                <span class="vm essential"></span>
+                                        <div class="form_contents_title w_auto mr40">
+                                            <label>
+                                                작성자
                                             </label>
                                         </div>
-                                        <div class="form_contents_desc_con">
-                                            <div class="over-hidden form_contents_desc">
-                                                <div class="col-12 input_style_2_con">
-                                                    <input type="text" class="input_style_2" id="title">
-                                                </div>
+                                        <div class="pt14 form_contents_desc_con">
+                                            <div class="form_contents_desc">
+                                                Cha
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form_contents_list">
-                                        <div class="form_contents_title">
-                                            <label for="counselContent">
-                                                상담내용
-                                                <span class="vm essential"></span>
-                                            </label>
+                                        <div class="col-12 input_style_2_con">
+                                            <input type="text" placeholder="제목" class="input_style_2" id="title">
                                         </div>
-                                        <div class="form_contents_desc_con">
-                                            <div class="over-hidden form_contents_desc">
-                                                <div class="col-12 textarea_style_0_con">
-                                                    <textarea name="counsel_content" id="counselContent" rows="11" class="col-12 textarea_style_0"></textarea>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="form_contents_list over-hidden">
+                                        <div class="col-12 textarea_style_0_con">
+                                            <textarea name="content" id="content"
+                                                      rows="7" placeholder="내용" class="col-12 textarea_style_0"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form_contents_list file">
+                                        <div class="col-12 input_style_2_con">
+                                            <input type="readonly" class="input_style_2" id="fileName">
+                                        </div>
+                                        <div class="btn_style_2_con">
+                                            <label for="fileBtn" class="btn_style_2">파일선택</label>
+                                            <input type="file" id="fileBtn">
                                         </div>
                                     </div>
                                 </div>
@@ -444,7 +254,7 @@
                                 </div>
                                 <div class="col-12 btn_style_0_con">
                                     <a href="javascript:void(0)" class="btn_style_0">
-                                        확인
+                                        등록
                                     </a>
                                 </div>
                             </div>
@@ -453,6 +263,7 @@
                 </div>
             </div>
         </div>
+
         <!--footer-->
         <footer class="col-12 footer_wrap">
             <div class="col-12 footer_con">

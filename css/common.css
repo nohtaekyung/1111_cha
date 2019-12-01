@@ -21,7 +21,7 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .btn_style_0_wrap .btn_style_0_con:last-child{margin-right: 0;}
 .btn_style_0_con{}
 .btn_style_0_con .btn_style_0{display: flex; align-items: center; justify-content: center; height: 70px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: 0em; font-weight: 400; color:#fff; text-align: center; background-color: #ff776a; border:1px solid #ff776a; box-sizing: border-box;}
-.btn_style_0_con .btn_style_0.small{height:60px; display:inline-block;}
+.btn_style_0_con .btn_style_0.small{height:60px; display:inline-flex; padding-left: 15px; padding-right: 15px;}
 .btn_style_0_con .btn_style_0.gray{background-color: #999; border-color: #999;}
 .btn_style_0_con .btn_style_0.white{color:#666; background-color: #fff; border-color:#ccc;}
 .btn_style_0_con .btn_style_0.point_color{color:#ff5d4e; background-color: #fff; border-color:#ff5d4e;}
