@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=750">
+    <meta property="og:image" content="../img/kakao_prev.jpg">
+    <title>CHA Meditech</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/common_style.css">
+    <link rel="stylesheet" href="../css/responsive.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/sub.css"/>
+    <link rel="stylesheet" href="../js/aos/aos.css"/>
+    <link rel="stylesheet" href="../js/swiper/swiper.min.css"/>
+    <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="../js/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/sub.js"></script>
+</head>
+<body>
+<div class="wrapper sub mypage" id="wrapper">
+    <div class="col-12 col-center mw-750">
+        <!--header-->
+        <header class="col-12 header_wrap">
+            <div class="col-12 header_con">
+                <div class="menu_con">
+                    <a href="javascript:void(0)" class="menu_box">
+                        <div class="img">
+                            <img src="../img/menu_icon.png" alt="전체메뉴">
+                        </div>
+                        <div class="text">
+                            전체메뉴
+                        </div>
+                    </a>
+                </div>
+                <h1 class="logo_con">
+                    <a href="javascript:void(0)">
+                        <img src="../img/logo.png" alt="CHA 의과대학교 일산차병원">
+                    </a>
+                </h1>
+                <div class="util_list_con">
+                    <a href="javascript:void(0)" class="util_list">
+                        <div class="img">
+                            <img src="../img/search_icon.png" alt="검색">
+                        </div>
+                        <div class="text">
+                            검색
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)" class="util_list">
+                        <div class="img">
+                            <img src="../img/login_icon.png" alt="로그인">
+                        </div>
+                        <div class="text">
+                            로그인
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="col-12 sub_contents_wrap">
+            <div class="col-12 tc sub_contents_header_con">
+                <h2>
+                    회원
+                </h2>
+                <a href="javascript:void(0)" class="mypage_close_btn">
+                    <img src="../img/mypage_close_icon.png" alt="닫기">
+                </a>
+            </div>
+            <div class="col-12 mb50 tab_style_0_con">
+                <ul class="tab_style_0">
+                    <li>
+                        <a href="javascript:void(0)">
+                            관심의료진
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:void(0)">
+                            1:1 상담내역
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            온라인 증명서
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 pb50 pr30 pl30">
+                <div class="col-12 mb42 list_style_0_con">
+                    <ul class="list_style_0">
+                        <li>
+                            의료상담, 건강상담 '1:1주치의 상담'을 이용해 주십시오
+                        </li>
+                        <li>
+                            병원의 이용 관련된 문의는 고객의 소리에 문의하여<br/>
+                            주십시오.
+                        </li>
+                        <li>
+                            0000-0000로 문의 부탁 드립니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 mb20 my_reserve_list_wrap">
+                    <div class="mb30 reserve_list_header_wrap">
+                        <div class="reserve_header_title">
+                            <span class="fontweight_bold">홍길동님</span>의<br/>
+                            답변 중 : <span class="fontweight_bold point0"><span class="point_border">0</span>건</span>    답변완료: <span class="fontweight_bold point0"><span class="point_border">0</span>건</span><br/>
+                            상담 현황이 있습니다.
+                        </div>
+                    </div>
+                    <div class="btn_style_0_con">
+                        <a href="javascript:void(0)" class="btn_style_0 small">
+                            주치의 상담하기
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 filter_wrap">
+                    <div class="col-12 mb20 search_style_0_con">
+                        <div class="keyword_wrap width150">
+                            <div class="col-0 keyword_list_wrap">
+                                <select name="type" id="name" class="select_style_0">
+                                    <option value="">제목</option>
+                                    <option value="">내용</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="키워드를 입력해 주세요" class="col-0 input_style_0">
+                        <div class="col-0 btn_style_0_con width150">
+                            <a href="javascript:void(0)" class="btn_style_0 gray">
+                                검색
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb30 board_style_1_con">
+                    <div class="board_style_1_list is_lock">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list is_lock">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list is_lock">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list is_lock">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_style_1_list">
+                        <div class="board_style_1_lock">
+                            <img src="../img/board_style_1_lock_icon.png" alt="비밀">
+                        </div>
+                        <div class="board_style_1_contents_con">
+                            <div class="board_style_1_title">
+                                예약관련 문의드립니다.
+                            </div>
+                            <div class="board_style_1_desc">
+                                <div class="board_style_1_desc_item">
+                                    일산차병원
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    산부인과
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    2019.12.20
+                                </div>
+                                <div class="board_style_1_desc_item">
+                                    문의중
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 pagination_style_0_wrap">
+                    <ul class="button_container">
+                        <li class="btn_singlePage btn_firstPage"></li>
+                        <li class="btn_singlePage btn_prevPage"></li>
+                        <li class="btn_page first selected">1</li>
+                        <li class="btn_page">2</li>
+                        <li class="btn_page">3</li>
+                        <li class="btn_page">4</li>
+                        <li class="btn_page">5</li>
+                        <li class="btn_singlePage btn_nextPage"></li>
+                        <li class="btn_singlePage btn_lastPage"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <footer class="col-12 footer_wrap">
+            <div class="col-12 footer_con">
+                <div class="col-12 footer_top_con">
+                    <div class="col-4">
+                        <div class="footer_btn_con">
+                            <a href="javascript:void(0)" class="footer_btn_inner">
+                                <span class="footer_btn_icon">
+                                    <img src="../img/footer_btn_000.png" alt="오시는길">
+                                </span>
+                                <span class="footer_btn">
+                                    오시는길
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer_btn_con">
+                            <a href="javascript:void(0)" class="footer_btn_inner">
+                                <span class="footer_btn_icon">
+                                    <img src="../img/footer_btn_001.png" alt="주요전화번호">
+                                </span>
+                                <span class="footer_btn">
+                                    주요전화번호
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer_lang_area">
+                            <a href="javascript:void(0)" class="footer_lang">언어선택</a>
+                            <ul class="footer_lang_list">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span>
+                                             <img src="../img/lang_eng.png" alt="">
+                                        </span>
+                                        <span> English</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span>
+                                            <img src="../img/lang_chi.png" alt="">
+                                        </span>
+                                        <span>
+                                            China
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="col-12 footer_quick_link_list_con">
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            환자권리장전
+                        </a>
+                    </li>
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            이용약관
+                        </a>
+                    </li>
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            개인정보처리방침
+                        </a>
+                    </li>
+                    <li class="footer_quick_link_list">
+                        <a href="javascript:void(0)">
+                            이메일 무단수집거부
+                        </a>
+                    </li>
+                </ul>
+                <div class="col-12 footer_desc">
+                    (410-380) 경기도 고양시 일산동구 장항동 889<br/>
+                    COPYRIGHT © 2019 CHAMC, ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
