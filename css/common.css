@@ -1,7 +1,7 @@
 @charset "utf-8";
 body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:touch; -webkit-font-smoothing: antialiased;}
 .point0{color:#ff5d4e !important;}
-.point_border{display:inline-block; border-bottom:2px solid #ff5d4e;}
+.point_border{display:inline-block; border-bottom:2px solid #ff5d4e; line-height:34px;}
 
 .desc_font_0{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; font-weight: 400; color:#111;}
 
