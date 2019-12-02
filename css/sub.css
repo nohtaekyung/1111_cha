@@ -517,17 +517,21 @@
 .board_style_1_con .board_style_1_desc_item:last-child{padding-right:0; margin-right:0;}
 .board_style_1_con .board_style_1_desc_item:last-child:after{display:none;}
 /* view */
-.board_style_1_con .board_style_1_view{}
-.board_style_1_con .board_style_1_view .board_style_1_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;
+.board_style_1_con .board_style_1_view{border-bottom:1px solid #f1f1f1; padding-bottom:30px;}
+.board_style_1_con .board_style_1_view .board_style_1_title_con{font-size:0; line-height:0;
     border-top:2px solid #988f87; padding-top:26px; padding-bottom:27px;}
+.board_style_1_con .board_style_1_view .board_style_1_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700; display:inline-block; vertical-align: middle;}
 .board_style_1_con .board_style_1_view .board_style_1_desc{border-top:1px solid #cccccc; padding-top:12px; padding-bottom:13px;}
 .board_style_1_con .board_style_1_view .board_style_1_desc_item{font-size:22px; font-size:2.2rem; line-height:36px; line-height:3.6rem; color:#666666;
     padding-right:16px; margin-right:14px;}
+.board_style_1_con .board_style_1_view.is_lock .board_style_1_lock{display:inline-block;}
+.board_style_1_con .board_style_1_view .board_style_1_lock{display:none; vertical-align: middle; margin-right:7px;}
 .board_style_1_con .board_style_1_view .board_style_1_desc_item:after{top:9px;}
 .board_style_1_con .board_style_1_view .board_style_1_contents{border-top:1px solid #cccccc; padding-top:25px; padding-bottom:40px;}
+.board_style_1_con .board_style_1_view .board_style_1_contents.reply{padding-bottom:0;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.05em; color:#111111; font-weight:700; margin-bottom:8px;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_desc{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#666666; font-weight:400;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_desc_list{margin-bottom:8px;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_desc_list:last-child{margin-bottom:0;}
 .board_style_1_con .board_style_1_view .board_style_1_box_con{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; color:#222222; font-weight:400;
-    background-color: #f5f5f5; padding-top:23px; padding-right:17px; padding-left:17px; padding-bottom:20px;}
+    background-color: #f5f5f5; padding-top:23px; padding-right:17px; padding-left:17px; padding-bottom:24px;}
