@@ -11,6 +11,7 @@ $(function(){
     $('.clicked_header_wrap').find('.close_btn_con').on('click',function(){
         if($('.clicked_header_wrap').hasClass('active')){
             $('.clicked_header_wrap').removeClass('active');
+            $('body').css('overflow','');
         }
     })
     $('.gnb_wrap').find('> ul > li').on('click',function(){
