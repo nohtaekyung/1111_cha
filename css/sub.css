@@ -503,7 +503,7 @@
 /* board_style_1_con */
 .board_style_1_con{}
 /* list */
-.board_style_1_con .board_style_1_list{border-bottom:1px solid #cccccc; display:flex; padding-top:31px; padding-bottom:31px;}
+.board_style_1_con .board_style_1_list{border-bottom:1px solid #cccccc; display:flex; padding-top:31px; padding-bottom:31px; position: relative;}
 .board_style_1_con .board_style_1_list.is_lock{}
 .board_style_1_con .board_style_1_list.is_lock .board_style_1_lock{display:block;}
 .board_style_1_con .board_style_1_list:first-child{border-top:2px solid #988f87;}
@@ -516,6 +516,7 @@
 .board_style_1_con .board_style_1_desc_item:after{content:""; position: absolute; top:6px; right:0; border-right:1px solid #999999; height:20px;}
 .board_style_1_con .board_style_1_desc_item:last-child{padding-right:0; margin-right:0;}
 .board_style_1_con .board_style_1_desc_item:last-child:after{display:none;}
+.board_style_1_con .board_style_1_desc_item.is_ing{font-weight: bold; color:#ff5d4e;}
 /* view */
 .board_style_1_con .board_style_1_view{border-bottom:1px solid #f1f1f1; padding-bottom:30px;}
 .board_style_1_con .board_style_1_view .board_style_1_title_con{font-size:0; line-height:0;
@@ -527,11 +528,21 @@
 .board_style_1_con .board_style_1_view.is_lock .board_style_1_lock{display:inline-block;}
 .board_style_1_con .board_style_1_view .board_style_1_lock{display:none; vertical-align: middle; margin-right:7px;}
 .board_style_1_con .board_style_1_view .board_style_1_desc_item:after{top:9px;}
-.board_style_1_con .board_style_1_view .board_style_1_contents{border-top:1px solid #cccccc; padding-top:25px; padding-bottom:40px;}
+.board_style_1_con .board_style_1_view .board_style_1_contents{border-top:1px solid #cccccc; padding-top:25px; padding-bottom:40px; position: relative;}
 .board_style_1_con .board_style_1_view .board_style_1_contents.reply{padding-bottom:0;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.05em; color:#111111; font-weight:700; margin-bottom:8px;}
+.board_style_1_con .board_style_1_view .board_style_1_contents.reply .board_style_1_contents_title{margin-bottom:16px;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_desc{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#666666; font-weight:400;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_desc_list{margin-bottom:8px;}
 .board_style_1_con .board_style_1_view .board_style_1_contents_desc_list:last-child{margin-bottom:0;}
 .board_style_1_con .board_style_1_view .board_style_1_box_con{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; color:#222222; font-weight:400;
     background-color: #f5f5f5; padding-top:23px; padding-right:17px; padding-left:17px; padding-bottom:24px;}
+.board_style_1_con .board_style_1_view .board_style_1_contents_info{position: absolute; right:0; top:30px;}
+.board_style_1_con .board_style_1_view .board_style_1_contents_info .board_style_1_contents_info_item{font-size:22px; font-size:2.2rem; line-height:28px; line-height:2.8rem; color:#666; font-weight: 400;
+    display:inline-block; vertical-align: middle; padding-right:15px; margin-right:13px; position: relative;}
+.board_style_1_con .board_style_1_view .board_style_1_contents_info .board_style_1_contents_info_item:after{content:""; position: absolute; top:5px; right:0; height:20px; border-right:1px solid #999999;}
+.board_style_1_con .board_style_1_view .board_style_1_contents_info .board_style_1_contents_info_item:last-child{margin-right:0; padding-right:0;}
+.board_style_1_con .board_style_1_view .board_style_1_contents_info .board_style_1_contents_info_item:last-child:after{display:none;}
+.board_style_1_con .board_style_1_list .reserve_cancel_btn{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#999999; font-weight:400;
+    display:none; position:absolute; bottom:27px; right:0; border:1px solid #cccccc; padding-top:20px; padding-bottom:21px; padding-right:16px; padding-left:16px; box-sizing: border-box;}
+.board_style_1_con .board_style_1_list.is_ing .reserve_cancel_btn{display:inline-block;}

@@ -43,6 +43,7 @@
 .gnb_wrap > ul > li > a > span{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.025em; font-weight: 600; color:#333; text-align: left;}
 /*.gnb_wrap > ul > li > ul{height: 0;}
 .gnb_wrap > ul > li.active > ul{height: auto;}*/
+.gnb_wrap > ul > li > ul{display:none;}
 .gnb_wrap > ul > li > ul > li{border-bottom:1px solid #ff5d4e; background-color: #fff1f0;}
 .gnb_wrap > ul > li > ul > li:first-child{border-top:2px solid #ff5d4e;}
 /*.gnb_wrap > ul > li > ul > li:last-child{border-bottom:none;}*/
