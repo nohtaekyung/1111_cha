@@ -24,8 +24,8 @@
 .tab_swiper_container .tab_swiper_wrapper > li.tab_slide:last-child{border-right:1px solid #cccccc;}
 .tab_swiper_container .tab_swiper_wrapper > li.tab_slide > a{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
     display:block; padding-top:17px; padding-bottom:17px; box-sizing: border-box; background-color:#fff; text-align: center;}
-.tab_swiper_container .tab_swiper_wrapper > li.tab_slide.swiper-slide-active{border-color:#ff776a;}
-.tab_swiper_container .tab_swiper_wrapper > li.tab_slide.swiper-slide-active > a{background-color:#ff776a; color:#fff;}
+.tab_swiper_container .tab_swiper_wrapper > li.tab_slide.active{border-color:#ff776a;}
+.tab_swiper_container .tab_swiper_wrapper > li.tab_slide.active > a{background-color:#ff776a; color:#fff;}
 .tab_swiper_container .tab_swiper_arrow{position: absolute; top:50%; margin-top:-11px; z-index:3; display:none;}
 .tab_swiper_container .tab_swiper_arrow:not(.swiper-button-disabled){display:block;}
 .tab_swiper_container .tab_swiper_arrow.left{left:30px;}

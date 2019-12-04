@@ -69,34 +69,43 @@
                     <img src="../img/mypage_close_icon.png" alt="닫기">
                 </a>
             </div>
-            <div class="col-12 mb41 tab_style_0_con">
-                <ul class="tab_style_0">
-                    <li>
+            <div class="col-12 mb41 tab_swiper_container mask swiper-container">
+                <ul class="tab_swiper_wrapper swiper-wrapper">
+                    <li class="tab_slide swiper-slide">
                         <a href="javascript:void(0)">
                             로그인
                         </a>
                     </li>
-                    <li>
+                    <li class="tab_slide swiper-slide">
                         <a href="javascript:void(0)">
                             회원가입
                         </a>
                     </li>
-                    <li>
+                    <li class="tab_slide swiper-slide">
                         <a href="javascript:void(0)">
                             아이디찾기
                         </a>
                     </li>
-                    <li class="active">
+                    <li class="tab_slide swiper-slide active">
                         <a href="javascript:void(0)">
                             비밀번호찾기
                         </a>
                     </li>
-                    <li>
+                    <li class="tab_slide swiper-slide">
                         <a href="javascript:void(0)">
                             회원가입FAQ
                         </a>
                     </li>
                 </ul>
+                <div class="tab_swiper_arrow left">
+                    <img src="../img/linemap_arrow.png" alt="prev">
+                </div>
+                <div class="tab_swiper_arrow right">
+                    <img src="../img/check_style_0_arrow.png" alt="next">
+                </div>
+                <div class="tab_mask">
+                    <img src="../img/tab_swiper_wrapper_mask_bg.png" alt="mask">
+                </div>
             </div>
             <div class="col-12 mb50 pr30 pl30">
                 <div class="col-12 mb42 list_style_0_con">
@@ -237,3 +246,30 @@
         </footer>
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        sub_swiper = new Swiper('.tab_swiper_container.swiper-container', {
+            direction: 'horizontal' // 슬라이드 진행방향은 수평(vertical하면 수직으로 움직임)
+            ,loop : false
+            ,speed : 500
+            ,autoplay : false
+            ,slidesPerView: 3 // 한번에 보이는 슬라이드 갯수
+            ,mousewheelControl: true // 마우스 휠로 슬라이드 움직임
+            ,navigation: {
+                nextEl: '.tab_swiper_container .tab_swiper_arrow.right',
+                prevEl: '.tab_swiper_container .tab_swiper_arrow.left'
+            }
+        })
+        var con = $('.tab_swiper_container').find('.tab_slide');
+
+        for( var i=0; i<con.length; i++ ){
+            if( $($(con)[i]).hasClass('active') ){
+                if( i==0 ){
+                    sub_swiper.slideToLoop(i, 0);
+                }else{
+                    sub_swiper.slideToLoop(i-1, 0);
+                }
+            }
+        }
+    })
+</script>

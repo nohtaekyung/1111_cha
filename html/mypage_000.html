@@ -72,7 +72,7 @@
             </div>
             <div class="col-12 mb41 tab_swiper_container mask swiper-container">
                 <ul class="tab_swiper_wrapper swiper-wrapper">
-                    <li class="tab_slide swiper-slide">
+                    <li class="tab_slide swiper-slide active">
                         <a href="javascript:void(0)">
                             로그인
                         </a>
@@ -307,7 +307,12 @@
                 prevEl: '.tab_swiper_container .tab_swiper_arrow.left'
             }
         })
+        var con = $('.tab_swiper_container').find('.tab_slide');
 
-        sub_swiper.slideToLoop(0, 0);
+        for( var i=0; i<con.length; i++ ){
+            if( $($(con)[i]).hasClass('active') ){
+                sub_swiper.slideToLoop(i, 0);
+            }
+        }
     })
 </script>
