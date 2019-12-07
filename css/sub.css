@@ -77,11 +77,12 @@
 .list_style_0_con .list_style_0{}
 .list_style_0_con .list_style_0 > li{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#333333; font-weight:400;
     padding-left:10px; box-sizing: border-box; position: relative; margin-bottom:8px; word-break: keep-all;}
-.list_style_0_con .list_style_0 > li:last-child{margin-bottom:0;}
+.list_style_0_con .list_style_0 > li:last-child{margin-bottom:0 !important;}
 .list_style_0_con .list_style_0 > li:after{content:""; position: absolute; top:20px; left:0; width:4px; height:4px; border-radius:50%; background-color:#333333;}
 .list_style_0_con .list_style_0.gray > li{color:#666;}
 .list_style_0_con .list_style_0.gray > li:after{background-color:#666;}
 .list_style_0_con.type_2 .list_style_0 > li:after{background-color:#ff5d4e !important;}
+.list_style_0_con .list_style_0.type_3 > li{margin-bottom: 5px;}
 
 /*list_style_1_con*/
 .list_style_1_con{}
@@ -615,6 +616,17 @@
 .popup_style_0_wrap .popup_style_0_con{}
 .popup_style_0_wrap .popup_title_con{padding-bottom:32px; padding-top:31px; text-align: center;}
 .popup_style_0_wrap .popup_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
+
+/* popup_style_1_wrap */
+.popup_style_1_wrap{}
+.popup_style_1_wrap .popup_style_1_con{}
+.popup_style_1_wrap .popup_close_btn{display: inline-block; width: 80px; height: 80px; background-color: #ff776a; background-image: url('../img/close_icon.png'); background-repeat: no-repeat; background-size: 44px 44px; background-position: center; margin-bottom: 30px;}
+.popup_style_1_wrap .popup_title{font-size:36px; font-size:3.6rem; line-height:42px; line-height:4.2rem; color:#111; text-align: center; font-weight: 600;}
+
+.btn_style_1_con{text-align: center;}
+.btn_style_1_con .btn_style_1{position: relative; display: inline-block; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666; padding-right: 40px;}
+.btn_style_1_con .btn_style_1:after{content: ''; position: absolute; top:50%; right:0;  margin-top: -16px; width:32px; height: 32px; background-color: #ff5d4e; border-radius: 50%;
+    background-image: url('../img/btn_style_1_arrow.png'); background-size: 8px 15px; background-position: left 14px center; background-repeat: no-repeat;}
 
 /* board_style_1_con */
 .board_style_1_con{}
