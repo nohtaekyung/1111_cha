@@ -336,6 +336,36 @@
 .staff_list_con .staff_list .info_con tr{border-bottom: 1px solid #ccc;}
 .staff_list_con .staff_list .info_con td{height: 70px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;}
 
+
+
+/*의료진 리스트*/
+.medical_schedule_wrap{float:left; width:100%;}
+.medical_schedule_wrap .medical_schedule_list{padding-top: 50px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px; border-bottom: 15px solid #f1f1f1; box-sizing: border-box;
+    font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; position: relative;}
+.medical_schedule_wrap .medical_schedule_list:last-child{border-bottom:none; padding-bottom: 0;}
+.medical_schedule_wrap .medical_schedule_list .pic_area{display: inline-block; vertical-align: top; width: 127px; position: absolute; top:50px; left:30px;}
+.medical_schedule_wrap .medical_schedule_list .medical_schedule_con_area{margin-top: 17px; box-sizing: border-box;}
+.medical_schedule_wrap .medical_schedule_list .doctor_name{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.025em; font-weight: 600; color:#111; margin-bottom: 7px; padding-left:149px;}
+.medical_schedule_wrap .medical_schedule_list .professional{font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; letter-spacing: -0.025em; font-weight: 400; color:#111;
+    height: 80px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap:break-word; word-break: keep-all; padding-left:149px; margin-bottom:29px;}
+.medical_schedule_wrap .medical_schedule_list .professional dt{display:none;}
+.medical_schedule_wrap .medical_schedule_list .schedule_btn_tab{margin-bottom:30px;}
+.medical_schedule_wrap .medical_schedule_list .schedule_tab{display:none;}
+
+
+.schedule_btn_tab .schedule_btn{display: flex; align-items: center; justify-content: center; width:calc(100% + 10px); margin-left:-10px;}
+.schedule_btn > a{display: flex; align-items: center; justify-content: center; height: 70px;
+    font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: 0em; font-weight: 400; color:#fff; text-align: center; background-color: #ff776a; border:1px solid #ff776a; box-sizing: border-box;
+    width:33.33%; margin-left:10px;}
+
+.medical_schedule_wrap .medical_schedule_list .schedule_tab_con_area{border-top:3px solid #988f87;}
+.medical_schedule_wrap .medical_schedule_list .schedule_tab_con_area .table_type_schedule{width:100%;}
+.medical_schedule_wrap .medical_schedule_list .schedule_tab_con_area tr{border-bottom: 1px solid #ccc;}
+.medical_schedule_wrap .medical_schedule_list .schedule_tab_con_area td{height: 70px; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#111;}
+
+
+
+
 .staff_list_con.type_2{}
 .staff_list_con.type_2 .staff_list:first-child{padding-top: 28px;}
 
