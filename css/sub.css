@@ -73,6 +73,10 @@
     padding-top:25px; padding-bottom:24px; border-bottom:3px solid transparent; display:block;}
 .tab_style_2_con .tab_style_2 > li.active > a{color:#ff5d4e; border-bottom-color:#ff5d4e;}
 
+.tab_style_2_con.type_2{}
+.tab_style_2_con.type_2 .tab_style_2 > li.active > a{color:#13426b; border-bottom-color:#13426b;}
+
+
 /* list_style_0_con */
 .list_style_0_con{}
 .list_style_0_con .list_style_0{}
@@ -133,9 +137,14 @@
 
 /* list_style_5 */
 .list_style_5{}
-.list_style_5 > li{font-size:0; line-height:0; text-align: left;}
-.list_style_5 > li .title{font-size:28px; line-height:42px; color:#666666; font-weight:400; width:100px; display:inline-block; vertical-align: top;}
-.list_style_5 > li .desc{font-size:28px; line-height:42px; color:#111111; font-weight:400; width:calc(100% - 100px); display:inline-block; vertical-align: top;}
+.list_style_5 > li{font-size:0; line-height:0; text-align: left; overflow: hidden;}
+.list_style_5 > li .title{float:left; font-size:28px; line-height:42px; color:#666666; font-weight:400; min-width:100px; display:inline-block; vertical-align: top;}
+.list_style_5 > li .title.small{font-size:24px; font-size:2.4rem; line-height:30px; line-height:3.0rem; color:#13426b;}
+.list_style_5 > li .desc{overflow: hidden; font-size:28px; line-height:42px; color:#111111; font-weight:400; display:inline-block; vertical-align: top;}
+
+.list_style_5.type_2{}
+.list_style_5.type_2 > li{display: flex; align-items: flex-start; justify-content: space-between;}
+.list_style_5.type_2 > li .title{}
 
 /* form_style_0_con */
 .form_style_0_con{border-top:3px solid #ff5d4e; padding-top:30px; border-bottom:3px solid #ff5d4e; padding-bottom:30px;}
@@ -723,6 +732,9 @@
 .table_style_0_caption.big{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#111111;}
 .table_style_0_caption.big .gray{color:#666666;}
 
+.table_style_0_con .table_style_0 td.pl0{padding-left: 0;}
+.table_style_0_con .table_style_0 td.pr0{padding-right: 0;}
+.table_style_0_con .table_style_0 td.vt{vertical-align: top;}
 
 /* calendar_con */
 .calendar_con{}
@@ -768,3 +780,15 @@
 .list_style_6_con .list_style_6 .list_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; font-weight: 600; color:#111;}
 .list_style_6_con .list_style_6 .list_desc{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; font-weight: 400; color:#111;}
 
+/*외래진료*/
+.step_style_1_con{width: calc(100% + 65px); margin-right: -65px; margin-bottom: -36px;}
+.step_style_1_con .step_style_1_list{float: left; width:33.33%; padding-right: 65px; margin-bottom: 36px; box-sizing: border-box; background-image: url('../img/step_style_1_arrow.png'); background-repeat: no-repeat; background-position: right 20px top 30px;}
+.step_style_1_con .step_style_1_list:nth-child(3n){background-image: none;}
+.step_style_1_con .step_style_1_list:last-child{background-image: none;}
+.step_style_1_con .step_style_1_list:nth-child(3n+1){clear:left;}
+.step_style_1_con .step_style_1_list_inner{overflow: hidden;}
+.step_style_1_con .step_style_1_list .img_con{float:left; width: 65px; text-align: center; margin-top: 8px;}
+.step_style_1_con .step_style_1_list .text_con{overflow: hidden;}
+.step_style_1_con .step_style_1_list .step_style_1{display: flex; align-items: center; justify-content: center; width: 115px; height: 43px; font-size:24px; font-size:2.4rem; line-height:30px; line-height:3.0rem; color:#fff; font-weight: 400;
+    background-color: #ffb642; border-radius: 30px; padding-bottom: 3px; box-sizing: border-box; margin-bottom: 4px;}
+.step_style_1_con .step_style_1_list .step_style_1_title{font-size:24px; font-size:2.4rem; line-height:30px; line-height:3.0rem; color:#111; font-weight: 600; word-break: keep-all;}
