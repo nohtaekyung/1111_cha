@@ -157,4 +157,24 @@ $(function() {
             }
         })
     }
+
+    faq_fn();
 });
+
+/* faq */
+function faq_fn(){
+    $(".faq_list > li > a").click(function(){
+        if($(this).next(".faq_con").css("display") == "block"){
+            $(this).parent("li").removeClass("on");
+            $(this).next(".faq_con").slideUp();
+        }else{
+            $(this).parent("li").addClass("on");
+
+            if ($(".faq_list").hasClass("pop")) {
+                $(".faq_con").slideUp();
+            }
+
+            $(this).next(".faq_con").slideDown();
+        }
+    });
+};
