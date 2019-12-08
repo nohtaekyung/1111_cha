@@ -618,7 +618,7 @@
 .popup_style_0_wrap .popup_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#111111; font-weight:700;}
 
 /* popup_style_1_wrap */
-.popup_style_1_wrap{}
+.popup_style_1_wrap{padding-bottom: 120px;}
 .popup_style_1_wrap .popup_style_1_con{}
 .popup_style_1_wrap .popup_close_btn{display: inline-block; width: 80px; height: 80px; background-color: #ff776a; background-image: url('../img/close_icon.png'); background-repeat: no-repeat; background-size: 44px 44px; background-position: center; margin-bottom: 30px;}
 .popup_style_1_wrap .popup_title{font-size:36px; font-size:3.6rem; line-height:42px; line-height:4.2rem; color:#111; text-align: center; font-weight: 600;}
@@ -627,6 +627,21 @@
 .btn_style_1_con .btn_style_1{position: relative; display: inline-block; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666; padding-right: 40px;}
 .btn_style_1_con .btn_style_1:after{content: ''; position: absolute; top:50%; right:0;  margin-top: -16px; width:32px; height: 32px; background-color: #ff5d4e; border-radius: 50%;
     background-image: url('../img/btn_style_1_arrow.png'); background-size: 8px 15px; background-position: left 14px center; background-repeat: no-repeat;}
+
+.terms_list_con{}
+.terms_list_con .terms_list{margin-bottom: 12px;}
+.terms_list_con .terms_list:last-child{margin-bottom: 0px;}
+.terms_list_con .terms_list .title{font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; color:#333; font-weight: 600; word-break: keep-all;}
+.terms_list_con .terms_list .desc{ position: relative; overflow: hidden; font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; color:#666; font-weight: 400; word-break: keep-all;}
+.terms_list_con .terms_list .desc .num{ float: left; margin-right: 9px;}
+
+.address_list_con{}
+.address_list_con .address_list{display: block;}
+.address_list_con .address_list_inner{display: table; width: 100%; border-bottom:2px solid #f4f4f4; padding-top: 22px; padding-bottom: 23px;}
+.address_list_con .address_list:first-child .address_list_inner{border-top:2px solid #f4f4f4;}
+.address_list_con .address_list_inner *{display: table-cell; vertical-align: top; font-size:28px; font-size:2.8rem; line-height:40px; line-height:4.0rem; word-break: keep-all;}
+.address_list_con .address_list_inner .address{width: calc(100% - 130px); text-align: left; padding-right: 30px;}
+.address_list_con .address_list_inner .num{width: 130px; text-align: center;}
 
 /* board_style_1_con */
 .board_style_1_con{}
