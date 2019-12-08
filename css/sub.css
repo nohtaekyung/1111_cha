@@ -32,6 +32,7 @@
 .tab_swiper_container .tab_swiper_arrow{position: absolute; top:50%; margin-top:-11px; z-index:3; display:none;}
 .tab_swiper_container .tab_swiper_arrow:not(.swiper-button-disabled){display:block;}
 .tab_swiper_container .tab_swiper_arrow.left{left:30px;}
+.tab_swiper_container.type_2 .tab_swiper_arrow.left{display:none;}
 .tab_swiper_container .tab_swiper_arrow.right{right:30px;}
 
 /* tab_style_0_con */
