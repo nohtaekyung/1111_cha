@@ -741,3 +741,14 @@
 .sns_popup_wrap .sns_contents_list{margin-bottom:80px;}
 .sns_popup_wrap .sns_contents_list:last-child{margin-bottom:0;}
 .sns_popup_wrap .sns_contents{display:inline-block;}
+
+/*처음오시는분*/
+.list_style_6_con{}
+.list_style_6_con .list_style_6{display: flex; align-items: center; height: 110px; padding-left: 28px; padding-right: 50px; background-image: url('../img/check_style_0_arrow.png'); background-size: 12px 22px;
+    background-position: right 42px center; background-repeat: no-repeat; border:1px solid #ddd; margin-bottom: 10px;}
+.list_style_6_con .list_style_6:last-child{margin-bottom: 0;}
+.list_style_6_con .list_style_6 .img_con{width: 92px; text-align: center; margin-right: 30px;}
+.list_style_6_con .list_style_6 .text_con{}
+.list_style_6_con .list_style_6 .list_title{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; font-weight: 600; color:#111;}
+.list_style_6_con .list_style_6 .list_desc{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; font-weight: 400; color:#111;}
+

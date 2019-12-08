@@ -29,23 +29,32 @@ $(function(){
 
 var naviEl = {
     init : function(){
-        this.el = $('#navigator');
-        this.realEl = $('#navigator').find('> li')[0];
-        this.elHeight = $('#navigator').outerHeight();
-        this.el.css('height', '101px');
+        this.el = $('#navigator').find('.menu_list_con');
+        this.realEl = $('#navigator').find('.active_menu');
+        this.elHeight = $(this.el).css('height','auto').outerHeight();
+        this.el.css('height', 0);
         this.registEvent();
     }
 
     ,registEvent : function(){
         var _this = this;
         $(this.realEl).on('click', function(){
+
+            var scrollHeight = $(window).innerHeight() - $(_this.realEl).outerHeight();
+
             if( $(_this.el).hasClass('active') ){
-                TweenMax.to( _this.el, 0.5, {height : '101px', onComplete : function(){
+                if(_this.elHeight > scrollHeight){
+                    $(_this.el).css('overflow-y','hidden');
+                }
+                TweenMax.to( _this.el, 0.5, {height : 0, onComplete : function(){
                     $(_this.el).removeClass('active');
                 }});
             }else{
                 TweenMax.to( _this.el, 0.5, {height : _this.elHeight, onComplete : function(){
                     $(_this.el).addClass('active');
+                    if(_this.elHeight > scrollHeight){
+                        $(_this.el).css({'maxHeight':scrollHeight}).css('overflow-y','scroll');
+                    }
                 }});
             }
         });
