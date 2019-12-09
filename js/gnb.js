@@ -77,11 +77,13 @@ var naviEl = {
     }
 
     ,title_pos : function(){
-        var scrT = $(window).scrollTop();
-        if(scrT > $("header").outerHeight()){
-            $(".wrapper").addClass("fixed");
-        }else{
-            $(".wrapper").removeClass("fixed");
+        if( $('.sub_header_wrap').length > 0 ){
+            var scrT = $(window).scrollTop();
+            if(scrT > $("header").outerHeight()){
+                $(".wrapper").addClass("fixed");
+            }else{
+                $(".wrapper").removeClass("fixed");
+            }
         }
     }
 }

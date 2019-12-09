@@ -233,10 +233,59 @@
                 <img src="../img/tab_swiper_wrapper_mask_bg.png" alt="mask">
             </div>
         </div>
-
+        <div class="col-12 mb41 tab_type_3_swiper_container swiper-container">
+            <ul class="tab_swiper_wrapper swiper-wrapper">
+                <li class="tab_slide swiper-slide active">
+                    <a href="javascript:void(0)">
+                        개인정보수정
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+                <li class="tab_slide swiper-slide">
+                    <a href="javascript:void(0)">
+                        비밀번호변경
+                    </a>
+                </li>
+            </ul>
+            <hr class="seperate_line_style_0">
+        </div>
         <!-- contents_wrap -->
         <div class="col-12 sub_contents_wrap">
-            <div class="col-12 pt50 pb50 pl30 pr30">
+            <div class="col-12 pb50 pl30 pr30">
                 <div class="col-12 mb23 list_style_0_con">
                     <ul class="list_style_0">
                         <li>
@@ -465,6 +514,30 @@
         var con = $('.tab_swiper_container').find('.tab_slide');
 
         for( var i=0; i<con.length; i++ ){
+            if( con.length < 4 ){
+                $('.tab_swiper_container').find('.tab_mask').hide();
+            }
+            if( $($(con)[i]).hasClass('active') ){
+                sub_swiper.slideToLoop(i, 0);
+            }
+        };
+        var actSlide1 = $('.tab_type_3_swiper_container .tab_slide.active').index();
+
+        var tab_type_3_swiper_container = new Swiper('.tab_type_3_swiper_container.swiper-container', {
+            initialSlide: actSlide1,
+            scrollbarHide: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            spaceBetween: 0,
+            grabCursor: false
+        })
+
+        var con = $('.tab_swiper_container').find('.tab_slide');
+
+        for( var i=0; i<con.length; i++ ){
+            if( con.length < 4 ){
+                $('.tab_swiper_container').find('.tab_mask').hide();
+            }
             if( $($(con)[i]).hasClass('active') ){
                 sub_swiper.slideToLoop(i, 0);
             }

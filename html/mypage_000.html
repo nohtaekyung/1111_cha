@@ -310,6 +310,9 @@
         var con = $('.tab_swiper_container').find('.tab_slide');
 
         for( var i=0; i<con.length; i++ ){
+            if( con.length < 4 ){
+                $('.tab_swiper_container').find('.tab_mask').hide();
+            }
             if( $($(con)[i]).hasClass('active') ){
                 sub_swiper.slideToLoop(i, 0);
             }

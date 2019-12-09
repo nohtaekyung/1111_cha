@@ -62,7 +62,8 @@
 
 .sub_header_wrap{ z-index:4;}
 .wrapper.fixed .sub_header_wrap{position: fixed; max-width:750px;}
-.wrapper.fixed .sub_contents_wrap{padding-top:101px;}
+.wrapper.fixed .sub_contents_wrap{}
+.wrapper.fixed .tab_swiper_container{padding-top:101px;}
 .sub_header_wrap .sub_header_con{height: 101px; background-color: #ff776a;}
 .sub_header_wrap .left_con{float:left; width: calc(100% - 101px); height: 100%;
     border-right:1px solid rgba(255,255,255,0.6); box-sizing: border-box; position: relative;}
