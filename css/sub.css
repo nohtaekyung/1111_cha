@@ -21,18 +21,22 @@
 .tab_swiper_container.type_2{}
 .tab_swiper_container.type_2 .tab_swiper_wrapper > li.tab_slide.active{border-color:#13426b;}
 .tab_swiper_container.type_2 .tab_swiper_wrapper > li.tab_slide.active > a{background-color:#13426b;}
-.tab_swiper_container .tab_swiper_wrapper{}
-.tab_swiper_container .tab_mask{position: absolute; top:1px; right:1px; z-index:2;}
-.tab_swiper_container .tab_swiper_wrapper > li.tab_slide{width:250px; border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; box-sizing: border-box;}
+.tab_swiper_container .tab_swiper_wrapper{display:flex;}
+.tab_swiper_container .tab_mask{position: absolute; top:1px; z-index:2;}
+.tab_swiper_container .tab_mask.left{left:1px;}
+.tab_swiper_container .tab_mask.right{right:1px;}
+.tab_swiper_container .tab_swiper_wrapper > li.tab_slide{width:auto !important; min-width:250px; flex:1; border-top:1px solid #cccccc; border-bottom:1px solid #cccccc; border-left:1px solid #cccccc; box-sizing: border-box;}
 .tab_swiper_container .tab_swiper_wrapper > li.tab_slide:last-child{border-right:1px solid #cccccc;}
 .tab_swiper_container .tab_swiper_wrapper > li.tab_slide > a{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
     display:block; padding-top:17px; padding-bottom:17px; box-sizing: border-box; background-color:#fff; text-align: center;}
 .tab_swiper_container .tab_swiper_wrapper > li.tab_slide.active{border-color:#ff776a;}
 .tab_swiper_container .tab_swiper_wrapper > li.tab_slide.active > a{background-color:#ff776a; color:#fff;}
 .tab_swiper_container .tab_swiper_arrow{position: absolute; top:50%; margin-top:-11px; z-index:3; display:none;}
+.tab_swiper_container.type_2 .tab_swiper_arrow{margin-top:-22px;}
+.tab_swiper_container.type_2 .tab_swiper_arrow.left{left:10px;}
+.tab_swiper_container.type_2 .tab_swiper_arrow.right{right:10px;}
 .tab_swiper_container .tab_swiper_arrow:not(.swiper-button-disabled){display:block;}
 .tab_swiper_container .tab_swiper_arrow.left{left:30px;}
-.tab_swiper_container.type_2 .tab_swiper_arrow.left{display:none;}
 .tab_swiper_container .tab_swiper_arrow.right{right:30px;}
 
 /* tab_style_0_con */
@@ -75,6 +79,8 @@
 
 .tab_style_2_con.type_2{}
 .tab_style_2_con.type_2 .tab_style_2 > li.active > a{color:#13426b; border-bottom-color:#13426b;}
+.tab_style_2_con.type_3{}
+.tab_style_2_con.type_3 .tab_style_2{text-align: left; overflow-x:auto; white-space: nowrap;}
 
 .tab_type_3_swiper_container{}
 .tab_type_3_swiper_container .tab_swiper_wrapper{font-size:0; line-height:0; margin-bottom:-1px; padding-right:30px; padding-left:30px;}
@@ -632,6 +638,7 @@
 .input_list_style_1_con .input_list_style_1 .input_style_style_1_input::-webkit-input-placeholder{color:#555555;}
 .input_list_style_1_con.type_2 .input_list_style_1 label{width:224px;}
 .input_list_style_1_con.type_2 .input_list_style_1 .input_style_style_1_input{width:calc(100% - 224px);}
+.input_list_style_1_con.type_2 .input_list_style_1 .input_style_style_1_input.width50{width:calc(((100% - 224px) / 2) - 13px);}
 .input_list_style_1_con.boxing{padding-top:30px; padding-bottom:30px; padding-right:30px; background-color:#f6f6f6;}
 
 /* 진료예약현황 */

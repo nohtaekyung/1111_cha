@@ -1,3 +1,82 @@
+var events = function( target ){
+    return bm.eventTrigger.get( target );
+};
+
+bm.Events = function(){ this.trigger = {} }
+bm.Events.prototype = {
+
+    addListener : function( type, listener ){
+        if( !this.trigger[type] ) this.trigger[type] = [];
+        this.trigger[type].push( listener );
+    }
+
+    ,removeListener : function( type, listener ){
+        if( this.hasListener(type, listener ) == false ) return;
+        var index = this.trigger[type].indexOf( listener );
+        this.trigger[type].splice( index, 1 );
+        if( this.trigger[type].length == 0 ) delete this.trigger[ type ];
+    }
+
+    ,hasListener : function( type, listener ){
+        if( this.trigger[type] && this.trigger[type].indexOf( listener ) > -1 ) return true;
+        else return false;
+    }
+
+    ,dispatch : function( type, data ){
+
+        if( type === '' ){
+            throw new Error("Error [bm.Events.Event]:dispatch() ==> type is not defined");
+            return;
+        }
+
+        var e = {};
+        e.type = type;
+        e.data = data;
+
+        if( this.trigger[type] ){
+            var len = this.trigger[type].length;
+            while( len-- ){
+                var fn = this.trigger[type][len];
+                fn.call( fn, e );
+            }
+        }
+
+    }
+}
+
+bm.eventTrigger = {
+
+    eventList : []
+
+    ,list : []
+
+    ,get : function( target ){
+        var idx = this.list.indexOf( target );
+        if( idx > -1 ) return this.eventList[ idx ];
+        else return this.make( target );
+    }
+
+    ,make : function( target ){
+        this.list.push( target );
+        this.eventList.push(new bm.Events());
+        return this.eventList[ this.eventList.length-1 ];
+    }
+}
+
+bm.each = function( list, fn ){
+    var key, i = 0;
+    if( !list || list.length == 0 ) return;
+
+    if( list.length ) while( i<list.length ) fn.call( list[i], i, list[i], i++ ); /* fn( key, value, index ); */
+    else for( key in list ){ fn.call( list[i], key , list[key], i++ ); }
+}
+
+bm.indexOf = function( list, item ){
+    var i = list.length;
+    while( i-- ) if( list[ i ] === item ) return i;
+    return -1;
+}
+
 /* 자주하는질문 faq용
  * 질문 카테고리별로 faqcon이 나오고, 각각 오픈되고 닫혀야한다면 따로 객체 생성하고,
  * 여러개여도 항상 하나만 오픈되어야한다면 하나객체만 생성
@@ -137,6 +216,49 @@ faqController.prototype = {
 
 }
 
+TabNavigator = function( btns, childs, btnOnClass ){
+
+    this.selectedIndex = 0;
+    this.btns = btns;
+    this.childs = childs;
+    this.btnOnClass = btnOnClass;
+
+    this.active();
+}
+
+TabNavigator.TAB_INDEX_CHANGE = "TAB_INDEX_CHANGE";
+
+TabNavigator.prototype = {
+
+    active : function(){
+        var tab = this;
+        tab.indexControl();
+
+        $(this.btns).on( "click", function(){
+            tab.selectedIndex = bm.indexOf( tab.btns, this );
+            tab.indexControl();
+        });
+    }
+
+    ,deActive : function(){
+        $(this.btns).off("click");
+    }
+
+    ,indexControl : function(){
+        var len = this.btns.length;
+        while( len-- ){
+            if( this.selectedIndex == len ){
+                $(this.btns[len]).addClass( this.btnOnClass );
+                $(this.childs[len]).show();
+            }else{
+                $(this.btns[len]).removeClass( this.btnOnClass );
+                $(this.childs[len]).hide();
+            }
+        }
+        events( this ).dispatch( TabNavigator.TAB_INDEX_CHANGE, {selectedIndex:this.selectedIndex} );
+    }
+}
+
 $(function() {
     var faqObj = new faqController();
     faqObj.init( '.comment_wrap' , 'list_on');
@@ -159,6 +281,23 @@ $(function() {
     }
 
     faq_fn();
+
+    var selectedIndex, findTabMenu;
+    var selectedMenu = $('.tab_style_0 > li.active');
+    var tabMenu = $('.tab_style_0 > li');
+    var tabContents = $('.tab_style_0_child_con .input_list_style_1_con');
+
+    if(selectedMenu){
+        selectedIndex = selectedMenu.index();
+    }else{
+        selectedIndex = 0;
+    }
+
+    if($('.tab_style_0').length > 0 && ( tabMenu.length == tabContents.length ) ){
+        findTabMenu = new TabNavigator( tabMenu , tabContents , 'active');
+        findTabMenu.selectedIndex = selectedIndex;
+        findTabMenu.indexControl();
+    }
 });
 
 /* faq */
