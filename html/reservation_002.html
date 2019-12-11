@@ -14,11 +14,15 @@
     <link rel="stylesheet" href="../css/sub.css"/>
     <link rel="stylesheet" href="../js/aos/aos.css"/>
     <link rel="stylesheet" href="../js/swiper/swiper.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="../js/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/bm.js"></script>
     <script type="text/javascript" src="../js/gnb.js"></script>
     <script type="text/javascript" src="../js/sub.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 </head>
 <body>
 <div class="wrapper sub mypage" id="wrapper">
@@ -395,6 +399,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 datepicker" id="datepicker">
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -404,16 +411,16 @@
             <div class="col-12 mb30 board_style_0_con">
                 <div class="col-12 board_style_0_contents">
                     <div class="col-12 pr30 pl30 form_style_1_wrap">
-                        <div class="col-12 mb30 form_header short">
+                        <div class="col-12 mb25 form_header short">
                             <div class="form_header_title small">
                                 <span class="vm mr11 icon"><img src="../img/user_info_icon_003.png" class="vt" alt="2. 시간 선택"></span>2. 시간 선택
                             </div>
                         </div>
-                        <div class="col-12 mb30 form_style_1_con">
+                        <div class="col-12 mb25 form_style_1_con">
                             <div class="form_contents_list_con">
                                 <div class="form_contents_list">
                                     <div class="form_contents_desc_con type_2">
-                                        <div class="mb10 radio_style_0_wrap">
+                                        <div class="radio_style_0_wrap">
                                             <div class="radio_style_0_con">
                                                 <input type="radio" class="radio_style_0" id="today0" name="today" disabled>
                                                 <label for="today0">08 : 30</label>
@@ -430,8 +437,6 @@
                                                 <input type="radio" class="radio_style_0" id="today3" name="today">
                                                 <label for="today3">12 : 00</label>
                                             </div>
-                                        </div>
-                                        <div class="radio_style_0_wrap">
                                             <div class="radio_style_0_con">
                                                 <input type="radio" class="radio_style_0" id="today4" name="today">
                                                 <label for="today4">08 : 30</label>
@@ -550,3 +555,16 @@
         </footer>
     </div>
 </div>
+<script type="text/javascript">
+    $(function() {
+        $( "#datepicker" ).datepicker({
+            dateFormat: 'yy.mm',
+            nextText: '다음 달',
+            prevText: '이전 달',
+            dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+            monthNames: ['1','2','3','4','5','6','7','8','9','10','11','12']
+        });
+    });
+</script>
