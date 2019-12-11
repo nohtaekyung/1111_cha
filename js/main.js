@@ -16,6 +16,13 @@ $(function(){
         }
     })
 
+    $('.quick_menu_close_btn').on('click', function(){
+        $('.quick_menu_con').removeClass('active');
+    })
+
+    $('.quick_menu_btn').on('click', function(){
+        $('.quick_menu_con').addClass('active');
+    })
 })
 
 $(window).load(function(){
@@ -42,9 +49,10 @@ $(window).load(function(){
         ,speed : 500
         ,mousewheelControl: false
         ,autoplayDisableOnInteraction: true // 인터렉션 이후 다시 오토 플레이
-        ,navigation: {
-            nextEl: '.facility_wrap .facility_slide_arrow.right',
-            prevEl: '.facility_wrap .facility_slide_arrow.left',
+        , pagination: {
+            el: '.facility_wrap .facility_slide_pagination_con',
+            type: 'bullets',
+            clickable : true
         }
         ,on : {
             init : function(){
@@ -60,4 +68,35 @@ $(window).load(function(){
             }
         }
     });
+
+    mainStaffController.init();
 })
+
+var mainStaffController = {
+    init : function(){
+        this.target = $('.staff_card_list_con');
+        this.targetHeight = $(this.target).outerHeight();
+        this.targetLen = $('.staff_card_list').length;
+        this.defaultLen = 4;
+    }
+
+    ,registEvent : function(){
+    }
+
+    ,addLoad : function(){
+        var _this = this;
+        if( this.targetLen > parseInt(this.defaultLen)+4 ){
+            if( this.targetLen > this.defaultLen ){
+                this.targetHeight = parseInt(this.targetHeight)+parseInt($('.staff_card_list').outerHeight()+20)*2;
+                TweenMax.to( this.target, 0.5, {height : this.targetHeight});
+                _this.defaultLen = parseInt(_this.defaultLen)+4;
+            }
+        }else{
+            if( this.targetLen > this.defaultLen ){
+                this.targetHeight = parseInt(this.targetHeight)+parseInt($('.staff_card_list').outerHeight()+20);
+                TweenMax.to( this.target, 0.5, {height : this.targetHeight});
+                _this.defaultLen = parseInt(_this.defaultLen)+2;
+            }
+        }
+    }
+}

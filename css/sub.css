@@ -848,8 +848,19 @@
     font-size:0; line-height:0; padding-bottom:9px; padding-top:10px; text-align: center;}
 #datepicker .ui-datepicker td:last-child{border-right:none;}
 #datepicker .ui-datepicker td a{font-size:28px; font-size:2.8rem; line-height:50px; line-height:5.0rem; color:#111111;
-    width:50px; height:50px; border-radius:50%; overflow: hidden; background:transparent; display:inline-block; text-align: center; border:none; padding:0;}
+    width:50px; height:50px; border-radius:50%; overflow: hidden; background:transparent; display:inline-block; text-align: center; border:none; padding:0; box-sizing: border-box;}
+#datepicker .ui-datepicker td span{font-size:28px; font-size:2.8rem; line-height:50px; line-height:5.0rem; color:#111111;
+    width:50px; height:50px; border-radius:50%; overflow: hidden; background:transparent; display:inline-block; text-align: center; border:none; padding:0; box-sizing: border-box;}
 #datepicker .ui-datepicker td a.ui-state-active{color:#fff; background-color:#ff5d4e;}
+#datepicker .ui-datepicker td a.ui-datepicker-unselectable{color:#cccccc;}
+#datepicker .ui-datepicker td a.ui-state-active.ui-state-default { background:#ff776a; color:#fff; border:1px solid #ff776a; }
+#datepicker .ui-datepicker .ui-datepicker-unselectable a { background:transparent; border:none; text-indent:-9999px; color:#cccccc;}
+#datepicker .ui-datepicker td span.ui-state-active{color:#fff; background-color:#ff5d4e;}
+#datepicker .ui-datepicker td span.ui-datepicker-unselectable{color:#cccccc;}
+#datepicker .ui-datepicker td span.ui-state-active.ui-state-default { background:#ff776a; color:#fff; border:1px solid #ff776a; }
+
+
+
 
 /* sns_popup_wrap */
 .sns_popup_wrap{position: fixed; height:100%; z-index: 6; background-color:#fff; top:0; left:100%; transition:left .5s ease;}
