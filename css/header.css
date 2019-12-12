@@ -83,3 +83,20 @@
 .sub_header_wrap .left_con .home_icon_con.hidden + .menu_list_wrap .active_menu{padding-left:30px;}
 .sub_header_wrap .sns_btn_con{float:left; width: 101px; height: 100%;}
 .sub_header_wrap .sns_btn_con .sns_btn{display: block; width: 100%; height: 100%; background-image: url('../img/sns_icon.png'); background-repeat: no-repeat; background-size: 39px 36px; background-position: center;}
+
+/* quick_menu_con */
+.quick_menu_btn_con{position: fixed; bottom:40px; right:20px; z-index: 5; text-align: center;}
+.quick_menu_btn_con .quick_menu_btn{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; letter-spacing: -0.025em; color:#fff; font-weight:700;
+    display:block; width:120px; height:120px; box-sizing: border-box; border-radius:50%; background-color:#ff776a; padding-top:23px;}
+
+.quick_menu_con{width:100%; height:100%; position: fixed; right:-100%; top:0; box-sizing: border-box; padding-bottom:80px; padding-right:40px; z-index: 6; background-color:#ff776a;
+    display: flex; flex: 1; flex-direction: column; justify-content: flex-end; transition:right 0.5s;}
+.quick_menu_con.active{right:0;}
+.quick_menu_con .quick_menu_list_con{margin-bottom:100px;}
+.quick_menu_con .quick_menu_list{font-size:0; line-height:0; text-align: right; margin-bottom:30px;}
+.quick_menu_con .quick_menu_list:last-child{margin-bottom:0;}
+.quick_menu_con .quick_menu_title{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4em; color:#fff; font-weight:700;
+    display:inline-block; vertical-align: middle; margin-right:30px;}
+.quick_menu_con .quick_menu_icon{display:inline-block; vertical-align: middle; width:100px; height:100px; border:2px solid #fff; border-radius:50%; line-height:96px; text-align: center;}
+.quick_menu_con .quick_menu_close_btn_con{text-align: right;}
+.quick_menu_con .quick_menu_close_btn{display:block; margin-left:auto;}

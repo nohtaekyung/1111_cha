@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=750">
     <meta property="og:image" content="../img/kakao_prev.jpg">
     <title>CHA Meditech</title>
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/common_style.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/responsive.css"/>
     <link rel="stylesheet" href="../css/header.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
@@ -18,6 +18,7 @@
     <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="../js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="../js/bm.js"></script>
+    <script type="text/javascript" src="../js/gnb.js"></script>
     <script type="text/javascript" src="../js/sub.js"></script>
 </head>
 <body>
@@ -62,180 +63,195 @@
             </div>
         </header>
         <div class="col-12 sub_contents_wrap">
-            <div class="col-12 tc sub_contents_header_con">
-                <h2>
-                    회원
-                </h2>
-                <a href="javascript:void(0)" class="mypage_close_btn">
-                    <img src="../img/mypage_close_icon.png" alt="닫기">
-                </a>
-            </div>
-            <div class="col-12 mb41 tab_swiper_container mask swiper-container">
+            <div class="col-12 mb41 tab_swiper_container mask swiper-container type_2">
                 <ul class="tab_swiper_wrapper swiper-wrapper">
-                    <li class="tab_slide swiper-slide">
-                        <a href="javascript:void(0)">
-                            로그인
-                        </a>
-                    </li>
-                    <li class="tab_slide swiper-slide">
-                        <a href="javascript:void(0)">
-                            회원가입
-                        </a>
-                    </li>
-                    <li class="tab_slide swiper-slide">
-                        <a href="javascript:void(0)">
-                            아이디찾기
-                        </a>
-                    </li>
-                    <li class="tab_slide swiper-slide">
-                        <a href="javascript:void(0)">
-                            비밀번호찾기
-                        </a>
-                    </li>
                     <li class="tab_slide swiper-slide active">
                         <a href="javascript:void(0)">
-                            회원가입FAQ
+                            진료예약 안내
+                        </a>
+                    </li>
+                    <li class="tab_slide swiper-slide">
+                        <a href="javascript:void(0)">
+                            처음진료 빠른예약
+                        </a>
+                    </li>
+                    <li class="tab_slide swiper-slide">
+                        <a href="javascript:void(0)">
+                            전화예약
+                        </a>
+                    </li>
+                    <li class="tab_slide swiper-slide">
+                        <a href="javascript:void(0)">
+                            방문예약
+                        </a>
+                    </li>
+                    <li class="tab_slide swiper-slide">
+                        <a href="javascript:void(0)">
+                            FAQ예약
+                        </a>
+                    </li>
+                    <li class="tab_slide swiper-slide">
+                        <a href="javascript:void(0)">
+                            예약조회/취소
                         </a>
                     </li>
                 </ul>
                 <div class="tab_swiper_arrow left">
-                    <img src="../img/linemap_arrow.png" alt="prev">
+                    <img src="../img/check_style_0_arrow_type_2_left.png" alt="prev">
                 </div>
                 <div class="tab_swiper_arrow right">
-                    <img src="../img/check_style_0_arrow.png" alt="next">
-                </div>
-                <div class="tab_mask">
-                    <img src="../img/tab_swiper_wrapper_mask_bg.png" alt="mask">
+                    <img src="../img/check_style_0_arrow_type_2.png" alt="next">
                 </div>
             </div>
-            <div class="col-12 pr30 pl30">
+            <div class="col-12 mb40 pr30 pl30">
                 <div class="col-12 mb42 list_style_0_con">
                     <ul class="list_style_0">
                         <li>
-                            기타 문의 사항은 고객서비스 내 고객의 소리에 문의하시거나 전화로 문의주시면 답변 드립니다.
+                            아래 예약 방법 중 원하시는 예약을 선택 해 주세요.<br/>
                         </li>
                         <li>
-                            회원가입 관련 전화문의 <span class="point0">000-0000-0000</span>
+                            처음진료를 보시는 고객은 처음진료 빠른예약, 전화예약,<br/>
+                            방문예약을 이용해 주세요.
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-12 mb50 faq_list_con">
-                <!-- data -->
-                <ul class="comment_wrap">
-                    <li>
-                        <div class="comment_con">
-                            <div class="comments">
-                                ID나 비밀번호를 잊어버렸는데요?
-                            </div>
-                        </div>
-                        <div class="reply_con" data-faqReply>
-                            <div class="reply">
-                                <!-- FAQ 코딩 -->
-
-                                <div class="txt_box">
-                                    ID나 비밀번호를 잊으신 경우 홈페이지에서 '아이디찾기'와 '비밀번호찾기'를 통해, 본인의 ID와 비밀번호를 확인하실 수 있습니다.<br>
-                                    <strong class="blue">백신의 동시 접종 원칙</strong>
-                                    Q: 소아마비 1차와 뇌수막염 Hib 1차를 한번에 접종해도 되나요?
+                <div class="col-12 step_child_con">
+                    <div class="col-12 box_style_2_wrap">
+                        <div class="col-12 box_style_2_con">
+                            <div class="box_header">
+                                <div class="box_title">
+                                    처음진료 빠른예약
                                 </div>
-                                <br>
-                                <div class="txt_box">
-                                    <ol class="num_list blue_bul">
-                                        <li><img src="../img/blue_bul01.png" alt="1">HBsAg 양성모체나 B형 감염의 감염 여부를 모르는 모체에서 출생한 신생아에게 접종하는 경우 HBIG를 동시에 다른 주사기로 투여합니다. 백신의 종류에 따라 첫 회 접종을 기준으로 0, 1, 6개월 또는 0, 1, 2개월로 총 3회 접종합니다.</li>
-                                        <li><img src="../img/blue_bul01.png" alt="1">HBsAg 음성 모체에서 출생한 신생아에게 접종하는 경우에는 백신의 종류에 따라 첫 회 접종을 기준으로 0, 1, 6개월 또는 0, 1, 2개월로 총 3회 접종합니다.</li>
-                                    </ol>
-                                    <br>
-
-                                    <ul class="dot_list05">
-                                        <li> Hib(헤모필루스 인플루엔자 b형) : 제품에 따라 2, 4, 6, 12~15개월 또는 2, 4, 12~15개월에 접종</li>
-                                        <li> 수두(Chickenpox) : 12개월 이후에 접종</li>
-                                    </ul>
-                                    <br>
+                                <div class="box_subtitle">
+                                    진료를 처음 보시는 경우
                                 </div>
-
-                                <ol class="num_list blue_bul">
-                                    <li><img src="../img/blue_bul01.png" alt="1">HBsAg 양성모체나 B형 감염의 감염 여부를 모르는 모체에서 출생한 신생아에게 접종하는 경우 HBIG를 동시에 다른 주사기로 투여합니다. 백신의 종류에 따라 첫 회 접종을 기준으로 0, 1, 6개월 또는 0, 1, 2개월로 총 3회 접종합니다.</li>
-                                    <li><img src="../img/blue_bul01.png" alt="1">HBsAg 음성 모체에서 출생한 신생아에게 접종하는 경우에는 백신의 종류에 따라 첫 회 접종을 기준으로 0, 1, 6개월 또는 0, 1, 2개월로 총 3회 접종합니다.</li>
-                                </ol>
-                                <br>
-
-                                <ul class="dot_list05">
-                                    <li> Hib(헤모필루스 인플루엔자 b형) : 제품에 따라 2, 4, 6, 12~15개월 또는 2, 4, 12~15개월에 접종</li>
-                                    <li> 수두(Chickenpox) : 12개월 이후에 접종</li>
-                                </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="comment_con">
-                            <div class="comments">
-                                신규 가입 중에 이미 사용 중인 ID가 있다고
-                                하는데.
-                            </div>
-                        </div>
-                        <div class="reply_con" data-faqReply>
-                            <div class="reply">
-                                신규 가입시 우선 기존 가입 여부를 확인하기 위해 핸드폰 및 아이핀 본인인증으로 중복여부를 확인하는데, 기존 가입자인 경우 ‘이미 홈페이지의 회원입니다’라고 알려드립니다.<br/>
-                                만약 기존 아이디와 비밀번호를 잊으신 경우에는 ‘아이디/비밀번호 찾기’ 메뉴에서 우선 확인합니다.<br/>
-                                이 절차로도 해결되지 않으면, 사이버 서비스센터(T. 000-0000-0000)로 전화해 주시면 본인확인 이후에 조치해 드립니다.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="comment_con">
-                            <div class="comments">
-                                회원 탈퇴는 어떻게 하나요?
-                            </div>
-                        </div>
-                        <div class="reply_con" data-faqReply>
-                            <div class="reply">
-                                아니요
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="comment_con">
-                            <div class="comments">
-                                Log-in후 자리를 비울 때는?
-                            </div>
-                        </div>
-                        <div class="reply_con" data-faqReply>
-                            <div class="reply">
-                                아니요
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <!-- nodata -->
-                <div class="col-12 hidden" id="noDataWrap">
-                    <div class="col-12 nodata_wrap no_border">
-                        <div class="nodata_con">
-                            <div class="pb16 nodata_inner">
-                                <div class="mb23 nodata_icon">
-                                    <svg version="1.1" id="격리_모드" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 65.2 53" style="enable-background:new 0 0 65.2 53;" xml:space="preserve">
-                                            <g>
-                                                <path class="st0 svg_point2" d="M64.1,44.9l-27-41.6c-2.5-4.5-6.6-4.5-9.1,0l-27,41.6C-1.4,49.4,0.6,53,5.6,53h54C64.6,53,66.6,49.4,64.1,44.9
-                                                    z"></path>
-                                                <g>
-                                                    <path class="st1" d="M32.6,17.1c2,0,3.4,1.6,3.3,3.2l-0.9,11.2c-0.1,1.1-0.5,2.1-2.5,2.1c-2,0-2.4-0.9-2.5-2.1l-0.9-11.2
-                                                        C29.1,18.7,30.6,17.1,32.6,17.1z"></path>
-                                                    <ellipse class="st1" cx="32.6" cy="40.7" rx="3.3" ry="3.4"></ellipse>
-                                                </g>
-                                            </g>
-                                            </svg>
+                            <div class="box_body">
+                                <div class="mt11 icon_con">
+                                    <img src="../img/box_style_2_icon_000.png" alt="이름, 연락처(휴대전화)를 남겨 주시면 전문 상담원이 진료예약을 도와 드립니다.">
                                 </div>
-                                <div class="mb7 sub_title_font_1">
-                                    <span class="point2">등록된 내용</span>이 없습니다!
+                                <div class="desc_con">
+                                    이름, 연락처(휴대전화)를 남겨 주시면 전문 상담원이 진료예약을 도와 드립니다.
                                 </div>
-                                <div class="desc_font_0">
-                                    해당 검색어와 관련된 등록 내용이 없습니다.<br>
-                                    아래의 질문하기 버튼을 이용해주세요.
+                                <div class="tc btn_style_0_con">
+                                    <a href="javascript:void(0)" class="btn_style_0 middle">
+                                        처음진료 빠른예약 신청
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 box_style_2_con">
+                            <div class="box_header">
+                                <div class="box_title">
+                                    온라인 예약
+                                </div>
+                            </div>
+                            <div class="box_body">
+                                <div class="mt12 icon_con">
+                                    <img src="../img/box_style_2_icon_001.png" alt="회원가입을 하지 않아도 환자등록번호, 주민번호를 통해 예약이 가능합니다.">
+                                </div>
+                                <div class="desc_con">
+                                    회원가입을 하지 않아도 환자등록번호, 주민번호를 통해 예약이 가능합니다.
+                                </div>
+                                <div class="btn_style_0_wrap">
+                                    <div class="show mr23 btn_style_0_con mlauto">
+                                        <a href="javascript:void(0)" class="btn_style_0 white width260">비회원예약</a>
+                                    </div>
+                                    <div class="show btn_style_0_con">
+                                        <a href="javascript:void(0)" class="btn_style_0 width260">회원예약</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 box_style_2_con">
+                            <div class="box_header">
+                                <div class="box_title">
+                                    일반예약
+                                </div>
+                            </div>
+                            <div class="box_body">
+                                <div class="mt12 icon_con">
+                                    <img src="../img/box_style_2_icon_002.png" alt="주민등록번호가 없는 신생아의 첫 진료인 경우 반드시 전화예약을 이용하시기 바랍니다.">
+                                </div>
+                                <div class="desc_con">
+                                    주민등록번호가 없는 신생아의 첫 진료인 경우 반드시 전화예약을 이용하시기 바랍니다.
+                                </div>
+                                <div class="btn_style_0_wrap">
+                                    <div class="show mr8 btn_style_0_con mlauto">
+                                        <a href="javascript:void(0)" class="btn_style_0 white width225">전화예약안내</a>
+                                    </div>
+                                    <div class="show mr8 btn_style_0_con mlauto">
+                                        <a href="javascript:void(0)" class="btn_style_0 white width225">방문예약안내</a>
+                                    </div>
+                                    <div class="show btn_style_0_con">
+                                        <a href="javascript:void(0)" class="btn_style_0 width225">FAX예약안내</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-12 mb50 faq_list_con no_icon">
+                <!-- data -->
+                <ul class="comment_wrap">
+                    <li>
+                        <div class="comment_con">
+                            <div class="comments">
+                                예약 시 유의사항
+                            </div>
+                        </div>
+                        <div class="reply_con" data-faqReply>
+                            <div class="reply">
+                                <div class="mb42 list_style_2_con type_4">
+                                    <ul class="list_style_2">
+                                        <li>
+                                            전화 또는 인터넷으로 예약을 진행할 수 있으며,
+                                            최소 하루 전날까지 예약이 가능합니다.
+                                            <ul class="list_style_6">
+                                                <li>
+                                                    같은 날 같은 과에 중복 예약 허용되지 않습니다.
+                                                </li>
+                                                <li>
+                                                    같은 날 여러 진료과 예약 시 최소 1시간 이상 간격으로
+                                                    예약하셔야 합니다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            환자등록번호가 없는 첫 진료예약은 예약완료 시
+                                            발급되는 임시 환자등록번호를 통해 예약조회 및 취소가
+                                            가능합니다.
+                                        </li>
+                                        <li>
+                                            '환자기본정보는' 진료받는 환자 정보를 사용하셔야
+                                            합니다.
+                                        </li>
+                                        <li>
+                                            환자의 정보(이름 및 주민번호)가 변경된 경우 새로
+                                            발급받은 신분증을 지참하시어 병원에  방문하여
+                                            원무팀에서 정보변경해주시기 바랍니다.
+                                        </li>
+                                        <li>
+                                            기재해 주신 핸드폰과 E-mail로 '예약완료' 알려드립니다.
+                                        </li>
+                                        <li>
+                                            의료급여인 경우 의료급여증과   진료의뢰서
+                                            (요양급여의뢰서)를 반드시 지참하셔야 합니다.
+                                        </li>
+                                        <li>
+                                            당일 취소 시 반드시 인터넷 및 전화(1577-_____)로
+                                            취소해 주시기 바랍니다.
+                                        </li>
+                                        <li>
+                                            인터넷예약과 상관없이 당일진료 접수는 가능합니다
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
         </div>
         <!--footer-->
         <footer class="col-12 footer_wrap">
@@ -339,11 +355,7 @@
 
         for( var i=0; i<con.length; i++ ){
             if( $($(con)[i]).hasClass('active') ){
-                if( i==0 ){
-                    sub_swiper.slideToLoop(i, 0);
-                }else{
-                    sub_swiper.slideToLoop(i-1, 0);
-                }
+                sub_swiper.slideToLoop(i, 0);
             }
         }
     })

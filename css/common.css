@@ -36,9 +36,11 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .btn_style_0_con .btn_style_0.width225{width:225px;}
 .btn_style_0_con .btn_style_0.width250{width:250px;}
 .btn_style_0_con .btn_style_0.width260{width:260px;}
+.btn_style_0_con .btn_style_0.width360{width:360px;}
 
 .btn_style_0_wrap.type_2{flex-wrap: wrap; justify-content: flex-start; width: calc(100% + 10px); margin-left: -10px; margin-bottom: -10px;}
 .btn_style_0_wrap.type_3{flex-wrap: wrap; justify-content: flex-start; width: calc(100% + 10px); margin-left: -10px; margin-bottom: -10px;}
+.btn_style_0_wrap.type_4 .btn_style_0_con{width:auto;}
 .btn_style_0_wrap.type_3 .btn_style_0_con{width:25%;}
 .btn_style_0_wrap .btn_style_0_con{flex:0 0 auto; width: 33.33%; padding-left: 10px; margin-right: 0; margin-bottom: 10px; box-sizing: border-box;}
 

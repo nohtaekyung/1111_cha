@@ -47,6 +47,9 @@ $(window).load(function(){
         direction: 'horizontal' // 슬라이드 진행방향은 수평(vertical하면 수직으로 움직임)
         ,loop : true
         ,speed : 500
+        ,autoplay: {
+            delay: 3000,
+        }
         ,mousewheelControl: false
         ,autoplayDisableOnInteraction: true // 인터렉션 이후 다시 오토 플레이
         , pagination: {
