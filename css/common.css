@@ -3,11 +3,13 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .point0{color:#ff5d4e !important;}
 .point1{color:#13426b !important;}
 .point2{color:#666666 !important;}
+.point3{color:#ef8009 !important;}
 .point_border{display:inline-block; border-bottom:2px solid #ff5d4e; line-height:34px;}
 
 .desc_font_0{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; font-weight: 400; color:#111; word-break: keep-all;}
 .desc_font_1{font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; font-weight: 400; color:#666; word-break: keep-all;}
 .desc_font_2{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; font-weight: 400; color:#333; word-break: keep-all;}
+.desc_font_3{font-size:26px; font-size:2.6rem; line-height:38px; line-height:3.8rem; font-weight: 400; color:#333; word-break: keep-all;}
 
 .hr_style_0{border-bottom:2px solid #ff5d4e;}
 .hr_style_0.width60{width:60px;}
