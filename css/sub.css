@@ -497,7 +497,7 @@
 .faq_wrap.type_2 .faq_list > li > .faq_con{padding-left:0; margin-top:30px;}
 .faq_wrap .faq_list > li .faq_con:after{content: 'A.'; position: absolute; top:9px; left:0; font-size:22px; font-size:2.2rem; line-height:28px; line-height:2.8rem; font-weight: 600; color:#ff5d4e;}
 .faq_wrap.type_2 .faq_list > li .faq_con:after{display:none;}
-.faq_wrap .faq_list > li .txt_box{font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; font-weight: 400; color:#111; word-break: keep-all;}
+.faq_wrap .faq_list > li .txt_box{font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; font-weight: 400; color:#111; word-break: keep-all; overflow: hidden;}
 .faq_wrap .faq_list > li .txt_box .point_blue{color:#13426b; font-weight: 600;}
 
 /*진료안내상담실*/
@@ -832,10 +832,10 @@
 .table_style_0_con{}
 .table_style_0_con table.table_style_0{width:100%;}
 .table_style_0_con table.table_style_0 th{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#111111; font-weight:400;
-    border-top:3px solid #988f87; text-align: center; padding-top:17px; padding-bottom:18px; box-sizing: border-box;}
+border-top:3px solid #988f87; text-align: center; padding-top:17px; padding-bottom:18px; box-sizing: border-box;}
 .table_style_0_con table.table_style_0 td{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#111111; font-weight:400;
-    vertical-align: middle; border-left:1px solid #cccccc; border-bottom:1px solid #cccccc; text-align: center;
-    padding-top:18px; padding-bottom:18px; box-sizing: border-box; word-break: keep-all;}
+vertical-align: middle; border-left:1px solid #cccccc; border-bottom:1px solid #cccccc; text-align: center;
+padding-top:18px; padding-bottom:18px; box-sizing: border-box; word-break: keep-all;}
 .table_style_0_con table.table_style_0 td.short{padding-top:12px; padding-bottom:13px;}
 .table_style_0_con table.table_style_0 tr:first-child td{border-top:1px solid #cccccc;}
 .table_style_0_con table.table_style_0 td:first-child{border-left:none;}
@@ -844,6 +844,14 @@
 .table_style_0_caption.big .gray{color:#666666;}
 
 .table_style_0_con .table_style_0 td.vt{vertical-align: top;}
+
+
+/* table_style_1_con */
+.table_style_1_con{border-top:3px solid #988f87;}
+.table_style_1_con table.table_style_1{width:100%;}
+.table_style_1_con table.table_style_1 td{font-size:28px; font-size:2.8rem; line-height:38px; line-height:3.8rem; color:#666; font-weight:400;
+    vertical-align: top; border-bottom:1px solid #cccccc; text-align: left;
+    padding-top:15px; padding-bottom:18px; box-sizing: border-box; word-break: keep-all;}
 
 /* calendar_con */
 .calendar_con{}
