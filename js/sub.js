@@ -307,12 +307,12 @@ function faq_fn(){
             $(this).parent("li").removeClass("on");
             $(this).next(".faq_con").slideUp();
         }else{
-            $(this).parent("li").addClass("on");
-
             if ($(".faq_list").hasClass("pop")) {
+                $('.faq_list > li').removeClass('on');
                 $(".faq_con").slideUp();
             }
 
+            $(this).parent("li").addClass("on");
             $(this).next(".faq_con").slideDown();
         }
     });

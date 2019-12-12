@@ -153,9 +153,9 @@
 /* list_style_5 */
 .list_style_5{}
 .list_style_5 > li{font-size:0; line-height:0; text-align: left; overflow: hidden;}
-.list_style_5 > li .title{float:left; font-size:28px; line-height:42px; color:#666666; font-weight:400; min-width:100px; display:inline-block; vertical-align: top;}
+.list_style_5 > li .title{float:left; font-size:28px; line-height:42px; letter-spacing:-0.025em; color:#666666; font-weight:400; min-width:100px; display:inline-block; vertical-align: top;}
 .list_style_5 > li .title.small{font-size:24px; font-size:2.4rem; line-height:30px; line-height:3.0rem; color:#13426b;}
-.list_style_5 > li .desc{overflow: hidden; font-size:28px; line-height:42px; color:#111111; font-weight:400; display:inline-block; vertical-align: top;}
+.list_style_5 > li .desc{overflow: hidden; font-size:28px; line-height:42px; letter-spacing:-0.025em; color:#111111; font-weight:400; display:inline-block; vertical-align: top;}
 
 .list_style_5.type_2{}
 .list_style_5.type_2 > li{display: flex; align-items: flex-start; justify-content: space-between;}
@@ -796,7 +796,7 @@
     border-top:3px solid #988f87; text-align: center; padding-top:17px; padding-bottom:18px; box-sizing: border-box;}
 .table_style_0_con table.table_style_0 td{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#111111; font-weight:400;
     vertical-align: middle; border-left:1px solid #cccccc; border-bottom:1px solid #cccccc; text-align: center;
-    padding-top:18px; padding-bottom:18px; box-sizing: border-box; padding-right:30px; padding-left:30px;}
+    padding-top:18px; padding-bottom:18px; box-sizing: border-box; word-break: keep-all;}
 .table_style_0_con table.table_style_0 td.short{padding-top:12px; padding-bottom:13px;}
 .table_style_0_con table.table_style_0 tr:first-child td{border-top:1px solid #cccccc;}
 .table_style_0_con table.table_style_0 td:first-child{border-left:none;}
@@ -804,8 +804,6 @@
 .table_style_0_caption.big{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#111111;}
 .table_style_0_caption.big .gray{color:#666666;}
 
-.table_style_0_con .table_style_0 td.pl0{padding-left: 0;}
-.table_style_0_con .table_style_0 td.pr0{padding-right: 0;}
 .table_style_0_con .table_style_0 td.vt{vertical-align: top;}
 
 /* calendar_con */
