@@ -298,6 +298,10 @@ $(function() {
         findTabMenu.selectedIndex = selectedIndex;
         findTabMenu.indexControl();
     }
+
+    if( $('.box_list_style_0_con').length > 0 ){
+        boxListController.init();
+    }
 });
 
 /* faq */
@@ -317,3 +321,36 @@ function faq_fn(){
         }
     });
 };
+
+var boxListController = {
+    init : function(){
+        this.targetCon = $('.box_list_style_0_con');
+        this.target = $(this.targetCon).find('.box_list');
+        this.targetLen = this.target.length;
+        this.defaultLen = 5;
+        this.currentLen = 5;
+
+        this.registEvent();
+    }
+
+    ,registEvent : function(){
+        var _this = this;
+        if( this.targetLen > this.defaultLen ){
+            this.targetHeight = 0;
+            for( var i=0; i<this.defaultLen; i++ ){
+                _this.targetHeight = _this.targetHeight+parseInt($(_this.target[i]).outerHeight())+30;
+            }
+            _this.targetHeight-=30;
+            this.targetCon.css('height', this.targetHeight);
+        }
+    }
+
+    ,addLoad : function(){
+        var _this = this;
+        if( this.targetLen >= this.currentLen ){
+            this.currentLen++;
+            this.targetHeight = parseInt(this.targetHeight) + parseInt($(this.target[this.currentLen-1]).outerHeight())+30;
+            TweenMax.to( this.targetCon, 0.5, {height : this.targetHeight});
+        }
+    }
+}
