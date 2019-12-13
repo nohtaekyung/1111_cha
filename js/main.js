@@ -15,14 +15,6 @@ $(function(){
             $('.footer_lang_list').addClass('on');
         }
     })
-
-    $('.quick_menu_close_btn').on('click', function(){
-        $('.quick_menu_con').removeClass('active');
-    })
-
-    $('.quick_menu_btn').on('click', function(){
-        $('.quick_menu_con').addClass('active');
-    })
 })
 
 $(window).load(function(){

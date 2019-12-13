@@ -110,6 +110,9 @@
 .list_style_0_con.type_3 .list_style_0 > li{line-height:34px; line-height:3.4rem; color:#111111; margin-bottom:0;}
 .list_style_0_con.type_3 .list_style_0 > li:after{top:16px;}
 .list_style_0_con.short .list_style_0 > li{margin-bottom:0;}
+.list_style_0_con.small .list_style_0 > li{font-size:26px; font-size:2.6rem; line-height:38px; line-height:3.8rem; color:#666666;
+    margin-bottom:10px;}
+.list_style_0_con.small .list_style_0 > li:last-child{margin-bottom:0;}
 .list_style_0_con .list_style_0 > li:last-child{margin-bottom:0 !important;}
 .list_style_0_con .list_style_0 > li:after{content:""; position: absolute; top:20px; left:0; width:4px; height:4px; border-radius:50%; background-color:#333333;}
 .list_style_0_con .list_style_0.gray > li{color:#666;}
@@ -1114,6 +1117,8 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 .professor_table_con .professor_table.type_2 td{padding-left:20px; height:65px;}
 .professor_table_con .professor_table.type_3 td{padding-left:20px;}
 .professor_table_con .professor_table.type_4 td{height:76px; padding-top:20px; padding-bottom:21px;}
+.professor_table_con .professor_table.type_5 td{font-size:26px; font-size:2.6rem; line-height:38px; line-height:3.8rem; color:#666666; padding-top:19px; padding-bottom:23px; vertical-align: top;}
+.professor_table_con .professor_table.type_5 td.black{color:#111111;}
 .professor_table_con .professor_table tr{}
 .professor_table_con .professor_table tr:first-child{border-top:3px solid #988f87;}
 .professor_table_con .professor_table th{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;

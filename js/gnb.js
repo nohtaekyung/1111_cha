@@ -25,6 +25,15 @@ $(function(){
             $(this).find('> ul').slideUp();
         }
     })
+
+    /* 퀵메뉴 */
+    $('.quick_menu_close_btn').on('click', function(){
+        $('.quick_menu_con').removeClass('active');
+    })
+
+    $('.quick_menu_btn').on('click', function(){
+        $('.quick_menu_con').addClass('active');
+    })
 })
 
 var naviEl = {
