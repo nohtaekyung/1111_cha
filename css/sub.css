@@ -964,7 +964,7 @@ padding-top:18px; padding-bottom:18px; box-sizing: border-box; word-break: keep-
 .step_style_1_con{width: calc(100% + 65px); margin-right: -65px; margin-bottom: -36px; overflow: hidden;}
 .step_style_1_con .step_style_1_list{float: left; padding-right: 65px; margin-bottom: 36px; box-sizing: border-box; background-image: url('../img/step_style_1_arrow.png'); background-repeat: no-repeat; background-position: right 20px top 30px;}
 .step_style_1_con .step_style_1_list.pr45{padding-right: 45px;}
-step_style_1_con .step_style_1_list:last-child{background-image: none;}
+.step_style_1_con .step_style_1_list:last-child{background-image: none;}
 .step_style_1_con .step_style_1_list_inner{overflow: hidden;}
 .step_style_1_con .step_style_1_list .img_con{float:left; min-width: 65px; text-align: center;}
 .step_style_1_con .step_style_1_list .text_con{overflow: hidden;}
@@ -985,6 +985,14 @@ step_style_1_con .step_style_1_list:last-child{background-image: none;}
 .step_style_1_con.type_2 .step_style_1_list .step_style_1_title{color:#333;}
 .step_style_1_con.type_2 .step_style_1_list:nth-child(2n){background-image: none;}
 .step_style_1_con.type_2 .step_style_1_list:nth-child(2n+1){clear:left;}
+
+.step_style_1_con.type_3{padding-top: 41px; border-top:2px solid #ff5d4e; margin-bottom: 0;}
+.step_style_1_con.type_3 .step_style_1_list{width: 100%; padding-left: 25px; padding-bottom: 23px; margin-bottom: 31px; background-image: none; border-bottom:1px solid #ccc;}
+.step_style_1_con.type_3 .step_style_1_list:last-child{margin-bottom: 0;}
+.step_style_1_con.type_3 .step_style_1_list .img_con{margin-right: 30px;}
+.step_style_1_con.type_3 .step_style_1_list .step_style_1{display: inline-flex; margin-bottom: 0; margin-right: 5px;}
+.step_style_1_con.type_3 .step_style_1_list .step_style_1_title{display: inline-block; font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; font-weight: 600;}
+.step_style_1_con.type_3 .step_style_1_list .step_style_1_desc{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#666; word-break: keep-all;}
 
 /* dot list */
 strong.blue + ul.dot_list01 {margin-top:10px;}
