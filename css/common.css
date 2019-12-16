@@ -12,6 +12,8 @@ body{overflow:auto; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:to
 .desc_font_3{font-size:26px; font-size:2.6rem; line-height:38px; line-height:3.8rem; font-weight: 400; color:#333; word-break: keep-all;}
 .desc_font_4{font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; font-weight: 400; color:#333; letter-spacing: -0.025em; word-break: keep-all;}
 
+.title_font_0{font-size:30px; font-size:3.0rem; line-height:42px; line-height:4.2rem; font-weight: 400; color:#111111; word-break: keep-all;}
+
 .hr_style_0{border-bottom:2px solid #ff5d4e;}
 .hr_style_0.width60{width:60px;}
 .hr_style_0.height1{border-width: 1px;}

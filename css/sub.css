@@ -874,6 +874,18 @@ padding-top:18px; padding-bottom:18px; box-sizing: border-box; word-break: keep-
     vertical-align: top; border-bottom:1px solid #cccccc; text-align: left;
     padding-top:15px; padding-bottom:18px; box-sizing: border-box; word-break: keep-all;}
 
+/* table_style_2_con */
+.table_style_2_con{}
+.table_style_2_con table.table_style_2{width:100%;}
+.table_style_2_con table.table_style_2 th{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#333333; font-weight:700;
+    vertical-align: top; border-bottom:1px solid #cccccc; text-align: left; padding-left:22px;
+    padding-top:22px; padding-bottom:21px; box-sizing: border-box; word-break: keep-all;}
+.table_style_2_con table.table_style_2 tr:first-child{border-top:1px solid #cccccc;}
+.table_style_2_con table.table_style_2 td{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#666; font-weight:400;
+    vertical-align: top; border-bottom:1px solid #cccccc; text-align: left;
+    padding-top:22px; padding-bottom:21px; box-sizing: border-box; word-break: keep-all;}
+
+
 /* calendar_con */
 .calendar_con{}
 .calendar_con .calendar_header_con{}
