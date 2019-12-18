@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=750">
     <meta property="og:image" content="../img/kakao_prev.jpg">
     <title>CHA Meditech</title>
-    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/common_style.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/responsive.css"/>
     <link rel="stylesheet" href="../css/header.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
@@ -18,10 +18,11 @@
     <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="../js/swiper/swiper.min.js"></script>
     <script type="text/javascript" src="../js/bm.js"></script>
+    <script type="text/javascript" src="../js/gnb.js"></script>
     <script type="text/javascript" src="../js/sub.js"></script>
 </head>
 <body>
-<div class="wrapper sub mypage" id="wrapper">
+<div class="wrapper sub" id="wrapper">
     <div class="col-12 col-center mw-750">
         <!--header-->
         <header class="col-12 header_wrap">
@@ -61,18 +62,119 @@
                 </div>
             </div>
         </header>
+        <div class="col-12 clicked_header_wrap">
+            <div class="col-0 close_btn_con">
+                <a href="javascript:void(0)" class="close_btn">
+                    <img src="../img/close_icon.png" alt="닫기">
+                </a>
+            </div>
+            <div class="col-12 clicked_header_con">
+                <div class="col-12 clicked_header_inner">
+                    <div class="col-12 header_top_con">
+                        <h1 class="logo_con">
+                            <a href="javascript:void(0)">
+                                <img src="../img/logo.png" alt="CHA 의과대학교 일산차병원">
+                            </a>
+                        </h1>
+                        <div class="lang_list_con">
+                            <a href="javascript:void(0)" class="lang_list active">KO</a>
+                            <a href="javascript:void(0)" class="lang_list">EN</a>
+                            <a href="javascript:void(0)" class="lang_list">CH</a>
+                            <a href="javascript:void(0)" class="lang_list">RU</a>
+                        </div>
+                    </div>
+                    <div class="col-12 mb30 btn_style_0_wrap">
+                        <div class="show btn_style_0_con">
+                            <a href="javascript:void(0)" class="btn_style_0">로그인</a>
+                        </div>
+                        <div class="show btn_style_0_con">
+                            <a href="javascript:void(0)" class="btn_style_0">예약조회</a>
+                        </div>
+                    </div>
+                    <div class="col-12 gnb_wrap">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span>진료예약·상담</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span>진료과·의료진</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span>이용안내</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:void(0)">
+                                    <span>건강정보</span>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>이달의 건강강좌</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>건강라이프 칼럼</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>여성의학정보</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>건강한 출산 A to Z</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span>120 웰니스</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span>병원소개</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 header_btn_wrap">
+                    <div class="header_btn_con">
+                        <a href="javascript:void(0)" class="header_btn tel">
+                            <span>대표번호</span>
+                        </a>
+                    </div>
+                    <div class="header_btn_con">
+                        <a href="javascript:void(0)" class="header_btn map">
+                            <span>오시는길</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <!--sub_header-->
         <div class="col-12 sub_header_wrap">
             <div class="col-12 sub_header_con">
                 <div class="left_con">
-                    <div class="home_icon_con">
+                    <div class="home_icon_con hidden">
                         <a href="javascript:void(0)" class="home_icon">
                             <img src="../img/home_icon.png" alt="home">
                         </a>
                     </div>
                     <div class="menu_list_wrap">
                         <div class="active_menu">
-                            찾아오시는길
+                            고마워요 차병원
                         </div>
                     </div>
                 </div>
@@ -81,79 +183,20 @@
                 </div>
             </div>
         </div>
+
+        <!-- contents_wrap -->
         <div class="col-12 sub_contents_wrap">
-            <div class="col-12 tab_style_0_con type_2">
-                <ul class="tab_style_0">
-                    <li class="active">
-                        <a href="javascript:void(0)">
-                            약도/자가용
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            대중교통안내
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            주차안내
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 pt41 pb40 pr30 pl30">
-                <div class="col-12 mb41 list_style_0_con">
-                    <ul class="list_style_0">
-                        <li>
-                            <span class="fontweight_bold">주소</span> 경기도 고양시 일산동구 장항동 889 일산차병원
-                        </li>
-                        <li>
-                            <span class="fontweight_bold">전화</span> 031-***-****
-                        </li>
-                        <li>
-                            <span class="fontweight_bold">예약</span> 1577-4488
-                        </li>
-                    </ul>
-                </div>
-                <hr class="col-12 seperate_line_style_1">
-                <div class="col-12 step_child_con">
-                    <div class="col-12 pt50 mb30 map_con">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.788376585337!2d126.77375331559034!3d37.65417902686104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c854ea55a5603%3A0xa449aa9119b665cc!2z6rK96riw64-EIOqzoOyWkeyLnCDsnbzsgrDrj5nqtawg7J6l7ZWt64-ZIDg4OQ!5e0!3m2!1sko!2skr!4v1576448961385!5m2!1sko!2skr" width="" height="" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                    </div>
-                    <div class="col-12 mb50">
-                        <div class="col-6 tl">
-                            <img src="../img/naver_contact_us_btn.png" alt="naver 빠른길 찾기">
-                        </div>
-                        <div class="col-6 tr">
-                            <img src="../img/google_contact_us_btn.png" alt="google 빠른길 찾기">
-                        </div>
-                    </div>
-                    <hr class="col-0 mb25 hr_style_0 width60">
-                    <div class="col-12 mb17 step_child_title">
-                        자가용 이용
-                    </div>
-                    <div class="col-12 desc_font_4">
-                        <div class="fontweight_bold point0">인천국제공항</div>
-                        자동차(택시)이용시, 평균소요시간 42분. 이동거리 48km<br/>
-                        공항버스 3300번 이용시, 마두역 정류장 하차. 평균소요시간<br/>
-                        1시간 15분.<br/>
-                        <div class="mt14 fontweight_bold point0">김포공항</div>
-                        자동차(택시)이용시, 평균소요시간 20분. 이동거리 15km<br/>
-                        일반버스 56번, 150번, 공항버스 7300번 이용시,<br/>
-                        마두역 정류장 하차. 평균소요시간 50분.<br/>
-                        <div class="mt14 fontweight_bold point0">고양종합터미널</div>
-                        자동차(택시)이용시, 평균소요시간 10분. 이동거리 3km<br/>
-                        지하철 마두역 정류장 하차. 평균소요시간 14분.<br/>
-                        마을버스 010, 078, 082A, 082B 마두역 정류장 하차.<br/>
-                        평균소요시간 18분<br/>
-                        <div class="mt14 fontweight_bold point0">KTX 행신역</div>
-                        자동차(택시)이용시, 평균소요시간 20분. 이동거리 11km<br/>
-                        일반버스 97번 이용시, 일산동구청 정류장 하차.<br/>
-                        평균소요시간 40분.
+            <!--contents-->
+            <div class="col-12 pt43 pb43 pl30 pr30">
+                <div class="col-12 board_view_style_0_con">
+                    <div class="col-12 board_view_title">
+                        김지원 교수님,김민정 간호사선생님 진심으로
+                        감사합니다.
                     </div>
                 </div>
             </div>
         </div>
+
         <!--footer-->
         <footer class="col-12 footer_wrap">
             <div class="col-12 footer_con">

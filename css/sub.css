@@ -1164,6 +1164,15 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 .professor_table_con .professor_table td.tc{text-align: center; padding-left:0;}
 
 
+/* professor_ul_con */
+.professor_ul_con{border-top: 3px solid #988f87;}
+.professor_ul_con > li{display:flex; flex-wrap:wrap; min-height:71px; padding-top:10px; padding-bottom:10px; box-sizing: border-box; border-bottom:1px solid #cccccc;  align-items: center;}
+.professor_ul_con > li .professor_year{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#666666; font-weight:400;
+    text-align: center; box-sizing: border-box; flex:1; max-width:130px;}
+.professor_ul_con > li .professor_desc{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; color:#111111; font-weight:400;
+    text-align: left; padding-left:10px; box-sizing: border-box; flex:1;}
+
+
 /* btn_style_3_con */
 .btn_style_3_con{display:flex; align-items: center; justify-content: center;}
 .btn_style_3_con .btn_style_3{font-size:30px; font-size:3.0rem; line-height:36px; line-height:3.6rem; color:#fff; font-weight:700;
@@ -1222,3 +1231,28 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 .contact_us_item_list_con .contact_us_item.red{background-color:#ff0000;}
 .contact_us_item_list_con .contact_us_desc{font-size:28px; font-size:2.8rem; line-height:42px; line-height:4.2rem; color:#666666; font-weight:400;
     display:inline-block; vertical-align: middle; width:calc(100% - 102px); padding-left:18px; box-sizing: border-box;}
+
+
+
+/* pc소스때문에 적용되는 소스영역 */
+.contents_area{float:left; width:100%; position: relative;}
+.contents_area .medical_list_wrap{}
+.contents_area .medical_list_wrap h2{display:none;}
+.contents_area .medical_list_wrap .pc{position: relative; margin-bottom:50px;}
+.contents_area .medical_list_wrap .intro_title{position: absolute; top:0; left:0; width:100%; height:100%;
+    display: flex; flex-wrap: wrap; align-content: center; padding-left: 30px; padding-right: 30px; box-sizing: border-box;}
+.contents_area .medical_list_wrap .intro_title p{font-size: 35px; font-size: 3.5rem; line-height: 60px; line-height: 6.0rem; font-weight: 600; color: #ff5d4e; margin-bottom:12px;}
+.contents_area .medical_list_wrap .intro_title span{font-size: 26px; font-size: 2.6rem; line-height: 32px; line-height: 3.2rem; font-weight: 500; color: #666;}
+.contents_area .line_list_dl_area{}
+.contents_area .line_list_dl{margin-bottom:50px;}
+.contents_area .line_list_dl:last-child{margin-bottom:0;}
+.contents_area .line_list_dl .onScroll.inLeft{font-size: 32px; font-size: 3.2rem; line-height: 38px; line-height: 3.8rem; color: #111111; font-weight: 700; margin-bottom:15px;
+    position: relative; padding-top:28px;}
+.contents_area .line_list_dl .onScroll.inLeft:after{content:""; position: absolute; top:0; left:0; border-bottom:2px solid #ff5d4e; width:60px;}
+.contents_area .line_list_dl .onScroll.inLeft br{display:none;}
+.contents_area .line_list_dl .onScroll.inRight{font-size: 28px; font-size: 2.8rem; line-height: 46px; line-height: 4.6rem; font-weight: 400; color: #666; word-break: keep-all;}
+
+
+/* board_view_style_0_con */
+.board_view_style_0_con{}
+.board_view_style_0_con .board_view_title{font-size:30px; font-size:3.0rem; line-height:40px; line-height:4.0rem; color:#222222; font-weight:700; word-break:keep-all;}
