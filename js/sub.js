@@ -112,7 +112,7 @@ faqController.prototype = {
 
 
         _this.target.each(function( idx , el ){
-            $( el ).on('click', function(){
+            $( el).find('.comment_con').on('click', function(){
 
                 //이전에 클릭한 타겟 == 현재 클릭한 타겟
                 if( _this.selectedIdx == idx ){
@@ -302,6 +302,10 @@ $(function() {
     if( $('.box_list_style_0_con').length > 0 ){
         boxListController.init();
     }
+
+    if( $('.box_list_style_1_con').length > 0 ){
+        boxListController1.init();
+    }
 });
 
 /* faq */
@@ -322,10 +326,20 @@ function faq_fn(){
     });
 };
 
+function openFloorPopup(){
+    $('#floorImg').show();
+    $('body').css('overflow', 'hidden');
+}
+
+function closeFloorPopup(){
+    $('#floorImg').hide();
+    $('body').css('overflow', '');
+}
+
 var boxListController = {
     init : function(){
         this.targetCon = $('.box_list_style_0_con');
-        this.target = $(this.targetCon).find('.box_list');
+        this.target = $(this.targetCon).find('> li');
         this.targetLen = this.target.length;
         this.defaultLen = 5;
         this.currentLen = 5;
@@ -350,6 +364,57 @@ var boxListController = {
         if( this.targetLen >= this.currentLen ){
             this.currentLen++;
             this.targetHeight = parseInt(this.targetHeight) + parseInt($(this.target[this.currentLen-1]).outerHeight())+30;
+            TweenMax.to( this.targetCon, 0.5, {height : this.targetHeight});
+        }
+    }
+}
+
+var boxListController1 = {
+    init : function(){
+        this.targetCon = $('.box_list_style_1_con');
+        this.target = $(this.targetCon).find('.box_list_style_1_list');
+        this.targetLen = this.target.length;
+        this.defaultLen = 6;
+        this.currentLen = 6;
+
+        this.registEvent();
+    }
+
+    ,registEvent : function(){
+        var _this = this;
+        if( this.targetLen > this.defaultLen ){
+            this.targetHeight = 0;
+            for( var i=0; i<this.defaultLen; i+=2 ){
+                if( (parseInt($(_this.target[i]).outerHeight()) - parseInt($(_this.target[i+1]).outerHeight())) >= 0 ){
+                    //왼쪽꺼가 오른쪽꺼보다 크거나 둘이 크기가 똑같을 때
+                    _this.targetHeight = _this.targetHeight+parseInt($(_this.target[i]).outerHeight());
+                }else{
+                    //오른쪽꺼가 더 클 때
+                    _this.targetHeight = _this.targetHeight+parseInt($(_this.target[i+1]).outerHeight());
+                }
+            }
+            this.targetCon.css('height', this.targetHeight);
+        }
+    }
+
+    ,addLoad : function(){
+        var _this = this;
+        if( this.targetLen >= this.currentLen ){
+            this.currentLen++;
+            if( this.targetLen % 2 == 0 ){
+                // 리스트의 개수가 짝수일 떄
+                if( parseInt($(this.target[this.currentLen-1]).outerHeight()) - parseInt($(this.target[this.currentLen]).outerHeight()) ){
+                    //왼쪽꺼가 오른쪽꺼보다 크거나 둘이 크기가 똑같을 때
+                    this.targetHeight = (parseInt(this.targetHeight) + parseInt($(this.target[this.currentLen-1]).outerHeight()));
+                }else{
+                    //오른쪽꺼가 더 클 때
+                    this.targetHeight = (parseInt(this.targetHeight) + parseInt($(this.target[this.currentLen]).outerHeight()));
+                }
+                this.currentLen++;
+            }else{
+                // 리스트의 개수가 홀수일 떄
+                this.targetHeight = (parseInt(this.targetHeight) + parseInt($(this.target[this.currentLen-1]).outerHeight()));
+            }
             TweenMax.to( this.targetCon, 0.5, {height : this.targetHeight});
         }
     }
