@@ -1330,3 +1330,6 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 #floorImg .popup_close_btn{width:80px; height:80px; background-color:#ff776a; box-sizing: border-box; line-height:80px; text-align: center; position: fixed; top:0; right:0; z-index:4;}
 #floorImg .img_box{overflow:auto; max-height:100%;}
 #floorImg .img_box img{max-width:none;}
+
+.video_area{}
+.video_area iframe{min-width:600px; min-height:345px;}
