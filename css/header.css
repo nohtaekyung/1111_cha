@@ -24,7 +24,7 @@
 
 .clicked_header_wrap .close_btn_con{position: absolute; top:30px; right:30px;}
 .clicked_header_wrap .clicked_header_con{width: 650px; height: 100%; overflow-y: auto; background-color: #fff;}
-.clicked_header_wrap .clicked_header_inner{min-height: 100vh; padding-left: 30px; padding-right: 30px;}
+.clicked_header_wrap .clicked_header_inner{min-height: calc(100vh - 70px); padding-left: 30px; padding-right: 30px;}
 .clicked_header_wrap .header_top_con{display: flex; align-items: center; justify-content: space-between; padding-top: 32px; padding-bottom: 29px; border-bottom:1px solid #ff5d4e; margin-bottom: 30px;}
 
 .clicked_header_wrap .lang_list_con{font-size:0px; font-size:0rem; line-height:0px; line-height:0.0rem; }
@@ -50,7 +50,7 @@
 .gnb_wrap > ul > li > ul > li > a{display: block; padding-left: 15px; padding-right: 15px; padding-top: 30px; padding-bottom: 26px;}
 .gnb_wrap > ul > li > ul > li > a > span{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: -0.025em; font-weight: 400; color:#333;}
 
-.header_btn_wrap{display: flex; align-items: center; justify-content: center;}
+.header_btn_wrap{display: flex; align-items: center; justify-content: center; position: absolute; bottom:0; left:0;}
 .header_btn_con{flex:1;}
 .header_btn_con .header_btn{display: flex; align-items: center; justify-content: center; height: 70px; box-sizing: border-box;}
 .header_btn_con .header_btn > span{font-size:28px; font-size:2.8rem; line-height:34px; line-height:3.4rem; letter-spacing: 0em; font-weight: 400; color:#fff; text-align: center; padding-left: 50px; box-sizing: border-box;

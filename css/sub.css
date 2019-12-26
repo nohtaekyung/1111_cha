@@ -1067,15 +1067,16 @@ ul.dot_list04 + strong.blue {margin-top:20px;}
 
 strong.blue + ul.dot_list05 {margin-top:10px;}
 ul.dot_list05 {}
-ul.dot_list05 > li {padding-left:10px; line-height:26px; background:url("../img/icon_matter_list_dot.png") no-repeat 0 13px; font-weight:400;}
-ul.dot_list05 > li > ul {padding-left:5px;}
-/*ul.dot_list05 > li + li {margin-top:8px;}*/
-ul.dot_list05.title > li + li {margin-top:20px;}
+ul.dot_list05 > li {padding-left:15px; font-weight:400; color:#111111;
+    font-size:28px; line-height:46px; position: relative;}
+ul.dot_list05 > li:after{content:""; position: absolute; top:22px; left:0; width:4px; height:4px; border-radius:50%; background-color:#ff7366;}
+ul.dot_list05 > li span.point { font-weight:400; }
+ul.dot_list05 > li > ul { padding-left:5px; }
+ul.dot_list05 > li.li_mg { position:relative; }
+ul.dot_list05 > li.li_mg:after { clear:both; content:''; display:block; }
+ul.dot_list05 > li.li_mg b { float:left; position:absolute; }
+ul.dot_list05 > li.li_mg b + span { display:block; float:left; }
 ul.dot_list05 + strong.blue {margin-top:20px;}
-ul.dot_list05.result {position:relative; margin-top:25px; }
-ul.dot_list05.result li {padding-left:0px !important; background:none !important;}
-ul.dot_list05.result span.point {font-weight:400;}
-ul.dot_list05.result + .medical_schedule_wrap {margin-top:37px;}
 
 ul.dot_list06 {}
 ul.dot_list06:after { clear:both; content:''; display:block; }
@@ -1316,14 +1317,27 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 .table_wrap .table_desc{display:none;}
 
 /* board_view_style_0_con */
-.board_view_style_0_con{}
-.board_view_style_0_con .board_view_title{font-size:30px; font-size:3.0rem; line-height:40px; line-height:4.0rem; color:#222222; font-weight:700; word-break:keep-all;}
+.board_view_style_0_con{border-top:2px solid #988f87;}
+.board_view_style_0_con .board_view_article_list{padding-top:14px; padding-bottom:16px; border-bottom:1px solid #cccccc;}
+.board_view_style_0_con .board_view_body_con{padding-top:50px; padding-bottom:42px;
+    font-size:28px; font-size:2.8rem; line-height:46px; line-height:4.6rem; color:#333333; font-weight:400;}
+.board_view_style_0_con .board_view_body_con img{margin-bottom:19px;}
+.board_view_style_0_con .board_view_title{font-size:30px; font-size:3.0rem; line-height:40px; line-height:4.0rem; color:#222222; font-weight:700; word-break:keep-all;
+    padding-top:10px; padding-bottom:8px;}
 .board_view_style_0_con .board_view_desc{font-size:0; line-height:0; text-align: left;}
 .board_view_style_0_con .board_view_desc_item{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; color:#666666; font-weight:400;
     display:inline-block; vertical-align: top; padding-right:14px; margin-right:13px; position: relative;}
-.board_view_style_0_con .board_view_desc_item:after{content:""; position: absolute; top:4px; right:0; border-right:1px solid #999999; height:20px;}
+.board_view_style_0_con .board_view_desc_item.download{color:#999999;}
+.board_view_style_0_con .board_view_desc_item.download a{color:#111111;}
+.board_view_style_0_con .board_view_desc_item:after{content:""; position: absolute; top:9px; right:0; border-right:1px solid #999999; height:20px;}
 .board_view_style_0_con .board_view_desc_item:last-child{padding-right:0; margin-right:0;}
 .board_view_style_0_con .board_view_desc_item:last-child:after{display:none;}
+.board_view_style_0_con .board_view_footer_con{}
+.board_view_style_0_con .board_view_footer_list{display:flex; width:100%; flex:1; align-items: center; padding-top:24px; padding-bottom:27px; border-bottom:1px solid #cccccc;}
+.board_view_style_0_con .board_view_footer_list:first-child{border-top:1px solid #cccccc;}
+.board_view_style_0_con .board_view_footer_title{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; letter-spacing: -0.025em; color:#999999; font-weight:400; margin-right:26px; width:70px;}
+.board_view_style_0_con .board_view_footer_desc{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; letter-spacing: -0.025em; color:#111111; font-weight:400; width:calc(100% - 96px);
+    white-space: nowrap; overflow: hidden; word-break:break-all; text-overflow:ellipsis; }
 
 
 #floorImg{position: fixed; top:0; left:0; width:100%; height:100%; display:none; z-index:5; background-color:#fff;}
