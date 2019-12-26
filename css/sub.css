@@ -1279,10 +1279,11 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 
 
 /* pc소스때문에 적용되는 소스영역 */
+.cms .pc{display:none;}
+
 .contents_area{float:left; width:100%; position: relative; padding-top:50px; padding-bottom:50px; padding-right:30px; padding-left:30px; box-sizing: border-box;}
 .contents_area h2{display:none;}
 .contents_area .top_area{position: relative; margin-bottom:50px;}
-.contents_area .top_area.pc{display:none;}
 .contents_area .top_area.mobile{display:block;}
 .contents_area .intro_title{position: absolute; top:0; left:0; width:100%; height:100%;
     display: flex; flex-wrap: wrap; align-content: center; padding-left: 30px; padding-right: 30px; box-sizing: border-box;}
@@ -1335,7 +1336,7 @@ ol.num_list.blue_bul.title li + li { margin-top:8px; }
 .board_view_style_0_con .board_view_footer_con{}
 .board_view_style_0_con .board_view_footer_list{display:flex; width:100%; flex:1; align-items: center; padding-top:24px; padding-bottom:27px; border-bottom:1px solid #cccccc;}
 .board_view_style_0_con .board_view_footer_list:first-child{border-top:1px solid #cccccc;}
-.board_view_style_0_con .board_view_footer_title{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; letter-spacing: -0.025em; color:#999999; font-weight:400; margin-right:26px; width:70px;}
+.board_view_style_0_con .board_view_footer_title{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; letter-spacing: -0.025em; color:#999999; font-weight:400; width:96px;}
 .board_view_style_0_con .board_view_footer_desc{font-size:26px; font-size:2.6rem; line-height:32px; line-height:3.2rem; letter-spacing: -0.025em; color:#111111; font-weight:400; width:calc(100% - 96px);
     white-space: nowrap; overflow: hidden; word-break:break-all; text-overflow:ellipsis; }
 
